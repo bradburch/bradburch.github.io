@@ -1,0 +1,10 @@
+title: Brad Burch
+email: burchbrad@duck.com
+description: Brad Burch's Website
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://bradburch.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  bradburch
+
+google_analytics: G-R8KE8VL0TQ
+linkedin_username: burchbrad
+author: Brad Burch

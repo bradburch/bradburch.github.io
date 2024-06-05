@@ -1,0 +1,59 @@
+---
+---
+
+a {
+  color: #002aff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00098a;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Condensed';
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10%;
+  width: 75%;
+  font-family: 'OpenSansLight';
+}
+
+.column {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.left {
+
+}
+
+p {
+    font-family: 'Rubik';
+}
+
+.right {
+  text-align: center;
+}
+
+.roboto-condensed-header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+.profile-photo {
+  width: 50%;
+  border-radius: 65%;
+}
+
+@media (max-width: 1000px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
