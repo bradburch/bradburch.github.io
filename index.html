@@ -1,52 +1,116 @@
 ---
-title: Brad Burch
-image: assets/img/bradburch.jpg
+title: Brad Burch - Software Engineer & Solutions Architect
 resume: assets/resume/brad_burch_resume.pdf
 ---
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{page.title}}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css">
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
     {%- endif -%}
 </script>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <div class="left column">
-        <h1>Hi, I'm Brad.</h1>
-      
-        <p>
-          I am a backend software engineer with a passion for building products that have a positive impact on the world. I love identifying areas in the product or company that would greatly improve the end user experience. I have experience developing external and internal product features, developer tooling, and release tools in a startup environment. Most of the developer tooling (CI/CD, testing methodologies, API documentation) and release tooling was inspired by breaking things myself, learning from my mistakes, finding time in the roadmap, and building guardrails to prevent myself or anyone else from making those mistakes again. Let's build together!         
-        </p>
-
-        <p>
-          Feel free to reach out via email, and if you have a cute pet, I'd love to see them!
-        </p>
+        <header>
+            <h1>Brad Burch</h1>
+            <p class="subtitle">Solutions Engineer & Software Architect</p>
+            <p class="summary">Bridging technical excellence with business impact. Experienced in building scalable systems, driving technical adoption, and translating customer needs into innovative solutions.</p>
+            
+            <div class="contact-info">
+                <a href="mailto:bradburch.jobs@gmail.com" class="contact-link">📧 Email</a>
+                <a href="https://linkedin.com/in/burchbrad/" class="contact-link" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/bradburch" class="contact-link" target="_blank">💻 GitHub</a>
+                <a href="{{page.resume}}" class="contact-link">📋 Resume</a> 
+            </div>
+            
+            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Let's Work Together</button>
+        </header>
         
-        <h3>Skills</h3>
-        <p><b>Languages:</b> Java, Scala, Go, Python, JavaScript, TypeScript</p>
-          <p><b>Frameworks, Libraries, Tools:</b>  Amazon Web Services (AWS), SQS, DynamoDB, Kafka, REST APIs, MSSQL, PostgreSQL, SQL, NoSQL, Git, Jenkins, Spring Framework, Play Framework, Node.js</p>
-  
-        <h3>
-          <a href="mailto:burchbrad@duck.com">Email</a> |
-          <a href="{{page.resume}}">Resume</a> |
-          <a href="https://www.linkedin.com/in/burchbrad/">LinkedIn</a> |
-          <a href="https://github.com/bradburch">Github</a> |
-          <a href="https://www.rover.com/sit/bradb97628">Rover</a>
-        </h3>
-      </div>
-  
-      <div class="right column center">
-        <img class="profile-photo" src="{{ page.image }}" alt="Brad Burch in Flagstaff, AZ enjoying the Aspens"></img>
-      </div>
+        <section class="section">
+            <h2>What I Do</h2>
+            <p class="summary">
+                I'm a full-stack engineer who thrives at the intersection of technology and business. Whether you need a forward-deployed engineer working directly with customers, a solutions architect designing scalable systems, or a software engineer building robust products—I deliver.
+            </p>
+            <div class="highlight">
+                <strong>Core Strengths:</strong> Cloud architecture (AWS), API design, system optimization, technical customer engagement, backend development, database modernization, and CI/CD automation.
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Recent Impact</h2>
+            
+            <div class="job">
+                <div class="job-title">Business Owner</div>
+                <div class="job-meta">Brad's Pet Services, San Francisco, CA • 2022 - Present</div>
+                <div class="achievement">Built and deployed AI Agents that modernized client management and scheduling systems</div>
+                <div class="achievement">Designed custom Notion database architectures for field-based operations and invoicing</div>
+            </div>
+            
+            <div class="job">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-meta">Front.com, San Francisco, CA • 2022</div>
+                <div class="achievement">Developed Node.js REST API that drove <span class="metric">30% adoption increase</span></div>
+                <div class="achievement">Optimized CSV importer achieving <span class="metric">5% faster processing</span> for large file uploads</div>
+                <div class="achievement">Upgraded core email infrastructure handling <span class="metric">200,000+ emails/month</span></div>
+            </div>
+            
+            <div class="job">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-meta">Total Brain, San Francisco, CA • 2019 - 2021</div>
+                <div class="achievement">Led database migration from MSSQL to DynamoDB, achieving <span class="metric">50% API response time improvement</span></div>
+                <div class="achievement">Implemented social authentication integration, boosting <span class="metric">new user sign-ups by 40%</span></div>
+                <div class="achievement">Integrated HubSpot, Box, and SSH APIs for seamless customer experience</div>
+                <div class="achievement">Built Jenkins CI/CD pipeline, increasing <span class="metric">developer productivity by 70%</span></div>
+                <div class="achievement">Standardized OAuth2, SAML 2.0, and JWT authentication systems company-wide</div>
+            </div>
+            
+            <div class="job">
+                <div class="job-title">Software Engineer</div>
+                <div class="job-meta">Salesforce.com, San Francisco, CA • 2017 - 2018</div>
+                <div class="achievement">Designed persistent repository architecture using Java, PostgreSQL, and EclipseLink</div>
+                <div class="achievement">Implemented OAuth2 security framework for Microservice API access control</div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Toolkit</h2>
+            <div class="skills-grid">
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">JavaScript/TypeScript</div>
+                <div class="skill-tag">Node.js</div>
+                <div class="skill-tag">AWS</div>
+                <div class="skill-tag">REST APIs</div>
+                <div class="skill-tag">PostgreSQL</div>
+                <div class="skill-tag">DynamoDB</div>
+                <div class="skill-tag">Jenkins CI/CD</div>
+                <div class="skill-tag">Docker & Microservices</div>
+                <div class="skill-tag">OAuth2/SAML 2.0</div>
+                <div class="skill-tag">System Architecture</div>
+            </div>
+        </section>
+        
+        <section class="section" id="contact">
+            <h2>Get In Touch</h2>
+            <p class="summary">
+                I'm actively exploring Forward-Deployed Engineer, Solutions Engineer, and Software Engineer roles where I can leverage my technical depth and customer-focused approach to drive impact.
+            </p>
+            <div class="highlight">
+                <strong>Ready to connect?</strong> Reach out via email at <a href="mailto:bradburch.jobs@gmail.com" style="color: #667eea; text-decoration: none;"><strong>bradburch.jobs@gmail.com</strong></a>. Let's discuss how I can add value to your team.
+            </div>
+            <p class="summary" style="margin-top: 20px; font-size: 0.95em; color: #999;">
+                📍 Based in San Francisco, CA | Available for in-person, remote, and hybrid collaboration
+            </p>
+        </section>
+        
+        <footer>
+            <p>© 2025 Brad Burch. All rights reserved.</p>
+        </footer>
     </div>
-  </body>
+</body>
 </html>
