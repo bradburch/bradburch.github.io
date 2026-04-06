@@ -30,6 +30,7 @@
 
 body {
   font-family: var(--font-sans);
+  font-size: 17px;
   color: var(--color-text);
   background: var(--color-surface);
   line-height: 1.6;
@@ -70,7 +71,7 @@ body {
 }
 
 .header-summary {
-  font-size: 0.88em;
+  font-size: 0.92em;
   color: var(--color-text);
   line-height: 1.75;
   max-width: 640px;
@@ -112,7 +113,7 @@ body {
 }
 
 .section-label {
-  font-size: 0.62em;
+  font-size: 0.7em;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -180,7 +181,7 @@ body {
 }
 
 .job-meta {
-  font-size: 0.7em;
+  font-size: 0.76em;
   color: var(--color-muted);
   margin-bottom: 12px;
 }
@@ -196,7 +197,7 @@ body {
 
 .stack-tag {
   font-family: var(--font-mono);
-  font-size: 0.63em;
+  font-size: 0.7em;
   font-weight: 600;
   color: var(--color-tag-text);
   background: var(--color-tag-bg);
@@ -217,7 +218,7 @@ body {
 
 .subsystem-label {
   display: block;
-  font-size: 0.6em;
+  font-size: 0.68em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -236,7 +237,7 @@ body {
 }
 
 .bullets li {
-  font-size: 0.78em;
+  font-size: 0.85em;
   color: var(--color-text);
   line-height: 1.82;
   padding-left: 16px;
@@ -318,7 +319,7 @@ body {
 }
 
 .story-panel p {
-  font-size: 0.78em;
+  font-size: 0.84em;
   color: var(--color-text);
   line-height: 1.75;
 }
@@ -363,7 +364,7 @@ body {
 }
 
 .contact-block p {
-  font-size: 0.82em;
+  font-size: 0.88em;
   color: var(--color-text);
   line-height: 1.75;
   margin-bottom: 12px;
@@ -385,10 +386,9 @@ body {
   border-radius: 4px;
   text-decoration: none;
   border: 1px solid var(--color-tag-border);
+  transition: background 0.15s, color 0.15s;
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
-  transition: background 0.15s, color 0.15s;
 }
 
 .contact-link:hover {
@@ -440,7 +440,7 @@ footer {
   }
 
   .bullets li {
-    font-size: 0.82em;
+    font-size: 0.88em;
   }
 
   .story-btn {
@@ -453,6 +453,7 @@ footer {
   .contact-link {
     min-height: 44px;
     padding: 8px 14px;
+    justify-content: center;
   }
 
   .stack-grid {
