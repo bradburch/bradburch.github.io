@@ -45,8 +45,8 @@ Full redesign of `bradburch.github.io` — a single-page Jekyll/GitHub Pages por
 - No background color — white
 - Name: `Brad Burch` — all `#111827`, no color on surname
 - Subtitle: `Software Engineer · Solutions Engineer` — uppercase, muted
-- One-line summary: "Full-stack engineer. Production systems, not demos. Most recently: sole owner of a client portal and AI booking platform — auth, AI agents, MCP server, invoicing, and a sync pipeline, all from scratch on Cloudflare's edge."
-- Links: `Email`, `LinkedIn`, `GitHub`, `Resume (PDF)` — monospace, steel blue bg pill style
+- One-line summary (optimized for SF hiring managers — leads with production ownership and AI signal): "Sole engineer on a production AI booking platform: auth from scratch, Claude agent with 10 tools, MCP server, invoicing pipeline, and 1,180+ tests — all on Cloudflare's edge. Targeting SWE and SE roles in San Francisco."
+- Links: `Email`, `LinkedIn`, `GitHub`, `Resume (PDF)` — monospace, steel blue bg pill style. **GitHub must be visually prominent** — SF engineering managers will click it immediately.
 
 ---
 
@@ -66,10 +66,10 @@ Brad Paws block
   └─ Job title + "Sole Engineer" badge + meta
   └─ Stack tags (monospace)
   └─ Subsystem groups (each with border-left label + bullets):
-       1. Full-Stack Architecture & Infrastructure
-       2. Authentication & Security
-       3. AI Chat Agent
-       4. MCP Booking Server
+       1. AI Chat Agent        ← moved up: hottest signal for SF market right now
+       2. MCP Booking Server   ← moved up: MCP is a differentiator, few candidates have it
+       3. Authentication & Security
+       4. Full-Stack Architecture & Infrastructure
        5. Google Calendar Integration
        6. Booking, Invoicing & Pipeline
        7. Testing & CI/CD
@@ -106,13 +106,9 @@ Footer: © 2026 Brad Burch
 
 ## Brad Paws — Full Bullet Content
 
-All bullets sourced from `RESUME_BULLETS.md` Software Engineer section.
+All bullets sourced from `RESUME_BULLETS.md` Software Engineer section. Subsystems rendered in this order (AI-first for SF market signal).
 
-### Full-Stack Architecture & Infrastructure
-- Sole-architected a full-stack client portal on Cloudflare Workers (D1, KV, R2), serving two custom domains from a single Worker with zero origin servers — designed for edge-first performance (sub-ms D1 reads, zero cold starts) on a platform proven to 10M+ req/day
-- Designed a 15-table relational schema on D1 (edge SQLite) spanning core entities, operational tables, chat persistence, and audit logging — with UUID primary keys for distributed ID generation, E.164 phone normalization, and `ExternalId`-based cross-source deduplication
-
-### Authentication & Security
+### AI Chat Agent
 - Implemented cookie-based JWT authentication (HS256 via `jose`) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider
 - Built a full OAuth 2.0 authorization code flow with PKCE (RFC 7636) from scratch — dynamic client registration, S256 code challenge verification, single-use authorization codes, refresh token rotation, and IP-based rate limiting to prevent brute-force enumeration
 - Added non-blocking D1 audit logging for all OAuth events (registration, authorization, token exchange, refresh, revocation) with indexed queries by owner, action, and timestamp
@@ -126,6 +122,15 @@ All bullets sourced from `RESUME_BULLETS.md` Software Engineer section.
 - Built a production MCP booking server (`@modelcontextprotocol/sdk` v1.x, Streamable HTTP) enabling external AI agents (Claude Desktop) to manage bookings through 10 shared tool definitions
 - Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required
 - Centralized tool definitions across chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels
+
+### Authentication & Security
+- Implemented cookie-based JWT authentication (HS256 via `jose`) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider
+- Built a full OAuth 2.0 authorization code flow with PKCE (RFC 7636) from scratch — dynamic client registration, S256 code challenge verification, single-use authorization codes, refresh token rotation, and IP-based rate limiting to prevent brute-force enumeration
+- Added non-blocking D1 audit logging for all OAuth events (registration, authorization, token exchange, refresh, revocation) with indexed queries by owner, action, and timestamp
+
+### Full-Stack Architecture & Infrastructure
+- Sole-architected a full-stack client portal on Cloudflare Workers (D1, KV, R2), serving two custom domains from a single Worker with zero origin servers — designed for edge-first performance (sub-ms D1 reads, zero cold starts) on a platform proven to 10M+ req/day
+- Designed a 15-table relational schema on D1 (edge SQLite) spanning core entities, operational tables, chat persistence, and audit logging — with UUID primary keys for distributed ID generation, E.164 phone normalization, and `ExternalId`-based cross-source deduplication
 
 ### Google Calendar Integration
 - Built a Google Calendar v3 integration via service account with KV-backed token caching (55-min TTL), reducing live OAuth calls by ~98% under normal load
@@ -179,6 +184,56 @@ The MCP server needed to share 10 tool definitions exactly with the chat agent. 
 - Designed and implemented a persistent state repository for integration test execution using Java, PostgreSQL, and EclipseLink
 - Built an OAuth2 security filter for microservice API access control and a management UI in React for the testing platform
 - Technical PM for config builder/validator — owned milestones, communicated with stakeholders, presented status to directors
+
+---
+
+## Mobile Responsiveness
+
+The page must be fully readable and functional on mobile (≥320px). Implemented via `@media (max-width: 640px)` breakpoint in `styles.scss`.
+
+### Breakpoint changes at ≤640px
+
+| Element | Desktop | Mobile |
+|---------|---------|--------|
+| Body padding | `20px 20px` | `16px 12px` |
+| Name font size | `2em` | `1.6em` |
+| Stack tag grid | `auto-fill minmax(150px)` | `auto-fill minmax(120px)` |
+| Header links | `flex-wrap: wrap; gap: 12px` | `flex-wrap: wrap; gap: 8px` — already wraps, reduce gap |
+| Section padding | `40px 0` | `24px 0` |
+| Subsystem label font | `0.6em` | `0.65em` (slightly larger for readability) |
+| Bullet font size | `0.74em` | `0.8em` (larger on small screens for readability) |
+
+### Touch interaction
+- "↗ Read the full story" button: minimum `44px` tap target height (add `min-height: 44px` on mobile)
+- Contact links: minimum `44px` tap target height
+- No hover-only interactions — all interactions are click/tap
+
+### Viewport meta
+Already present in the current `index.html` — verify and keep: `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+
+---
+
+## SF Hiring Market Considerations
+
+These decisions are specifically calibrated for software engineering and solutions engineering hiring in San Francisco, 2026.
+
+### What SF engineering hiring managers scan for first
+1. **Production ownership** — "sole engineer" and "real clients" in the header summary signals this immediately
+2. **AI/LLM work** — Claude agent + MCP server moved to subsystems 1 and 2 in Brad Paws block; it's the hottest signal in the current market
+3. **GitHub link** — SF engineers click it; make it the first or second link in the header
+4. **Test discipline** — 1,180+ tests with 100% coverage is a strong signal; it appears in both the Brad Paws block and the header summary
+5. **Stack recency** — TypeScript, edge compute, React 19, Vercel AI SDK are all current; Java/Scala/Python are listed separately as "Prior" in the stack grid to avoid looking dated
+
+### What SF SE hiring managers additionally look for
+- Business outcomes, not just technical features — the "Read the full story" panel explicitly explains why the project exists (real business, real clients, real workflow replacement)
+- Integration breadth — Google Calendar, Notion, Gmail, Venmo, Resend, Mapbox all appear in bullets
+- Communication of tradeoffs — the story panel explains the Workers architecture decision, the MCP source-of-truth decision, and the test count rationale
+
+### "Impacted by RIF" labels
+Keep them. The SF market experienced mass RIFs in 2022–2023; this label reads as context, not stigma. Omitting it could look like an unexplained gap.
+
+### Contact section copy
+Update to: "Actively targeting **Software Engineer** and **Solutions Engineer** roles in San Francisco. Open to in-person, hybrid, and remote. Strong fit for teams where production ownership, AI integration, and customer impact overlap."
 
 ---
 
