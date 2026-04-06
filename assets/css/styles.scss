@@ -12,9 +12,14 @@
   --color-tag-border: #bfdbfe;
   --color-tag-text: #1e3a8a;
   --color-story-bg: #eff6ff;
+  /* note: --color-tag-bg and --color-story-bg are intentionally the same value;
+     they're kept separate so each can evolve independently */
   --color-story-border: #1d4ed8;
   --font-sans: system-ui, -apple-system, sans-serif;
   --font-mono: 'SF Mono', ui-monospace, monospace;
+  --color-surface: #f1f5f9;   /* page canvas and inline code background */
+  --color-well: #f9fafb;      /* sunken surfaces: contact block, rif badge */
+  --color-border: #e5e7eb;    /* contact block border */
 }
 
 * {
@@ -26,7 +31,7 @@
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
-  background: #f1f5f9;
+  background: var(--color-surface);
   line-height: 1.6;
 }
 
@@ -166,7 +171,7 @@ body {
 .job-rif {
   font-size: 0.62em;
   color: var(--color-muted);
-  background: #f9fafb;
+  background: var(--color-well);
   border: 1px solid var(--color-divider);
   padding: 1px 7px;
   border-radius: 10px;
@@ -253,7 +258,7 @@ body {
 .bullets li code {
   font-family: var(--font-mono);
   font-size: 0.9em;
-  background: #f1f5f9;
+  background: var(--color-surface);
   padding: 1px 4px;
   border-radius: 3px;
   color: var(--color-heading);
@@ -274,7 +279,7 @@ body {
   border: 1.5px solid var(--color-accent);
   padding: 6px 16px;
   border-radius: 20px;
-  background: #fff;
+  background: var(--color-bg);
   transition: background 0.15s;
   min-height: 36px;
 }
@@ -350,8 +355,8 @@ body {
 /* ── Contact block ──────────────────────── */
 
 .contact-block {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--color-well);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 20px 22px;
 }
