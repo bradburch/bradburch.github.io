@@ -9,29 +9,24 @@ github: https://github.com/bradburch
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Brad Burch — Software Engineer & Solutions Engineer</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
     {%- endif -%}
-</script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="site-header">
             <h1>Brad Burch</h1>
-            <p class="subtitle">Solutions Engineer & Software Architect</p>
-            <p class="summary">Bridging technical excellence with business impact. Experienced in building scalable systems, driving technical adoption, and translating customer needs into innovative solutions.</p>
-            
-            <div class="contact-info">
-                <a href="mailto:bradburch.jobs@gmail.com" class="contact-link">📧 Email</a>
-                <a href="{{page.linkedin}}" class="contact-link" target="_blank">💼 LinkedIn</a>
-                <a href="{{page.github}}" class="contact-link" target="_blank">💻 GitHub</a>
-                <a href="{{page.resume}}" class="contact-link">📋 Resume</a> 
+            <p class="header-title">Software Engineer &nbsp;·&nbsp; Solutions Engineer</p>
+            <p class="header-summary">Sole engineer on a production AI booking platform: auth from scratch, Claude agent with 10 tools, MCP server, invoicing pipeline, and 1,180+ tests — all on Cloudflare's edge. Targeting SWE and SE roles in San Francisco.</p>
+            <div class="header-links">
+                <a href="https://github.com/bradburch" class="header-link" target="_blank">github</a>
+                <a href="mailto:bradburch.jobs@gmail.com" class="header-link">email</a>
+                <a href="{{page.linkedin}}" class="header-link" target="_blank">linkedin</a>
+                <a href="{{page.resume}}" class="header-link">resume.pdf</a>
             </div>
-            
-            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Let's Work Together</button>
         </header>
         
         <section class="section">
