@@ -4,3 +4,6 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem "jekyll"
+gem "logger"
+gem "csv"
+gem "base64"
