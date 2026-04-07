@@ -35,7 +35,7 @@ github: https://github.com/bradburch
 
                 <div class="job">
                     <div class="job-head">
-                        <span class="job-title">Brad Paws</span>
+                        <a href="https://bradpaws.com" class="job-title" target="_blank">Brad Paws</a>
                         <span class="job-badge">Sole Engineer</span>
                     </div>
                     <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2022–Present</p>
@@ -55,8 +55,8 @@ github: https://github.com/bradburch
                     <div class="subsystem">
                         <span class="subsystem-label">AI Chat Agent</span>
                         <ul class="bullets">
-                            <li>Built a production AI chat agent (Claude Haiku 4.5, Vercel AI SDK v6, 10 tools) that wraps all booking, cancellation, and account services — clients interact via natural language with a two-phase confirmation flow (single-use KV tokens, 5-min TTL) preventing any destructive action without explicit approval</li>
-                            <li>Implemented layered cost controls: per-user rate limiting (20 msg/hour), daily token budgets (50k tokens/day), and a circuit breaker (3 failures → 60s cooldown) — bounding API spend while maintaining availability</li>
+                            <li>Engineered a production AI chat agent (Claude Haiku 4.5, Vercel AI SDK v6, <strong>10 tools</strong>) that wraps all booking, cancellation, and account services — clients interact via natural language with a two-phase confirmation flow (single-use KV tokens, 5-min TTL) preventing any destructive action without explicit approval</li>
+                            <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), and a circuit breaker (3 failures → 60s cooldown) — bounding API spend while maintaining availability</li>
                             <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
                         </ul>
                     </div>
@@ -64,7 +64,7 @@ github: https://github.com/bradburch
                     <div class="subsystem">
                         <span class="subsystem-label">MCP Booking Server</span>
                         <ul class="bullets">
-                            <li>Built a production MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) enabling external AI agents (Claude Desktop) to manage bookings through 10 shared tool definitions</li>
+                            <li>Developed a production MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) enabling external AI agents (Claude Desktop) to manage bookings through <strong>10 shared tool definitions</strong></li>
                             <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
                             <li>Centralized tool definitions across chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
                         </ul>
@@ -74,7 +74,7 @@ github: https://github.com/bradburch
                         <span class="subsystem-label">Authentication &amp; Security</span>
                         <ul class="bullets">
                             <li>Implemented cookie-based JWT authentication (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
-                            <li>Built a full OAuth 2.0 authorization code flow with PKCE (RFC 7636) from scratch — dynamic client registration, S256 code challenge verification, single-use authorization codes, refresh token rotation, and IP-based rate limiting to prevent brute-force enumeration</li>
+                            <li>Constructed a full OAuth 2.0 authorization code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code challenge verification, single-use authorization codes, refresh token rotation, and IP-based rate limiting to prevent brute-force enumeration</li>
                             <li>Added non-blocking D1 audit logging for all OAuth events (registration, authorization, token exchange, refresh, revocation) with indexed queries by owner, action, and timestamp</li>
                         </ul>
                     </div>
@@ -82,34 +82,34 @@ github: https://github.com/bradburch
                     <div class="subsystem">
                         <span class="subsystem-label">Full-Stack Architecture &amp; Infrastructure</span>
                         <ul class="bullets">
-                            <li>Sole-architected a full-stack client portal on Cloudflare Workers (D1, KV, R2), serving two custom domains from a single Worker with zero origin servers — designed for edge-first performance (sub-ms D1 reads, zero cold starts) on a platform proven to 10M+ req/day</li>
-                            <li>Designed a 15-table relational schema on D1 (edge SQLite) spanning core entities, operational tables, chat persistence, and audit logging — with UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication</li>
+                            <li>Sole-architected a full-stack client portal on Cloudflare Workers (D1, KV, R2), serving a custom domain from a single Worker with <strong>zero origin servers</strong> — designed for edge-first performance (sub-ms D1 reads, zero cold starts) on a platform proven to <strong>10M+ req/day</strong></li>
+                            <li>Designed a <strong>15-table</strong> relational schema on D1 (edge SQLite) spanning core entities, operational tables, chat persistence, and audit logging — with UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication</li>
                         </ul>
                     </div>
 
                     <div class="subsystem">
                         <span class="subsystem-label">Google Calendar Integration</span>
                         <ul class="bullets">
-                            <li>Built a Google Calendar v3 integration via service account with KV-backed token caching (55-min TTL), reducing live OAuth calls by ~98% under normal load</li>
+                            <li>Integrated Google Calendar v3 via service account with KV-backed token caching (55-min TTL), reducing live OAuth calls by <strong>~98%</strong> under normal load</li>
                             <li>Replaced pet-name substring matching with a structured JSON metadata system — <code>serializeMetadata</code> writes owner IDs at booking time, <code>parseEventDescription</code> resolves ownership on read — eliminating false attribution for multi-owner pets</li>
-                            <li>Implemented multipart/mixed HTTP batching for Calendar writes: raw multipart boundary construction (no library support in Workers), 50 PATCH requests per HTTP call, multipart response parsing, and 429/500/503 retry with exponential backoff — reducing API quota usage by up to 50x during bulk migrations</li>
+                            <li>Implemented multipart/mixed HTTP batching for Calendar writes: raw multipart boundary construction (no library support in Workers), <strong>50 PATCH requests per HTTP call</strong>, multipart response parsing, and 429/500/503 retry with exponential backoff — reducing API quota usage by <strong>up to 50x</strong> during bulk migrations</li>
                         </ul>
                     </div>
 
                     <div class="subsystem">
                         <span class="subsystem-label">Booking, Invoicing &amp; Pipeline</span>
                         <ul class="bullets">
-                            <li>Built a transactional booking flow for three service types (boarding, house sit, walk/check-in) with automatic Google Calendar rollback on DB failure and capacity-aware conflict detection (boundary date soft rules, configurable daily limits)</li>
-                            <li>Built a monthly invoice pipeline: <code>pdf-lib</code> PDF synthesis → R2 storage → Resend email delivery, with historical backfill support and a concurrency guard to prevent overlapping runs; invoice download with per-file streaming and batch ZIP download (<code>fflate</code> <code>zipSync</code>, ~5MB peak memory) behind ownership-verified Hono endpoints</li>
-                            <li>Built a bidirectional Notion sync: pulls owner/pet/payment records into D1, pushes locally-modified records back via dirty-flag tracking — keeping D1 and Notion synchronized without data races or manual reconciliation</li>
-                            <li>Designed a concurrent multi-source payment pipeline (Notion REST, Venmo CSV via R2, Gmail) normalized through a common <code>PaymentEvent</code> interface with idempotent <code>ExternalId</code>-based deduplication and cursor-per-source commit semantics</li>
+                            <li>Architected a transactional booking flow for <strong>three service types</strong> (boarding, house sit, walk/check-in) with automatic Google Calendar rollback on DB failure and capacity-aware conflict detection (boundary date soft rules, configurable daily limits)</li>
+                            <li>Constructed a monthly invoice pipeline: <code>pdf-lib</code> PDF synthesis → R2 storage → Resend email delivery, with historical backfill support and a concurrency guard to prevent overlapping runs; invoice download with per-file streaming and batch ZIP download (<code>fflate</code> <code>zipSync</code>, ~5MB peak memory) behind ownership-verified Hono endpoints</li>
+                            <li>Created a bidirectional Notion sync: pulls owner/pet/payment records into D1, pushes locally-modified records back via dirty-flag tracking — keeping D1 and Notion synchronized without data races or manual reconciliation</li>
+                            <li>Designed a concurrent multi-source payment pipeline (<strong>4 sources</strong>: Notion REST, Venmo CSV via R2, Gmail) normalized through a common <code>PaymentEvent</code> interface with idempotent <code>ExternalId</code>-based deduplication and cursor-per-source commit semantics</li>
                         </ul>
                     </div>
 
                     <div class="subsystem">
                         <span class="subsystem-label">Testing &amp; CI/CD</span>
                         <ul class="bullets">
-                            <li>Wrote 1,180+ Vitest tests across 91+ files covering auth, booking, cancellation, calendar parsing, AI tools, and all 14 dashboard components — 100% server-side statement coverage</li>
+                            <li>Wrote <strong>1,180+ Vitest tests</strong> across <strong>91+ files</strong> covering auth, booking, cancellation, calendar parsing, AI tools, and all 14 dashboard components — <strong>100% server-side statement coverage</strong></li>
                             <li>Configured GitHub Actions test gates on every push, Cloudflare auto-deploy on merge to <code>main</code>, and production source maps for error debugging</li>
                         </ul>
                     </div>
@@ -134,7 +134,7 @@ github: https://github.com/bradburch
 
                 <div class="job">
                     <div class="job-head">
-                        <span class="job-title">Front.com</span>
+                        <a href="https://front.com" class="job-title" target="_blank">Front</a>
                         <span class="job-badge">Software Engineer</span>
                         <span class="job-rif">Impacted by RIF</span>
                     </div>
@@ -148,7 +148,7 @@ github: https://github.com/bradburch
 
                 <div class="job">
                     <div class="job-head">
-                        <span class="job-title">Total Brain</span>
+                        <a href="https://totalbrain.com" class="job-title" target="_blank">Total Brain</a>
                         <span class="job-badge">Software Engineer</span>
                         <span class="job-rif">Impacted by RIF</span>
                     </div>
@@ -163,7 +163,7 @@ github: https://github.com/bradburch
 
                 <div class="job">
                     <div class="job-head">
-                        <span class="job-title">Salesforce</span>
+                        <a href="https://salesforce.com" class="job-title" target="_blank">Salesforce</a>
                         <span class="job-badge">Software Engineer</span>
                     </div>
                     <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2017–2018</p>
