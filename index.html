@@ -9,124 +9,204 @@ github: https://github.com/bradburch
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}}</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Brad Burch — Software Engineer & Solutions Engineer</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
     {%- endif -%}
-</script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="site-header">
             <h1>Brad Burch</h1>
-            <p class="subtitle">Solutions Engineer & Software Architect</p>
-            <p class="summary">Bridging technical excellence with business impact. Experienced in building scalable systems, driving technical adoption, and translating customer needs into innovative solutions.</p>
-            
-            <div class="contact-info">
-                <a href="mailto:bradburch.jobs@gmail.com" class="contact-link">📧 Email</a>
-                <a href="{{page.linkedin}}" class="contact-link" target="_blank">💼 LinkedIn</a>
-                <a href="{{page.github}}" class="contact-link" target="_blank">💻 GitHub</a>
-                <a href="{{page.resume}}" class="contact-link">📋 Resume</a> 
+            <p class="header-title">Software Engineer &nbsp;·&nbsp; Solutions Engineer</p>
+            <p class="header-summary">Sole engineer on a production AI booking platform: auth from scratch, Claude agent with 10 tools, MCP server, invoicing pipeline, and 1,180+ tests — all on Cloudflare's edge. Targeting SWE and SE roles in San Francisco.</p>
+            <div class="header-links">
+                <a href="https://github.com/bradburch" class="header-link" target="_blank">github</a>
+                <a href="mailto:bradburch.jobs@gmail.com" class="header-link">email</a>
+                <a href="{{page.linkedin}}" class="header-link" target="_blank">linkedin</a>
+                <a href="{{page.resume}}" class="header-link">resume.pdf</a>
             </div>
-            
-            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Let's Work Together</button>
         </header>
         
-        <section class="section">
-            <h2>What I Do</h2>
-            <p class="summary">
-                I'm a full-stack engineer who thrives at the intersection of technology and business. Whether you need a forward-deployed engineer working directly with customers, a solutions architect designing scalable systems, or a software engineer building robust products—I deliver.
-            </p>
-            <div class="highlight">
-                <strong>Core Strengths:</strong> Cloud architecture (AWS), API design, system optimization, technical customer engagement, backend development, database modernization, and CI/CD automation.
-            </div>
-        </section>
+        <main>
+            <section class="page-section">
+                <p class="section-label">Experience</p>
 
-        <section class="section">
-            <h2>Technical Toolkit</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">Java</div>
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">JavaScript/TypeScript</div>
-                <div class="skill-tag">Node.js</div>
-                <div class="skill-tag">AWS</div>
-                <div class="skill-tag">REST APIs</div>
-                <div class="skill-tag">PostgreSQL</div>
-                <div class="skill-tag">DynamoDB</div>
-                <div class="skill-tag">Jenkins CI/CD</div>
-                <div class="skill-tag">Docker & Microservices</div>
-                <div class="skill-tag">OAuth2/SAML 2.0</div>
-                <div class="skill-tag">System Architecture</div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Recent Impact</h2>
-            
-            <div class="job">
-                <div class="job-title">Business Owner</div>
-                <div class="job-meta">Brad's Pet Services, San Francisco, CA • 2022 - Present</div>
-                <div class="achievement">Built and deployed AI Agents that modernized client management and scheduling systems.</div>
-                <div class="achievement">Designed custom Notion database architectures for field-based operations and invoicing.</div>
-            </div>
-            
-            <div class="job">
-                <div class="job-title">Software Engineer</div>
-                <div class="job-meta">Front.com, San Francisco, CA • 2022 • Impacted by RIF</div>
-                <div class="achievement">Redesigned cross-functional Node.js microservice architecture of a two-way sync system handling <span class="metric">1.1M requests/hour</span> using a priority-based Go scheduler and Kafka streams to increase accuracy and reliability for all email webhooks.</div>
-                <div class="achievement">Developed and deployed a REST API for account-based rules, driving a <span class="metric">30% adoption increase</span>.</div>
-                <div class="achievement">Optimized CSV importer achieving <span class="metric">5% faster processing</span> for large file uploads</div>
-                <div class="achievement">Upgraded core email infrastructure handling <span class="metric">200,000+ emails/month</span></div>
-            </div>
-            
-            <div class="job">
-                <div class="job-title">Software Engineer</div>
-                <div class="job-meta">Total Brain, San Francisco, CA • 2019 - 2021 • Impacted by RIF</div>
-                <div class="achievement">Spearheaded the design and implementation of a Scala backend integration system for Apple, Google, and Facebook authentication platforms resulting in a <span class="metric">60% increase</span> in new user sign-ups.</div>
-                <div class="achievement">Leveraged Box APIs to provide secure and user-friendly folders for confidential customer files, seamlessly integrating with SSH for an enhanced customer experience.</div>
-                <div class="achievement">Orchestrated the seamless migration of user data from a legacy relational MSSQL database to DynamoDB, implementing a modernized NoSQL schema while achieving a <span class="metric">50% reduction</span> in overall API response times.</div>
-                <div class="achievement">Implemented seamless integration of HubSpot APIs to synchronize critical customer and lead data, enhancing customer success, sales, and product experiences.</div>
-                <div class="achievement">Standardized and optimized the SSO systems for SAML 2.0 and JWT, streamlining the onboarding process for new customers.</div>
-                <div class="achievement">Improved API response times by <span class="metric">50%</span> through the implementation of an in-memory caching system for DynamoDB tables.</div>
-                <div class="achievement">Increased developer productivity by 70% with a Jenkins continuous integration (CI) and continuous delivery (CD) pipeline for all development backend systems while increasing observability.</div>
-                <div class="achievement">Automated and streamlined the release process by <span class="metric">75%</span> by utilizing Jenkins pipelines and efficient bash scripts.</div>
-                <div class="achievement">Facilitated the onboarding of new Enterprise clients by providing engineering expertise through proactive communication with Customer Success and clients via calls.</div>
-                <div class="achievement">Mentored and onboarded new developers through the Total Brain backend systems and infrastructure.</div>
-                <div class="achievement">Interviewed potential Software Engineers, Software Engineer Managers, and Product Managers for both cultural fit and technical expertise.</div>
-            </div>
-            
-            <div class="job">
-                <div class="job-title">Software Engineer</div>
-                <div class="job-meta">Salesforce.com, San Francisco, CA • 2017 - 2018</div>
-                <div class="achievement">Designed and implemented a persistent repository for internal state as integration tests were executed using Java, PostgreSQL and Eclipselink.</div>
-                <div class="achievement">Created an OAuth2 security filter to manage access control of Microservice APIs, integrating with a remote service for identity validation.</div>
-                <div class="achievement">Designed and implemented a management UI for Microservice Testing using React.</div>
-                <div class="achievement">Technical Project Manager for config builder and validator ensure on-time delivery by prioritizing milestones, keeping schedule, and communicating with stakeholders.</div>
-                <div class="achievement">Developed multi-year, multi-phase schedule for new testing client with input from senior developers, managers, and directors.</div>
-                <div class="achievement">Presented to execs and other teams on current project statuses and customer impact.</div>
-                <div class="achievement">Provided support and guidance on usage of the Salesforce.com testing platform to developers within the company.</div>
-                <div class="achievement">Developed and reviewed design documentation, as well as user documentation, for large scale enterprise projects with the end customer in mind.</div>
-                <div class="achievement">Interviewed potential Software Engineers, Software Engineer Managers, and Interns for both fit and technical expertise.</div>
-            </div>
-        </section>
-        
-        <section class="section" id="contact">
-            <h2>Get In Touch</h2>
-            <p class="summary">
-                I'm actively exploring Forward-Deployed Engineer, Solutions Engineer, and Software Engineer roles where I can leverage my technical depth and customer-focused approach to drive impact.
-            </p>
-            <div class="highlight">
-                <strong>Ready to connect?</strong> Reach out via email at <a href="mailto:bradburch.jobs@gmail.com" style="color: #667eea; text-decoration: none;"><strong>bradburch.jobs@gmail.com</strong></a>. Let's discuss how I can add value to your team.
-            </div>
-            <p class="summary" style="margin-top: 20px; font-size: 0.95em; color: #999;">
-                📍 Based in San Francisco, CA | Available for in-person, remote, and hybrid collaboration
-            </p>
-        </section>
-        
+                <div class="job">
+                    <div class="job-head">
+                        <a href="https://bradpaws.com" class="job-title" target="_blank">Brad Paws</a>
+                        <span class="job-badge">Sole Engineer</span>
+                    </div>
+                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2022–Present</p>
+
+                    <div class="stack-tags">
+                        <span class="stack-tag">TypeScript</span>
+                        <span class="stack-tag">Cloudflare Workers</span>
+                        <span class="stack-tag">D1 · KV · R2</span>
+                        <span class="stack-tag">Hono</span>
+                        <span class="stack-tag">React 19</span>
+                        <span class="stack-tag">Claude Haiku 4.5</span>
+                        <span class="stack-tag">MCP</span>
+                        <span class="stack-tag">OAuth 2.0+PKCE</span>
+                        <span class="stack-tag">Vitest</span>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">AI Chat Agent</span>
+                        <ul class="bullets">
+                            <li>Engineered a production AI chat agent (Claude Haiku 4.5, Vercel AI SDK v6, <strong>10 tools</strong>) that wraps all booking, cancellation, and account services — clients interact via natural language with a two-phase confirmation flow (single-use KV tokens, 5-min TTL) preventing any destructive action without explicit approval</li>
+                            <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), and a circuit breaker (3 failures → 60s cooldown) — bounding API spend while maintaining availability</li>
+                            <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">MCP Booking Server</span>
+                        <ul class="bullets">
+                            <li>Developed a production MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) enabling external AI agents (Claude Desktop) to manage bookings through <strong>10 shared tool definitions</strong></li>
+                            <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
+                            <li>Centralized tool definitions across chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">Authentication &amp; Security</span>
+                        <ul class="bullets">
+                            <li>Implemented cookie-based JWT authentication (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
+                            <li>Constructed a full OAuth 2.0 authorization code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code challenge verification, single-use authorization codes, refresh token rotation, and IP-based rate limiting to prevent brute-force enumeration</li>
+                            <li>Added non-blocking D1 audit logging for all OAuth events (registration, authorization, token exchange, refresh, revocation) with indexed queries by owner, action, and timestamp</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">Full-Stack Architecture &amp; Infrastructure</span>
+                        <ul class="bullets">
+                            <li>Sole-architected a full-stack client portal on Cloudflare Workers (D1, KV, R2), serving a custom domain from a single Worker with <strong>zero origin servers</strong> — designed for edge-first performance (sub-ms D1 reads, zero cold starts) on a platform proven to <strong>10M+ req/day</strong></li>
+                            <li>Designed a <strong>15-table</strong> relational schema on D1 (edge SQLite) spanning core entities, operational tables, chat persistence, and audit logging — with UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">Google Calendar Integration</span>
+                        <ul class="bullets">
+                            <li>Integrated Google Calendar v3 via service account with KV-backed token caching (55-min TTL), reducing live OAuth calls by <strong>~98%</strong> under normal load</li>
+                            <li>Replaced pet-name substring matching with a structured JSON metadata system — <code>serializeMetadata</code> writes owner IDs at booking time, <code>parseEventDescription</code> resolves ownership on read — eliminating false attribution for multi-owner pets</li>
+                            <li>Implemented multipart/mixed HTTP batching for Calendar writes: raw multipart boundary construction (no library support in Workers), <strong>50 PATCH requests per HTTP call</strong>, multipart response parsing, and 429/500/503 retry with exponential backoff — reducing API quota usage by <strong>up to 50x</strong> during bulk migrations</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">Booking, Invoicing &amp; Pipeline</span>
+                        <ul class="bullets">
+                            <li>Architected a transactional booking flow for <strong>three service types</strong> (boarding, house sit, walk/check-in) with automatic Google Calendar rollback on DB failure and capacity-aware conflict detection (boundary date soft rules, configurable daily limits)</li>
+                            <li>Constructed a monthly invoice pipeline: <code>pdf-lib</code> PDF synthesis → R2 storage → Resend email delivery, with historical backfill support and a concurrency guard to prevent overlapping runs; invoice download with per-file streaming and batch ZIP download (<code>fflate</code> <code>zipSync</code>, ~5MB peak memory) behind ownership-verified Hono endpoints</li>
+                            <li>Created a bidirectional Notion sync: pulls owner/pet/payment records into D1, pushes locally-modified records back via dirty-flag tracking — keeping D1 and Notion synchronized without data races or manual reconciliation</li>
+                            <li>Designed a concurrent multi-source payment pipeline (<strong>4 sources</strong>: Notion REST, Venmo CSV via R2, Gmail) normalized through a common <code>PaymentEvent</code> interface with idempotent <code>ExternalId</code>-based deduplication and cursor-per-source commit semantics</li>
+                        </ul>
+                    </div>
+
+                    <div class="subsystem">
+                        <span class="subsystem-label">Testing &amp; CI/CD</span>
+                        <ul class="bullets">
+                            <li>Wrote <strong>1,180+ Vitest tests</strong> across <strong>91+ files</strong> covering auth, booking, cancellation, calendar parsing, AI tools, and all 14 dashboard components — <strong>100% server-side statement coverage</strong></li>
+                            <li>Configured GitHub Actions test gates on every push, Cloudflare auto-deploy on merge to <code>main</code>, and production source maps for error debugging</li>
+                        </ul>
+                    </div>
+
+                    <button class="story-btn" onclick="
+                        var p = document.getElementById('brad-paws-story');
+                        var open = p.classList.toggle('open');
+                        this.textContent = open ? '↑ Collapse' : '↗ Read the full story';
+                    ">↗ Read the full story</button>
+
+                    <div class="story-panel" id="brad-paws-story">
+                        <h4>Why this project exists</h4>
+                        <p>Brad Paws is a real, operating pet care business. Paying clients book through it, invoices go out monthly, and the AI agent handles real bookings. Built to replace a manual workflow spread across Notion, Google Calendar, Venmo, and Gmail.</p>
+                        <h4>The architecture decision</h4>
+                        <p>Cloudflare Workers was chosen for a specific reason: the operator should never think about infrastructure. No cold starts, no scaling knobs, zero monthly cost at current volume — with a documented path to Durable Objects if write concurrency ever demands it.</p>
+                        <h4>What made it hard</h4>
+                        <p>The MCP server needed to share 10 tool definitions exactly with the chat agent. Behavioral drift between two access channels would silently break client-facing features. Centralizing both on a single source of truth — names, Zod schemas, MCP annotations — was a deliberate scope decision, not an accident.</p>
+                        <h4>On the test count</h4>
+                        <p>1,180+ tests and 100% server-side coverage isn't a metric exercise. The booking and billing flows have real financial consequences for real clients. Catching a recency-guarded upsert edge case in testing rather than in a monthly billing run was worth every test written.</p>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-head">
+                        <a href="https://front.com" class="job-title" target="_blank">Front</a>
+                        <span class="job-badge">Software Engineer</span>
+                        <span class="job-rif">Impacted by RIF</span>
+                    </div>
+                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2022</p>
+                    <ul class="bullets">
+                        <li>Redesigned a two-way sync microservice handling <strong>1.1M requests/hour</strong> — replaced a Node.js monolith with a priority-based Go scheduler and Kafka streams, increasing accuracy and reliability for all email webhooks</li>
+                        <li>Developed and deployed a REST API for account-based rules, driving a <strong>30% adoption increase</strong></li>
+                        <li>Optimized CSV importer for large file uploads; upgraded core email infrastructure handling <strong>200k+ emails/month</strong></li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-head">
+                        <a href="https://totalbrain.com" class="job-title" target="_blank">Total Brain</a>
+                        <span class="job-badge">Software Engineer</span>
+                        <span class="job-rif">Impacted by RIF</span>
+                    </div>
+                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2019–2021</p>
+                    <ul class="bullets">
+                        <li>Designed and built a Scala backend integration system for Apple, Google, and Facebook auth — drove a <strong>60% increase</strong> in new user sign-ups</li>
+                        <li>Migrated user data from MSSQL to DynamoDB with a modernized NoSQL schema — <strong>50% reduction</strong> in API response times, further improved with in-memory DynamoDB caching</li>
+                        <li>Standardized SSO for SAML 2.0 and JWT; integrated HubSpot APIs; built Jenkins CI/CD pipeline increasing developer productivity by <strong>70%</strong></li>
+                        <li>Facilitated onboarding of enterprise clients alongside Customer Success; mentored and onboarded new backend engineers</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-head">
+                        <a href="https://salesforce.com" class="job-title" target="_blank">Salesforce</a>
+                        <span class="job-badge">Software Engineer</span>
+                    </div>
+                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2017–2018</p>
+                    <ul class="bullets">
+                        <li>Designed and implemented a persistent state repository for integration test execution using Java, PostgreSQL, and EclipseLink</li>
+                        <li>Built an OAuth2 security filter for microservice API access control and a management UI in React for the testing platform</li>
+                        <li>Technical PM for config builder/validator — owned milestones, communicated with stakeholders, presented status to directors</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <section class="page-section">
+                <p class="section-label">Technical Stack</p>
+                <div class="stack-grid">
+                    <div class="stack-item"><span class="stack-cat">Languages</span>TypeScript · JavaScript · Java · Scala · Go · Python</div>
+                    <div class="stack-item"><span class="stack-cat">Frontend</span>React · Node.js</div>
+                    <div class="stack-item"><span class="stack-cat">Backend</span>Hono · Spring · Play · Docker · Microservices · Kafka</div>
+                    <div class="stack-item"><span class="stack-cat">Edge & Cloud</span>Cloudflare Workers · D1 · KV · R2 · AWS · SQS</div>
+                    <div class="stack-item"><span class="stack-cat">Databases</span>PostgreSQL · DynamoDB · MSSQL · SQL · NoSQL</div>
+                    <div class="stack-item"><span class="stack-cat">APIs & Integrations</span>Google Calendar · Notion · Gmail · REST APIs</div>
+                    <div class="stack-item"><span class="stack-cat">Auth</span>OAuth2 · SAML 2.0 · JWT · PKCE</div>
+                    <div class="stack-item"><span class="stack-cat">AI</span>Claude · MCP · Vercel AI SDK</div>
+                    <div class="stack-item"><span class="stack-cat">Testing & CI/CD</span>Vitest · GitHub Actions · Jenkins · Git</div>
+                </div>
+            </section>
+
+            <section class="page-section" id="contact">
+                <p class="section-label">Get In Touch</p>
+                <div class="contact-block">
+                    <p>Actively targeting <strong>Software Engineer</strong> and <strong>Solutions Engineer</strong> roles in San Francisco. Open to in-person, hybrid, and remote. Strong fit for teams where production ownership, AI integration, and customer impact overlap.</p>
+                    <div class="contact-links">
+                        <a href="https://github.com/bradburch" class="contact-link" target="_blank">github</a>
+                        <a href="mailto:bradburch.jobs@gmail.com" class="contact-link">email</a>
+                        <a href="{{page.linkedin}}" class="contact-link" target="_blank">linkedin</a>
+                        <a href="{{page.resume}}" class="contact-link">resume.pdf</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
         <footer>
-            <p>© 2025 Brad Burch. All rights reserved.</p>
+            <p>© 2026 Brad Burch</p>
         </footer>
     </div>
 </body>
