@@ -3,3 +3,11 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 .DS_Store
+
+# Local planning / strategy notes — keep out of the public repo
+GITHUB_PAGES_CONTENT.md
+RESUME_BULLETS_BEST.md
+RESUME_BULLETS_CODEX.md
+
+# Tooling scratch
+.superpowers/
