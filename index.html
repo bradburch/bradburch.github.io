@@ -31,6 +31,10 @@ email: bradburch.jobs@gmail.com
   <meta name="twitter:image" content="https://bradburch.github.io/og-card.png">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -102,7 +106,7 @@ email: bradburch.jobs@gmail.com
       <!-- ── Featured work ─────────────────────────── -->
       <section id="work">
         <p class="section-label reveal"><span class="idx">01</span> Featured work</p>
-        <h2 class="section-intro reveal">Three systems live in production, a security audit, and a high-scale redesign from Front.</h2>
+        <h2 class="section-intro reveal">Three systems running in production, plus a public security audit.</h2>
 
         <div class="projects">
 
@@ -137,7 +141,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Architecture &amp; Infrastructure</span>
                 <ul class="bullets">
-                  <li>Architected a TypeScript monorepo (<strong>React Router 7 client portal, Hono API Worker, scheduled sync Worker, shared domain package</strong>) spanning <strong>~437 source files</strong> and a <strong>19-table D1 schema</strong> on Cloudflare Workers, D1, KV, R2, and Workflows with <strong>no origin server</strong></li>
+                  <li>Architected a TypeScript monorepo (<strong>React Router 7 client portal, Hono API Worker, scheduled sync Worker, shared domain package</strong>) on a <strong>19-table D1 schema</strong>, running on Cloudflare Workers, D1, KV, R2, and Workflows with <strong>no origin server</strong></li>
                   <li>Chose this stack around one constraint, that the operator never manages infrastructure: <strong>zero monthly cost, no cold starts, nothing to scale</strong>, with a documented path to Durable Objects if write concurrency ever demands it</li>
                   <li>UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication throughout</li>
                 </ul>
@@ -167,7 +171,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Testing &amp; CI/CD</span>
                 <ul class="bullets">
-                  <li>Wrote <strong>1,500+ tests across 159 files</strong> (server coverage near 100%) with Playwright end-to-end suites — covering auth, booking, cancellation, calendar parsing, AI tools, and every dashboard component</li>
+                  <li>Wrote <strong>1,500+ tests</strong> (server coverage near 100%) with Playwright end-to-end suites, covering auth, booking, cancellation, calendar parsing, AI tools, and every dashboard component</li>
                   <li>Gated by a CI pipeline that runs <strong>type generation, typecheck, ESLint, Prettier, and tests on every push</strong>, with Cloudflare auto-deploy on merge to <code>main</code> and production source maps</li>
                 </ul>
               </div>
@@ -287,31 +291,6 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 5. Front -->
-          <article class="project reveal">
-            <div class="project-head">
-              <span class="project-num">05</span>
-              <div class="project-titles">
-                <h3>Front — Email Sync Redesign</h3>
-                <p class="project-tagline">Two-way email sync at 1.1M requests an hour on Go + Kafka.</p>
-              </div>
-              <span class="badge badge-spec">2022</span>
-            </div>
-            <p class="project-body">At Front I redesigned the Node microservice behind two-way email sync. I put a <strong>priority scheduler in Go in front of Kafka</strong> so high-value mailboxes (active conversations, paid plans) got latency they could feel while lower-priority sync still made progress. It ran at roughly 1.1M requests an hour. Alongside the rewrite I shipped a REST API for account-level rules that drove a 30% adoption lift.</p>
-            <div class="tags">
-              <span class="tag">Go</span><span class="tag">Node.js</span><span class="tag">Kafka</span><span class="tag">REST APIs</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">1.1M</span><span class="key">requests / hour</span></div>
-              <div class="metric"><span class="val">+30%</span><span class="key">rules-API adoption</span></div>
-            </div>
-            <div class="project-foot">
-              <div class="project-links">
-                <a class="project-link" href="#contact" aria-disabled="true">Former employer — happy to whiteboard</a>
-              </div>
-            </div>
-          </article>
-
         </div>
       </section>
 
@@ -325,7 +304,7 @@ email: bradburch.jobs@gmail.com
             <div class="role-when">2022 — Present<span class="loc">San Francisco</span></div>
             <div>
               <div class="role-name"><a href="https://bradpaws.com" target="_blank" rel="noopener">Brad Paws</a><span class="role-title">Founder · Sole Engineer</span></div>
-              <p class="role-desc">Sole engineer on a production stack: a <strong>~437-file TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with ten tools and a full safety envelope, a standards-compliant MCP server, and <strong>1,500+ tests across 159 files</strong>. See the four projects above.</p>
+              <p class="role-desc">Sole engineer on a production stack: a <strong>TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with ten tools and a full safety envelope, a standards-compliant MCP server, and <strong>1,500+ tests</strong>. See the four projects above.</p>
             </div>
           </div>
 
@@ -333,7 +312,7 @@ email: bradburch.jobs@gmail.com
             <div class="role-when">2022<span class="loc">San Francisco</span></div>
             <div>
               <div class="role-name"><a href="https://front.com" target="_blank" rel="noopener">Front</a><span class="role-title">Software Engineer</span><span class="role-rif">Impacted by RIF</span></div>
-              <p class="role-desc">Redesigned the two-way email-sync microservice — a priority Go scheduler on Kafka handling <strong>1.1M requests/hour</strong> — and shipped a REST API for account-level rules that pushed adoption up <strong>30%</strong>. Upgraded core email infrastructure handling 200k+ emails/month.</p>
+              <p class="role-desc">Redesigned the Node microservice behind two-way email sync, which ran at <strong>1.1M requests/hour</strong>, and shipped a REST API for account-level rules that pushed adoption up <strong>30%</strong>. Upgraded core email infrastructure handling 200k+ emails/month.</p>
             </div>
           </div>
 
@@ -353,13 +332,6 @@ email: bradburch.jobs@gmail.com
             </div>
           </div>
 
-          <div class="role reveal">
-            <div class="role-when">Class of 2017<span class="loc">Greencastle, IN</span></div>
-            <div>
-              <div class="role-name"><a href="https://www.depauw.edu" target="_blank" rel="noopener">DePauw University</a><span class="role-title">Education</span></div>
-              <p class="role-desc">Bachelor's degree in Computer Science.</p>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -367,11 +339,11 @@ email: bradburch.jobs@gmail.com
       <section id="stack">
         <p class="section-label reveal"><span class="idx">03</span> Technical stack</p>
         <div class="stack-grid">
-          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Go · Java · Scala</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Java · Scala</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 7 · Node.js · Hono · Vercel AI SDK · Spring · Play</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">AI &amp; LLM</span><span class="stack-items">Claude (Haiku, Sonnet) · MCP servers · agentic workflows · tool-use design · prompt-injection defense · AI security audits</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Cloud &amp; Infra</span><span class="stack-items">Cloudflare Workers · D1 · KV · R2 · Workflows · AWS · SQS · Docker</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Data</span><span class="stack-items">PostgreSQL · DynamoDB · MSSQL · Kafka · SQL · NoSQL</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Data</span><span class="stack-items">PostgreSQL · DynamoDB · MSSQL · SQL · NoSQL</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Auth &amp; Security</span><span class="stack-items">OAuth2 · PKCE · SAML 2.0 · JWT · SSO · rate limiting · circuit breakers</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">APIs &amp; Integrations</span><span class="stack-items">REST · Google Calendar v3 · Notion · Gmail · HubSpot · Box · multipart/mixed batching · service-account auth</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Testing &amp; DevOps</span><span class="stack-items">Vitest · Playwright · GitHub Actions · Jenkins · WCAG 2.1 AA</span></div>
@@ -384,7 +356,7 @@ email: bradburch.jobs@gmail.com
         <div class="about-grid">
           <div class="about-prose reveal">
             <p>I'm a full-stack engineer in San Francisco, seven-plus years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
-            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>~437-file TypeScript monorepo on a 19-table D1 schema, 1,500 tests across 159 files</strong>, and durable calendar sync on Cloudflare Workflows. I published an AI security audit because the agent sits in front of a billing system.</p>
+            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 19-table D1 schema with 1,500+ tests</strong>, and durable calendar sync on Cloudflare Workflows. I published an AI security audit because the agent sits in front of a billing system.</p>
             <p>What I want next is a <strong>Forward Deployed, Solutions, or Software Engineer</strong> role in SF at a company shipping AI that's load-bearing. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one.</p>
           </div>
           <aside class="about-side reveal">
@@ -395,6 +367,10 @@ email: bradburch.jobs@gmail.com
               <li>I'll tell you when a feature is the wrong call</li>
               <li>Happy on a customer call, happy in the four-hour debugging session after</li>
             </ul>
+            <div class="edu">
+              <h4>Education</h4>
+              <p><a href="https://www.depauw.edu" target="_blank" rel="noopener"><b>DePauw University</b></a><br>Bachelor's in Computer Science, 2017</p>
+            </div>
           </aside>
         </div>
       </section>
