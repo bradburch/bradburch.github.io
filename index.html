@@ -1,213 +1,458 @@
 ---
-title: Brad Burch - Software Engineer & Solutions Architect
-resume: assets/resume/brad_burch_resume.pdf
+title: Brad Burch — Full-Stack Engineer, San Francisco
+resume: assets/resume/Brad-Burch-Resume.pdf
 linkedin: https://linkedin.com/in/burchbrad/
 github: https://github.com/bradburch
+email: bradburch.jobs@gmail.com
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brad Burch — Software Engineer & Solutions Engineer</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-    {%- endif -%}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brad Burch — Full-Stack Engineer, San Francisco</title>
+  <meta name="description" content="Brad Burch is a full-stack engineer in San Francisco shipping production AI. Open to Forward Deployed, Solutions, and Software Engineer roles.">
+  <meta name="author" content="Brad Burch">
+  <link rel="canonical" href="https://bradburch.github.io">
+  <meta name="theme-color" content="#0c0c0e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bradburch.github.io">
+  <meta property="og:title" content="Brad Burch — Full-Stack Engineer, San Francisco">
+  <meta property="og:description" content="Production AI, Cloudflare Workers, MCP. Open to FDE / SE / SWE roles in SF.">
+  <meta property="og:image" content="https://bradburch.github.io/og-card.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brad Burch — Full-Stack Engineer, San Francisco">
+  <meta name="twitter:description" content="Production AI, Cloudflare Workers, MCP. Open to FDE / SE / SWE roles in SF.">
+  <meta name="twitter:image" content="https://bradburch.github.io/og-card.png">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brad Burch",
+    "url": "https://bradburch.github.io",
+    "email": "mailto:bradburch.jobs@gmail.com",
+    "jobTitle": "Full-Stack Engineer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "DePauw University" },
+    "sameAs": [
+      "https://www.linkedin.com/in/burchbrad/",
+      "https://github.com/bradburch"
+    ],
+    "knowsAbout": [
+      "TypeScript", "React", "Cloudflare Workers", "Large Language Models",
+      "Model Context Protocol", "OAuth2", "Forward Deployed Engineering", "Solutions Engineering"
+    ]
+  }
+  </script>
+
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+  {%- include google-analytics.html -%}
+  {%- endif -%}
 </head>
 <body>
-    <div class="container">
-        <header class="site-header">
-            <h1>Brad Burch</h1>
-            <p class="header-title">Software Engineer &nbsp;·&nbsp; Solutions Engineer</p>
-            <p class="header-summary">Sole engineer on a production AI booking platform: auth from scratch, Claude agent with 10 tools, MCP server, invoicing pipeline, and 1,180+ tests — all on Cloudflare's edge. Targeting SWE and SE roles in San Francisco.</p>
-            <div class="header-links">
-                <a href="https://github.com/bradburch" class="header-link" target="_blank">github</a>
-                <a href="mailto:bradburch.jobs@gmail.com" class="header-link">email</a>
-                <a href="{{page.linkedin}}" class="header-link" target="_blank">linkedin</a>
-                <a href="{{page.resume}}" class="header-link">resume.pdf</a>
-            </div>
-        </header>
-        
-        <main>
-            <section class="page-section">
-                <p class="section-label">Experience</p>
+  <a class="skip" href="#main">Skip to content</a>
 
-                <div class="job">
-                    <div class="job-head">
-                        <a href="https://bradpaws.com" class="job-title" target="_blank">Brad Paws</a>
-                        <span class="job-badge">Sole Engineer</span>
-                    </div>
-                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2022–Present</p>
-
-                    <div class="stack-tags">
-                        <span class="stack-tag">TypeScript</span>
-                        <span class="stack-tag">Cloudflare Workers</span>
-                        <span class="stack-tag">D1 · KV · R2</span>
-                        <span class="stack-tag">Hono</span>
-                        <span class="stack-tag">React 19</span>
-                        <span class="stack-tag">Claude Haiku 4.5</span>
-                        <span class="stack-tag">MCP</span>
-                        <span class="stack-tag">OAuth 2.0+PKCE</span>
-                        <span class="stack-tag">Vitest</span>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">AI Chat Agent</span>
-                        <ul class="bullets">
-                            <li>Engineered a production AI chat agent (Claude Haiku 4.5, Vercel AI SDK v6, <strong>10 tools</strong>) that wraps all booking, cancellation, and account services — clients interact via natural language with a two-phase confirmation flow (single-use KV tokens, 5-min TTL) preventing any destructive action without explicit approval</li>
-                            <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), and a circuit breaker (3 failures → 60s cooldown) — bounding API spend while maintaining availability</li>
-                            <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">MCP Booking Server</span>
-                        <ul class="bullets">
-                            <li>Developed a production MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) enabling external AI agents (Claude Desktop) to manage bookings through <strong>10 shared tool definitions</strong></li>
-                            <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
-                            <li>Centralized tool definitions across chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">Authentication &amp; Security</span>
-                        <ul class="bullets">
-                            <li>Implemented cookie-based JWT authentication (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
-                            <li>Constructed a full OAuth 2.0 authorization code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code challenge verification, single-use authorization codes, refresh token rotation, and IP-based rate limiting to prevent brute-force enumeration</li>
-                            <li>Added non-blocking D1 audit logging for all OAuth events (registration, authorization, token exchange, refresh, revocation) with indexed queries by owner, action, and timestamp</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">Full-Stack Architecture &amp; Infrastructure</span>
-                        <ul class="bullets">
-                            <li>Sole-architected a full-stack client portal on Cloudflare Workers (D1, KV, R2), serving a custom domain from a single Worker with <strong>zero origin servers</strong> — designed for edge-first performance (sub-ms D1 reads, zero cold starts) on a platform proven to <strong>10M+ req/day</strong></li>
-                            <li>Designed a <strong>15-table</strong> relational schema on D1 (edge SQLite) spanning core entities, operational tables, chat persistence, and audit logging — with UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">Google Calendar Integration</span>
-                        <ul class="bullets">
-                            <li>Integrated Google Calendar v3 via service account with KV-backed token caching (55-min TTL), reducing live OAuth calls by <strong>~98%</strong> under normal load</li>
-                            <li>Replaced pet-name substring matching with a structured JSON metadata system — <code>serializeMetadata</code> writes owner IDs at booking time, <code>parseEventDescription</code> resolves ownership on read — eliminating false attribution for multi-owner pets</li>
-                            <li>Implemented multipart/mixed HTTP batching for Calendar writes: raw multipart boundary construction (no library support in Workers), <strong>50 PATCH requests per HTTP call</strong>, multipart response parsing, and 429/500/503 retry with exponential backoff — reducing API quota usage by <strong>up to 50x</strong> during bulk migrations</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">Booking, Invoicing &amp; Pipeline</span>
-                        <ul class="bullets">
-                            <li>Architected a transactional booking flow for <strong>three service types</strong> (boarding, house sit, walk/check-in) with automatic Google Calendar rollback on DB failure and capacity-aware conflict detection (boundary date soft rules, configurable daily limits)</li>
-                            <li>Constructed a monthly invoice pipeline: <code>pdf-lib</code> PDF synthesis → R2 storage → Resend email delivery, with historical backfill support and a concurrency guard to prevent overlapping runs; invoice download with per-file streaming and batch ZIP download (<code>fflate</code> <code>zipSync</code>, ~5MB peak memory) behind ownership-verified Hono endpoints</li>
-                            <li>Created a bidirectional Notion sync: pulls owner/pet/payment records into D1, pushes locally-modified records back via dirty-flag tracking — keeping D1 and Notion synchronized without data races or manual reconciliation</li>
-                            <li>Designed a concurrent multi-source payment pipeline (<strong>4 sources</strong>: Notion REST, Venmo CSV via R2, Gmail) normalized through a common <code>PaymentEvent</code> interface with idempotent <code>ExternalId</code>-based deduplication and cursor-per-source commit semantics</li>
-                        </ul>
-                    </div>
-
-                    <div class="subsystem">
-                        <span class="subsystem-label">Testing &amp; CI/CD</span>
-                        <ul class="bullets">
-                            <li>Wrote <strong>1,180+ Vitest tests</strong> across <strong>91+ files</strong> covering auth, booking, cancellation, calendar parsing, AI tools, and all 14 dashboard components — <strong>100% server-side statement coverage</strong></li>
-                            <li>Configured GitHub Actions test gates on every push, Cloudflare auto-deploy on merge to <code>main</code>, and production source maps for error debugging</li>
-                        </ul>
-                    </div>
-
-                    <button class="story-btn" onclick="
-                        var p = document.getElementById('brad-paws-story');
-                        var open = p.classList.toggle('open');
-                        this.textContent = open ? '↑ Collapse' : '↗ Read the full story';
-                    ">↗ Read the full story</button>
-
-                    <div class="story-panel" id="brad-paws-story">
-                        <h4>Why this project exists</h4>
-                        <p>Brad Paws is a real, operating pet care business. Paying clients book through it, invoices go out monthly, and the AI agent handles real bookings. Built to replace a manual workflow spread across Notion, Google Calendar, Venmo, and Gmail.</p>
-                        <h4>The architecture decision</h4>
-                        <p>Cloudflare Workers was chosen for a specific reason: the operator should never think about infrastructure. No cold starts, no scaling knobs, zero monthly cost at current volume — with a documented path to Durable Objects if write concurrency ever demands it.</p>
-                        <h4>What made it hard</h4>
-                        <p>The MCP server needed to share 10 tool definitions exactly with the chat agent. Behavioral drift between two access channels would silently break client-facing features. Centralizing both on a single source of truth — names, Zod schemas, MCP annotations — was a deliberate scope decision, not an accident.</p>
-                        <h4>On the test count</h4>
-                        <p>1,180+ tests and 100% server-side coverage isn't a metric exercise. The booking and billing flows have real financial consequences for real clients. Catching a recency-guarded upsert edge case in testing rather than in a monthly billing run was worth every test written.</p>
-                    </div>
-                </div>
-
-                <div class="job">
-                    <div class="job-head">
-                        <a href="https://front.com" class="job-title" target="_blank">Front</a>
-                        <span class="job-badge">Software Engineer</span>
-                        <span class="job-rif">Impacted by RIF</span>
-                    </div>
-                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2022</p>
-                    <ul class="bullets">
-                        <li>Redesigned a two-way sync microservice handling <strong>1.1M requests/hour</strong> — replaced a Node.js monolith with a priority-based Go scheduler and Kafka streams, increasing accuracy and reliability for all email webhooks</li>
-                        <li>Developed and deployed a REST API for account-based rules, driving a <strong>30% adoption increase</strong></li>
-                        <li>Optimized CSV importer for large file uploads; upgraded core email infrastructure handling <strong>200k+ emails/month</strong></li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <div class="job-head">
-                        <a href="https://totalbrain.com" class="job-title" target="_blank">Total Brain</a>
-                        <span class="job-badge">Software Engineer</span>
-                        <span class="job-rif">Impacted by RIF</span>
-                    </div>
-                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2019–2021</p>
-                    <ul class="bullets">
-                        <li>Designed and built a Scala backend integration system for Apple, Google, and Facebook auth — drove a <strong>60% increase</strong> in new user sign-ups</li>
-                        <li>Migrated user data from MSSQL to DynamoDB with a modernized NoSQL schema — <strong>50% reduction</strong> in API response times, further improved with in-memory DynamoDB caching</li>
-                        <li>Standardized SSO for SAML 2.0 and JWT; integrated HubSpot APIs; built Jenkins CI/CD pipeline increasing developer productivity by <strong>70%</strong></li>
-                        <li>Facilitated onboarding of enterprise clients alongside Customer Success; mentored and onboarded new backend engineers</li>
-                    </ul>
-                </div>
-
-                <div class="job">
-                    <div class="job-head">
-                        <a href="https://salesforce.com" class="job-title" target="_blank">Salesforce</a>
-                        <span class="job-badge">Software Engineer</span>
-                    </div>
-                    <p class="job-meta">San Francisco, CA &nbsp;·&nbsp; 2017–2018</p>
-                    <ul class="bullets">
-                        <li>Designed and implemented a persistent state repository for integration test execution using Java, PostgreSQL, and EclipseLink</li>
-                        <li>Built an OAuth2 security filter for microservice API access control and a management UI in React for the testing platform</li>
-                        <li>Technical PM for config builder/validator — owned milestones, communicated with stakeholders, presented status to directors</li>
-                    </ul>
-                </div>
-
-            </section>
-
-            <section class="page-section">
-                <p class="section-label">Technical Stack</p>
-                <div class="stack-grid">
-                    <div class="stack-item"><span class="stack-cat">Languages</span>TypeScript · JavaScript · Java · Scala · Go · Python</div>
-                    <div class="stack-item"><span class="stack-cat">Frontend</span>React · Node.js</div>
-                    <div class="stack-item"><span class="stack-cat">Backend</span>Hono · Spring · Play · Docker · Microservices · Kafka</div>
-                    <div class="stack-item"><span class="stack-cat">Edge & Cloud</span>Cloudflare Workers · D1 · KV · R2 · AWS · SQS</div>
-                    <div class="stack-item"><span class="stack-cat">Databases</span>PostgreSQL · DynamoDB · MSSQL · SQL · NoSQL</div>
-                    <div class="stack-item"><span class="stack-cat">APIs & Integrations</span>Google Calendar · Notion · Gmail · REST APIs</div>
-                    <div class="stack-item"><span class="stack-cat">Auth</span>OAuth2 · SAML 2.0 · JWT · PKCE</div>
-                    <div class="stack-item"><span class="stack-cat">AI</span>Claude · MCP · Vercel AI SDK</div>
-                    <div class="stack-item"><span class="stack-cat">Testing & CI/CD</span>Vitest · GitHub Actions · Jenkins · Git</div>
-                </div>
-            </section>
-
-            <section class="page-section" id="contact">
-                <p class="section-label">Get In Touch</p>
-                <div class="contact-block">
-                    <p>Actively targeting <strong>Software Engineer</strong> and <strong>Solutions Engineer</strong> roles in San Francisco. Open to in-person, hybrid, and remote. Strong fit for teams where production ownership, AI integration, and customer impact overlap.</p>
-                    <div class="contact-links">
-                        <a href="https://github.com/bradburch" class="contact-link" target="_blank">github</a>
-                        <a href="mailto:bradburch.jobs@gmail.com" class="contact-link">email</a>
-                        <a href="{{page.linkedin}}" class="contact-link" target="_blank">linkedin</a>
-                        <a href="{{page.resume}}" class="contact-link">resume.pdf</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p>© 2026 Brad Burch</p>
-        </footer>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">brad_burch<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#work" class="nav-link hide-xs">Work</a>
+        <a href="#about" class="nav-link hide-xs">About</a>
+        <a href="{{ page.resume }}" class="nav-link" download="Brad-Burch-Resume.pdf">Resume</a>
+        <a href="mailto:{{ page.email }}" class="nav-link is-cta">Email</a>
+      </div>
     </div>
+  </nav>
+
+  <div class="wrap" id="top">
+    <header class="hero" id="main">
+      <span class="status reveal d1"><span class="ping"></span> Open to roles · San Francisco</span>
+      <p class="eyebrow reveal d1">Full-stack · Production AI · San Francisco</p>
+      <h1 class="reveal d2">I build production<br>AI systems <em>end-to-end.</em></h1>
+      <p class="lede reveal d3">7+ years full-stack. I'm the <strong>sole engineer on Brad&nbsp;Paws</strong>, where I run a Claude agent, an OAuth2&nbsp;+&nbsp;PKCE MCP server, and a client portal on Cloudflare Workers. Looking for Forward Deployed, Solutions, or Software Engineer roles in SF.</p>
+      <p class="hero-proof reveal d3"><span class="live-dot"></span><span>Brad Paws is live, handling bookings and billing for <b>dozens of paying SF clients</b>.</span></p>
+      <p class="tagline reveal d4">The operator-engineer who ships production AI, talks to customers, and writes the tests.</p>
+      <div class="cta-row reveal d5">
+        <a class="btn btn-primary" href="mailto:{{ page.email }}">→ Email me</a>
+        <a class="btn btn-ghost" href="#work">See the projects</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- ── Featured work ─────────────────────────── -->
+      <section id="work">
+        <p class="section-label reveal"><span class="idx">01</span> Featured work</p>
+        <h2 class="section-intro reveal">Three systems live in production, a security audit, and a high-scale redesign from Front.</h2>
+
+        <div class="projects">
+
+          <!-- 1. Portal -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">01</span>
+              <div class="project-titles">
+                <h3>Brad Paws Client Portal</h3>
+                <p class="project-tagline">A full-stack React&nbsp;19 + Hono portal on Cloudflare Workers, running a live SF pet-care operation.</p>
+              </div>
+              <span class="badge badge-live"><span class="b-dot"></span>Live</span>
+            </div>
+            <p class="project-body">Brad Paws is a pet-care business in SF, and this portal is its system of record. Dozens of clients and their pets run through it, with bookings and invoices processed every month. <strong>The credential isn't the business, it's the software</strong>: I treated a small operation as a place to build production patterns properly. I <strong>integrated the operator's existing tools instead of replacing them</strong> — Notion stayed the workspace, Google Calendar the scheduling source of truth, and the portal took over everything customer-facing. It's a TypeScript monorepo (client portal, API Worker, sync Worker, shared package) on Cloudflare Workers with D1, KV, R2, and Workflows, no origin server. The hard part was making external APIs feel local. I cache OAuth tokens in KV so 98% of Calendar operations never touch Google's auth endpoint.</p>
+            <div class="tags">
+              <span class="tag">React Router 7</span><span class="tag">React 19</span><span class="tag">Hono</span><span class="tag">TypeScript</span><span class="tag">Cloudflare Workers</span><span class="tag">D1 · KV · R2</span><span class="tag">Workflows</span><span class="tag">Vitest</span><span class="tag">Playwright</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">30+</span><span class="key">active clients</span></div>
+              <div class="metric"><span class="val">60+</span><span class="key">bookings / month</span></div>
+              <div class="metric"><span class="val">30+</span><span class="key">invoices / month</span></div>
+              <div class="metric"><span class="val">98%</span><span class="key">fewer auth calls</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://bradpaws.com" target="_blank" rel="noopener">Live site ↗</a>
+                <a class="project-link" href="#contact" aria-disabled="true">Code: private — walkthrough on request</a>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="subsystem">
+                <span class="subsystem-label">Architecture &amp; Infrastructure</span>
+                <ul class="bullets">
+                  <li>Architected a TypeScript monorepo (<strong>React Router 7 client portal, Hono API Worker, scheduled sync Worker, shared domain package</strong>) spanning <strong>~437 source files</strong> and a <strong>19-table D1 schema</strong> on Cloudflare Workers, D1, KV, R2, and Workflows with <strong>no origin server</strong></li>
+                  <li>Chose this stack around one constraint, that the operator never manages infrastructure: <strong>zero monthly cost, no cold starts, nothing to scale</strong>, with a documented path to Durable Objects if write concurrency ever demands it</li>
+                  <li>UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication throughout</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Google Calendar Integration</span>
+                <ul class="bullets">
+                  <li>Integrated Google Calendar v3 via service account with KV-backed token caching (55-min TTL), reducing live OAuth calls by <strong>~98%</strong> under normal load</li>
+                  <li>Implemented multipart/mixed HTTP batching for Calendar writes: raw boundary construction (no library support in Workers), <strong>50 PATCH requests per HTTP call</strong>, response parsing, and 429/500/503 retry with exponential backoff, staying within Cloudflare subrequest limits and Google rate constraints during migrations</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Reliability — Workflows Backfill</span>
+                <ul class="bullets">
+                  <li>Re-architected a fragile calendar backfill that was tripping Cloudflare's subrequest cap into a <strong>Cloudflare Workflows fan-out / fan-in</strong>: one durable instance per date window, an idempotent count-based fan-in, and <strong>exactly-once finalization</strong>. Backfills now retry per window and recover from a crash without skipping or double-writing data</li>
+                  <li>Built observability for unattended automation: <strong>structured JSON logging</strong>, workflow run tables, heartbeat rows, cron failure emails, and a <strong>watchdog that catches silent never-ran failures</strong></li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Booking, Invoicing &amp; Payment Pipeline</span>
+                <ul class="bullets">
+                  <li>Built conflict-aware booking across <strong>boarding, house-sit, and walk/check-in</strong> with a server-enforced cancellation policy and fee tiers, plus automatic Google Calendar rollback on DB failure</li>
+                  <li>Designed a multi-source payment pipeline (<strong>Notion REST, Venmo CSV from R2, Gmail</strong>) normalized into idempotent events with per-source cursor commits, and automated past-due detection (grace periods, ambiguous-owner handling) that emails the operator weekly</li>
+                  <li>Automated monthly invoicing: <code>pdf-lib</code> synthesis → R2 storage → emailed delivery, with authenticated batch ZIP download (<code>fflate</code>, ~5MB peak memory) behind ownership-verified Hono endpoints</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Testing &amp; CI/CD</span>
+                <ul class="bullets">
+                  <li>Wrote <strong>1,500+ tests across 159 files</strong> (server coverage near 100%) with Playwright end-to-end suites — covering auth, booking, cancellation, calendar parsing, AI tools, and every dashboard component</li>
+                  <li>Gated by a CI pipeline that runs <strong>type generation, typecheck, ESLint, Prettier, and tests on every push</strong>, with Cloudflare auto-deploy on merge to <code>main</code> and production source maps</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. AI Agent -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">02</span>
+              <div class="project-titles">
+                <h3>Brad Paws AI Chat Agent</h3>
+                <p class="project-tagline">A production Claude Haiku 4.5 agent with ten tools, two-phase confirmation, and a circuit breaker.</p>
+              </div>
+              <span class="badge badge-live"><span class="b-dot"></span>Live</span>
+            </div>
+            <p class="project-body">Clients talk to the portal in plain language. The agent runs on Claude Haiku 4.5 through Vercel AI SDK v6, with ten tools wired to the live system: schedule, reschedule, cancel, pull history, send a receipt. Most of the work went into the safety envelope, not the prompt. <strong>Destructive tools require two-phase confirmation.</strong> There are per-user rate limits, per-conversation token budgets, and a circuit breaker that takes the agent offline when upstream errors spike.</p>
+            <div class="tags">
+              <span class="tag">Claude Haiku 4.5</span><span class="tag">Vercel AI SDK v6</span><span class="tag">TypeScript</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">10 tools</span><span class="key">live system access</span></div>
+              <div class="metric"><span class="val">2-phase</span><span class="key">confirm on mutations</span></div>
+              <div class="metric"><span class="val">Circuit breaker</span><span class="key">fails safe on errors</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://bradpaws.com" target="_blank" rel="noopener">Live demo (gated) ↗</a>
+                <a class="project-link" href="#contact" aria-disabled="true">Security audit on request</a>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="subsystem">
+                <span class="subsystem-label">Agent &amp; Safety Envelope</span>
+                <ul class="bullets">
+                  <li>Built the chat agent (Claude Haiku 4.5, Vercel AI SDK v6, <strong>10 tools</strong>) with streaming responses over all booking, cancellation, and account services. Every mutation goes through an <strong>explicit confirmation card</strong> backed by a single-use KV token (5-min TTL), so no destructive action runs without approval</li>
+                  <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), and a circuit breaker (3 failures → 60s cooldown) — bounding API spend while maintaining availability</li>
+                  <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
+                </ul>
+              </div>
+              <div class="dive-note"><strong>Why it matters:</strong> a chat agent in front of a live billing and scheduling system is a liability without guardrails. I put the circuit breaker at the agent layer rather than the model layer, so it still protects the downstream tools when the model itself is the thing misbehaving.</div>
+            </div>
+          </article>
+
+          <!-- 3. MCP -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">03</span>
+              <div class="project-titles">
+                <h3>Brad Paws MCP Server</h3>
+                <p class="project-tagline">A standards-compliant Model Context Protocol server with OAuth2 + PKCE, stateless on Workers V8.</p>
+              </div>
+              <span class="badge badge-spec">Spec-strict</span>
+            </div>
+            <p class="project-body">I exposed the Brad Paws platform to MCP clients so I (and authorized agents) can drive the system from Claude Desktop, Cursor, or anything spec-compliant. The server implements the MCP spec and handles <strong>OAuth2 with PKCE</strong> for client auth. It's stateless across the Workers V8 fleet: every request stands alone, every token is verified, nothing held in memory between calls. This is the one where I read the spec end to end, twice.</p>
+            <div class="tags">
+              <span class="tag">MCP spec</span><span class="tag">OAuth2</span><span class="tag">PKCE (RFC 7636)</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">RFC 7636</span><span class="key">PKCE from scratch</span></div>
+              <div class="metric"><span class="val">Stateless</span><span class="key">across V8 fleet</span></div>
+              <div class="metric"><span class="val">10 tools</span><span class="key">single source of truth</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="#contact" aria-disabled="true">Code: private — walkthrough on request</a>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="subsystem">
+                <span class="subsystem-label">MCP Booking Server</span>
+                <ul class="bullets">
+                  <li>Built the MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) so external AI agents (Claude Desktop) can manage bookings through <strong>10 shared tool definitions</strong></li>
+                  <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
+                  <li>Centralized tool definitions across the chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Authentication &amp; Security</span>
+                <ul class="bullets">
+                  <li>Built a full OAuth 2.0 authorization-code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code-challenge verification, single-use authorization codes, refresh-token rotation, IP-based rate limiting against brute-force enumeration, and hashed-token audit logging</li>
+                  <li>Implemented cookie-based JWT auth (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
+                  <li>Added non-blocking D1 audit logging for all OAuth events with indexed queries by owner, action, and timestamp</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Audit -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">04</span>
+              <div class="project-titles">
+                <h3>AI Surfaces Audit</h3>
+                <p class="project-tagline">A security self-audit of every AI surface in a production Claude agent.</p>
+              </div>
+              <span class="badge badge-spec">Writeup</span>
+            </div>
+            <p class="project-body">I went after my own agent the way a security firm would go after a client's. I listed every AI surface (the chat input, tool outputs that re-enter the prompt, third-party content that lands in context) and walked the attack tree: <strong>prompt injection through Notion sync, tool-authority abuse, data exfiltration through tool responses</strong>. The writeup covers the findings, the mitigations I shipped, and the risk I chose to live with. It's what I send when someone asks how I think about AI safety once it's in front of customers.</p>
+            <div class="tags">
+              <span class="tag">Prompt injection defense</span><span class="tag">Tool authority</span><span class="tag">Threat modeling</span><span class="tag">MCP</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">Every surface</span><span class="key">enumerated</span></div>
+              <div class="metric"><span class="val">In-code</span><span class="key">mitigations shipped</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="#contact" aria-disabled="true">Audit available on request</a>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="dive-note">Most AI-safety writeups are theoretical. I wanted one grounded in a system I actually had to defend. The mitigations are concrete and live in code: two-phase confirmation, the circuit breaker, scoped tool authority, and a content boundary on third-party data. I kept the public version at the architecture level, so it's useful to a reader without handing an attacker a map.</div>
+            </div>
+          </article>
+
+          <!-- 5. Front -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">05</span>
+              <div class="project-titles">
+                <h3>Front — Email Sync Redesign</h3>
+                <p class="project-tagline">Two-way email sync at 1.1M requests an hour on Go + Kafka.</p>
+              </div>
+              <span class="badge badge-spec">2022</span>
+            </div>
+            <p class="project-body">At Front I redesigned the Node microservice behind two-way email sync. I put a <strong>priority scheduler in Go in front of Kafka</strong> so high-value mailboxes (active conversations, paid plans) got latency they could feel while lower-priority sync still made progress. It ran at roughly 1.1M requests an hour. Alongside the rewrite I shipped a REST API for account-level rules that drove a 30% adoption lift.</p>
+            <div class="tags">
+              <span class="tag">Go</span><span class="tag">Node.js</span><span class="tag">Kafka</span><span class="tag">REST APIs</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">1.1M</span><span class="key">requests / hour</span></div>
+              <div class="metric"><span class="val">+30%</span><span class="key">rules-API adoption</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="#contact" aria-disabled="true">Former employer — happy to whiteboard</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ── Experience ────────────────────────────── -->
+      <section id="experience">
+        <p class="section-label reveal"><span class="idx">02</span> Experience</p>
+        <h2 class="section-intro reveal">Seven years of customer-facing engineering, from Salesforce to my own product.</h2>
+
+        <div class="timeline">
+          <div class="role reveal">
+            <div class="role-when">2022 — Present<span class="loc">San Francisco</span></div>
+            <div>
+              <div class="role-name"><a href="https://bradpaws.com" target="_blank" rel="noopener">Brad Paws</a><span class="role-title">Founder · Sole Engineer</span></div>
+              <p class="role-desc">Sole engineer on a production stack: a <strong>~437-file TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with ten tools and a full safety envelope, a standards-compliant MCP server, and <strong>1,500+ tests across 159 files</strong>. See the four projects above.</p>
+            </div>
+          </div>
+
+          <div class="role reveal">
+            <div class="role-when">2022<span class="loc">San Francisco</span></div>
+            <div>
+              <div class="role-name"><a href="https://front.com" target="_blank" rel="noopener">Front</a><span class="role-title">Software Engineer</span><span class="role-rif">Impacted by RIF</span></div>
+              <p class="role-desc">Redesigned the two-way email-sync microservice — a priority Go scheduler on Kafka handling <strong>1.1M requests/hour</strong> — and shipped a REST API for account-level rules that pushed adoption up <strong>30%</strong>. Upgraded core email infrastructure handling 200k+ emails/month.</p>
+            </div>
+          </div>
+
+          <div class="role reveal">
+            <div class="role-when">2019 — 2021<span class="loc">San Francisco</span></div>
+            <div>
+              <div class="role-name"><a href="https://totalbrain.com" target="_blank" rel="noopener">Total Brain</a><span class="role-title">Software Engineer</span><span class="role-rif">Impacted by RIF</span></div>
+              <p class="role-desc">Engineering point of contact on enterprise customer-success and sales calls. Owned the HubSpot, Box, and SAML+JWT SSO integrations; migrated the backing store from MSSQL to DynamoDB (<strong>50% latency drop</strong>) and drove a <strong>60% sign-up increase</strong> via Apple/Google/Facebook auth. Enterprise onboarding went from 2+ weeks to 3 days.</p>
+            </div>
+          </div>
+
+          <div class="role reveal">
+            <div class="role-when">2017 — 2018<span class="loc">San Francisco</span></div>
+            <div>
+              <div class="role-name"><a href="https://salesforce.com" target="_blank" rel="noopener">Salesforce</a><span class="role-title">Software Engineer</span></div>
+              <p class="role-desc">Built an OAuth2 security filter for microservice API access control and the React management UI behind it, cutting internal test setup time by <strong>40%</strong>. First exposure to security primitives at scale.</p>
+            </div>
+          </div>
+
+          <div class="role reveal">
+            <div class="role-when">Class of 2017<span class="loc">Greencastle, IN</span></div>
+            <div>
+              <div class="role-name"><a href="https://www.depauw.edu" target="_blank" rel="noopener">DePauw University</a><span class="role-title">Education</span></div>
+              <p class="role-desc">Bachelor's degree in Computer Science.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Stack ─────────────────────────────────── -->
+      <section id="stack">
+        <p class="section-label reveal"><span class="idx">03</span> Technical stack</p>
+        <div class="stack-grid">
+          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Go · Java · Scala</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 7 · Node.js · Hono · Vercel AI SDK · Spring · Play</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">AI &amp; LLM</span><span class="stack-items">Claude (Haiku, Sonnet) · MCP servers · agentic workflows · tool-use design · prompt-injection defense · AI security audits</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Cloud &amp; Infra</span><span class="stack-items">Cloudflare Workers · D1 · KV · R2 · Workflows · AWS · SQS · Docker</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Data</span><span class="stack-items">PostgreSQL · DynamoDB · MSSQL · Kafka · SQL · NoSQL</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Auth &amp; Security</span><span class="stack-items">OAuth2 · PKCE · SAML 2.0 · JWT · SSO · rate limiting · circuit breakers</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">APIs &amp; Integrations</span><span class="stack-items">REST · Google Calendar v3 · Notion · Gmail · HubSpot · Box · multipart/mixed batching · service-account auth</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Testing &amp; DevOps</span><span class="stack-items">Vitest · Playwright · GitHub Actions · Jenkins · WCAG 2.1 AA</span></div>
+        </div>
+      </section>
+
+      <!-- ── About ─────────────────────────────────── -->
+      <section id="about">
+        <p class="section-label reveal"><span class="idx">04</span> About</p>
+        <div class="about-grid">
+          <div class="about-prose reveal">
+            <p>I'm a full-stack engineer in San Francisco, seven-plus years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
+            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>~437-file TypeScript monorepo on a 19-table D1 schema, 1,500 tests across 159 files</strong>, and durable calendar sync on Cloudflare Workflows. I published an AI security audit because the agent sits in front of a billing system.</p>
+            <p>What I want next is a <strong>Forward Deployed, Solutions, or Software Engineer</strong> role in SF at a company shipping AI that's load-bearing. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one.</p>
+          </div>
+          <aside class="about-side reveal">
+            <h4>What working with me is like</h4>
+            <ul>
+              <li>I write tests before I ship</li>
+              <li>I read the RFC before I write the integration</li>
+              <li>I'll tell you when a feature is the wrong call</li>
+              <li>Happy on a customer call, happy in the four-hour debugging session after</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ── Now ───────────────────────────────────── -->
+      <section id="now">
+        <p class="section-label reveal"><span class="idx">05</span> Now</p>
+        <div class="now reveal">
+          <div class="now-head"><span class="tag-now">Currently</span><span class="when">June 2026</span></div>
+          <p>Running Brad Paws and tightening the agent's tool surface around what clients actually ask it to do. Writing a second AI-safety post, this one on tool-authority scoping. <strong>Interviewing in SF</strong> for Forward Deployed, Solutions, and Software Engineer roles at companies shipping AI that matters to the product. Open to onsite-hybrid in SF, or remote with an SF anchor. Email is the best way to reach me.</p>
+        </div>
+      </section>
+
+      <!-- ── Contact ───────────────────────────────── -->
+      <section id="contact">
+        <p class="section-label reveal"><span class="idx">06</span> Get in touch</p>
+        <div class="contact-card reveal">
+          <p class="pitch">I'm interviewing for <strong>Forward Deployed Engineer, Solutions Engineer, and Software Engineer</strong> roles in <strong>San Francisco</strong>. Best fit is a team that puts engineers in front of customers and ships AI the product actually leans on. Fastest reply is email.</p>
+          <div class="contact-grid">
+            <a class="contact-item" href="mailto:{{ page.email }}"><div class="ci-key">Email</div><div class="ci-val">{{ page.email }}</div></a>
+            <a class="contact-item" href="{{ page.linkedin }}" target="_blank" rel="noopener"><div class="ci-key">LinkedIn</div><div class="ci-val">linkedin.com/in/burchbrad</div></a>
+            <a class="contact-item" href="{{ page.github }}" target="_blank" rel="noopener"><div class="ci-key">GitHub</div><div class="ci-val">github.com/bradburch</div></a>
+            <a class="contact-item" href="{{ page.resume }}" download="Brad-Burch-Resume.pdf"><div class="ci-key">Resume</div><div class="ci-val">Brad-Burch-Resume.pdf ↓</div></a>
+            <a class="contact-item" href="#top"><div class="ci-key">Location</div><div class="ci-val">San Francisco, CA</div></a>
+          </div>
+          <a class="btn btn-primary" href="mailto:{{ page.email }}">→ Email Brad</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span class="copy">© 2026 Brad Burch · San Francisco, CA</span>
+      <span class="built">Built on Cloudflare Workers, naturally.</span>
+    </footer>
+  </div>
+
+  <script>
+    // sticky nav border on scroll
+    var nav = document.getElementById('nav');
+    var onScroll = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // deep-dive toggles
+    document.querySelectorAll('.dive-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = btn.closest('.project').querySelector('.dive');
+        var open = panel.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+        btn.textContent = open ? '↑ Collapse' : '↗ Engineering detail';
+      });
+    });
+
+    // scroll-reveal
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    document.querySelectorAll('main .reveal').forEach(function (el) { io.observe(el); });
+  </script>
 </body>
 </html>

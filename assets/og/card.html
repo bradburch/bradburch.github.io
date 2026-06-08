@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OG card source — regenerate to /og-card.png at 1200×630</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --bg:#0c0c0e; --panel:#141417; --line:#26262b;
+    --text:#e8e6e1; --muted:#8c8c94; --bright:#fafaf7;
+    --accent:#ffb000; --accent-dim:#6d4b0f; --accent-faint:rgba(255,176,0,.08);
+    --display:'Bricolage Grotesque',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  html,body{width:1200px;height:630px;overflow:hidden}
+  body{
+    background:var(--bg); color:var(--text);
+    background-image:
+      radial-gradient(circle at 8% -10%, rgba(255,176,0,.10), transparent 38%),
+      radial-gradient(circle at 108% 120%, rgba(255,176,0,.06), transparent 44%);
+    position:relative;
+    font-family:var(--mono);
+  }
+  body::before{
+    content:""; position:absolute; inset:0; opacity:.04; pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .card{position:absolute; inset:0; padding:72px 80px; display:flex; flex-direction:column; justify-content:space-between; border-left:8px solid var(--accent)}
+  .top{display:flex; justify-content:space-between; align-items:center}
+  .mark{font-family:var(--mono); font-weight:700; font-size:22px; letter-spacing:.02em; color:var(--bright)}
+  .mark .dot{color:var(--accent)}
+  .status{display:flex; align-items:center; gap:11px; font-size:16px; letter-spacing:.14em; text-transform:uppercase; color:var(--text); border:1px solid var(--line); border-radius:30px; padding:9px 18px}
+  .status .d{width:10px; height:10px; border-radius:50%; background:#5bd17a; box-shadow:0 0 12px #5bd17a}
+
+  .mid{margin-top:6px}
+  .eyebrow{font-size:18px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin-bottom:26px; display:flex; align-items:center; gap:14px}
+  .eyebrow::before{content:""; width:46px; height:2px; background:var(--accent)}
+  h1{font-family:var(--display); font-weight:800; font-size:118px; line-height:.92; letter-spacing:-.035em; color:var(--bright)}
+  .sub{font-family:var(--display); font-weight:700; font-size:40px; letter-spacing:-.02em; color:var(--text); margin-top:24px}
+  .sub em{font-style:normal; color:var(--accent)}
+
+  .bottom{display:flex; justify-content:space-between; align-items:flex-end}
+  .roles{display:flex; gap:10px}
+  .role{font-size:16px; letter-spacing:.04em; color:var(--accent); background:var(--accent-faint); border:1px solid var(--accent-dim); padding:8px 15px; border-radius:7px}
+  .where{font-size:18px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); text-align:right}
+  .where b{color:var(--text); font-weight:500}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="top">
+      <span class="mark">brad_burch<span class="dot">.</span></span>
+      <span class="status"><span class="d"></span> Open to roles</span>
+    </div>
+    <div class="mid">
+      <div class="eyebrow">Full-Stack · Production AI</div>
+      <h1>Brad Burch</h1>
+      <div class="sub">I build production AI systems <em>end-to-end.</em></div>
+    </div>
+    <div class="bottom">
+      <div class="roles">
+        <span class="role">Forward Deployed</span>
+        <span class="role">Solutions</span>
+        <span class="role">Software Engineer</span>
+      </div>
+      <div class="where"><b>San Francisco, CA</b><br>bradburch.github.io</div>
+    </div>
+  </div>
+</body>
+</html>
