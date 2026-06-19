@@ -141,7 +141,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Architecture &amp; Infrastructure</span>
                 <ul class="bullets">
-                  <li>Architected a TypeScript monorepo (<strong>React Router 7 client portal, Hono API Worker, scheduled sync Worker, shared domain package</strong>) on a <strong>19-table D1 schema</strong>, running on Cloudflare Workers, D1, KV, R2, and Workflows with <strong>no origin server</strong></li>
+                  <li>Architected a TypeScript monorepo (<strong>React Router 7 client portal, Hono API Worker, scheduled sync Worker, shared domain package</strong>) on a <strong>23-table D1 schema</strong>, running on Cloudflare Workers, D1, KV, R2, and Workflows with <strong>no origin server</strong></li>
                   <li>Chose this stack around one constraint, that the operator never manages infrastructure: <strong>zero monthly cost, no cold starts, nothing to scale</strong>, with a documented path to Durable Objects if write concurrency ever demands it</li>
                   <li>UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication throughout</li>
                 </ul>
@@ -163,9 +163,10 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Booking, Invoicing &amp; Payment Pipeline</span>
                 <ul class="bullets">
-                  <li>Built conflict-aware booking across <strong>boarding, house-sit, and walk/check-in</strong> with a server-enforced cancellation policy and fee tiers, plus automatic Google Calendar rollback on DB failure</li>
-                  <li>Designed a multi-source payment pipeline (<strong>Notion REST, Venmo CSV from R2, Gmail</strong>) normalized into idempotent events with per-source cursor commits, and automated past-due detection (grace periods, ambiguous-owner handling) that emails the operator weekly</li>
-                  <li>Automated monthly invoicing: <code>pdf-lib</code> synthesis → R2 storage → emailed delivery, with authenticated batch ZIP download (<code>fflate</code>, ~5MB peak memory) behind ownership-verified Hono endpoints</li>
+                  <li>Built conflict-aware booking across <strong>boarding, house-sit, and walk/check-in</strong> with a server-enforced cancellation policy and tiered fees keyed to the local business day, plus automatic Google Calendar rollback on DB failure</li>
+                  <li>Implemented <strong>combined-set multi-pet pricing</strong> that keeps the quote, the charge, and the invoice in agreement, so a multi-pet stay never produces three different totals</li>
+                  <li>Designed a multi-source payment pipeline (<strong>Notion REST, Venmo CSV from R2, Gmail</strong>) normalized into idempotent events with per-source cursor commits. Gmail ingestion only trusts <strong>SPF/DKIM-verified</strong> mail. Automated past-due detection (grace periods, ambiguous-owner handling) emails the operator weekly</li>
+                  <li>Automated monthly invoicing: <code>pdf-lib</code> synthesis → R2 storage → emailed delivery, with authenticated batch ZIP download (<code>fflate</code>, ~5MB peak memory, <strong>RFC 5987</strong> filename encoding) behind ownership-verified Hono endpoints</li>
                 </ul>
               </div>
               <div class="subsystem">
@@ -184,16 +185,16 @@ email: bradburch.jobs@gmail.com
               <span class="project-num">02</span>
               <div class="project-titles">
                 <h3>Brad Paws AI Chat Agent</h3>
-                <p class="project-tagline">A production Claude Haiku 4.5 agent with ten tools, two-phase confirmation, and a circuit breaker.</p>
+                <p class="project-tagline">A production Claude Haiku 4.5 agent with fifteen tools, two-phase confirmation, and a circuit breaker.</p>
               </div>
               <span class="badge badge-live"><span class="b-dot"></span>Live</span>
             </div>
-            <p class="project-body">Clients talk to the portal in plain language. The agent runs on Claude Haiku 4.5 through Vercel AI SDK v6, with ten tools wired to the live system: schedule, reschedule, cancel, pull history, send a receipt. Most of the work went into the safety envelope, not the prompt. <strong>Destructive tools require two-phase confirmation.</strong> There are per-user rate limits, per-conversation token budgets, and a circuit breaker that takes the agent offline when upstream errors spike.</p>
+            <p class="project-body">Clients talk to the portal in plain language. The agent runs on Claude Haiku 4.5 through Vercel AI SDK v6, with fifteen tools wired to the live system: schedule, reschedule, cancel, pull history, send a receipt. Most of the work went into the safety envelope, not the prompt. <strong>Destructive tools require two-phase confirmation.</strong> There are per-user rate limits, per-conversation token budgets, and a circuit breaker that takes the agent offline when upstream errors spike.</p>
             <div class="tags">
               <span class="tag">Claude Haiku 4.5</span><span class="tag">Vercel AI SDK v6</span><span class="tag">TypeScript</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
             </div>
             <div class="metrics">
-              <div class="metric"><span class="val">10 tools</span><span class="key">live system access</span></div>
+              <div class="metric"><span class="val">15 tools</span><span class="key">live system access</span></div>
               <div class="metric"><span class="val">2-phase</span><span class="key">confirm on mutations</span></div>
               <div class="metric"><span class="val">Circuit breaker</span><span class="key">fails safe on errors</span></div>
             </div>
@@ -208,7 +209,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Agent &amp; Safety Envelope</span>
                 <ul class="bullets">
-                  <li>Built the chat agent (Claude Haiku 4.5, Vercel AI SDK v6, <strong>10 tools</strong>) with streaming responses over all booking, cancellation, and account services. Every mutation goes through an <strong>explicit confirmation card</strong> backed by a single-use KV token (5-min TTL), so no destructive action runs without approval</li>
+                  <li>Built the chat agent (Claude Haiku 4.5, Vercel AI SDK v6, <strong>15 tools</strong>) with streaming responses over all booking, cancellation, and account services. Every mutation goes through an <strong>explicit confirmation card</strong> backed by a single-use KV token (5-min TTL), so no destructive action runs without approval</li>
                   <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), and a circuit breaker (3 failures → 60s cooldown) — bounding API spend while maintaining availability</li>
                   <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
                 </ul>
@@ -234,7 +235,7 @@ email: bradburch.jobs@gmail.com
             <div class="metrics">
               <div class="metric"><span class="val">RFC 7636</span><span class="key">PKCE from scratch</span></div>
               <div class="metric"><span class="val">Stateless</span><span class="key">across V8 fleet</span></div>
-              <div class="metric"><span class="val">10 tools</span><span class="key">single source of truth</span></div>
+              <div class="metric"><span class="val">15 tools</span><span class="key">single source of truth</span></div>
             </div>
             <div class="project-foot">
               <div class="project-links">
@@ -246,7 +247,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">MCP Booking Server</span>
                 <ul class="bullets">
-                  <li>Built the MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) so external AI agents (Claude Desktop) can manage bookings through <strong>10 shared tool definitions</strong></li>
+                  <li>Built the MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) so external AI agents (Claude Desktop) can manage bookings through <strong>15 shared tool definitions</strong></li>
                   <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
                   <li>Centralized tool definitions across the chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
                 </ul>
@@ -255,7 +256,7 @@ email: bradburch.jobs@gmail.com
                 <span class="subsystem-label">Authentication &amp; Security</span>
                 <ul class="bullets">
                   <li>Built a full OAuth 2.0 authorization-code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code-challenge verification, single-use authorization codes, refresh-token rotation, IP-based rate limiting against brute-force enumeration, and hashed-token audit logging</li>
-                  <li>Implemented cookie-based JWT auth (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and E.164 phone normalization — protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
+                  <li>Implemented cookie-based JWT auth (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies, <strong>server-side session revocation</strong>, and E.164 phone normalization, protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
                   <li>Added non-blocking D1 audit logging for all OAuth events with indexed queries by owner, action, and timestamp</li>
                 </ul>
               </div>
@@ -304,7 +305,7 @@ email: bradburch.jobs@gmail.com
             <div class="role-when">2022 — Present<span class="loc">San Francisco</span></div>
             <div>
               <div class="role-name"><a href="https://bradpaws.com" target="_blank" rel="noopener">Brad Paws</a><span class="role-title">Founder · Sole Engineer</span></div>
-              <p class="role-desc">Sole engineer on a production stack: a <strong>TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with ten tools and a full safety envelope, a standards-compliant MCP server, and <strong>1,500+ tests</strong>. See the four projects above.</p>
+              <p class="role-desc">Sole engineer on a production stack: a <strong>TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with fifteen tools and a full safety envelope, a standards-compliant MCP server, and <strong>1,500+ tests</strong>. See the four projects above.</p>
             </div>
           </div>
 
@@ -356,7 +357,7 @@ email: bradburch.jobs@gmail.com
         <div class="about-grid">
           <div class="about-prose reveal">
             <p>I'm a full-stack engineer in San Francisco, seven-plus years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
-            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 19-table D1 schema with 1,500+ tests</strong>, and durable calendar sync on Cloudflare Workflows. I published an AI security audit because the agent sits in front of a billing system.</p>
+            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 23-table D1 schema with 1,500+ tests</strong>, and durable calendar sync on Cloudflare Workflows. I published an AI security audit because the agent sits in front of a billing system.</p>
             <p>What I want next is a <strong>Forward Deployed, Solutions, or Software Engineer</strong> role in SF at a company shipping AI that's load-bearing. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one.</p>
           </div>
           <aside class="about-side reveal">
