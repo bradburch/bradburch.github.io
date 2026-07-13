@@ -110,17 +110,17 @@ email: bradburch.jobs@gmail.com
 
         <div class="projects">
 
-          <!-- 1. pawbook -->
+          <!-- 1. Pawbook -->
           <article class="project reveal">
             <div class="project-head">
               <span class="project-num">01</span>
               <div class="project-titles">
-                <h3>pawbook</h3>
+                <h3>Pawbook</h3>
                 <p class="project-tagline">An open-source, embeddable multi-tenant booking widget — drop a live booking calendar into any website with a single &lt;script&gt; tag.</p>
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">pawbook is the productization of the Brad Paws scheduler, built solo end to end. A host site adds one <code>&lt;script&gt;</code> tag; pawbook injects an auto-resizing iframe whose <code>postMessage</code> channel is validated by both <strong>origin and source</strong>, so neither the widget nor the host page can hijack the other. Behind it is a full multi-tenant platform — each sitter gets isolated config, services, pricing, and bookings, with capacity and conflict rules computed from a single source of truth. The booking/date/pricing core is pure TypeScript with <strong>zero runtime dependencies</strong>, backed by 46+ test files running against in-memory SQLite. CI gates every PR on typecheck, lint, format, test, and build, then auto-deploys to Cloudflare on merge.</p>
+            <p class="project-body">Pawbook is the productization of the Brad Paws scheduler, built solo end to end. A host site adds one <code>&lt;script&gt;</code> tag; Pawbook injects an auto-resizing iframe whose <code>postMessage</code> channel is validated by both <strong>origin and source</strong>, so neither the widget nor the host page can hijack the other. Behind it is a full multi-tenant platform — each sitter gets isolated config, services, pricing, and bookings, with capacity and conflict rules computed from a single source of truth. The booking/date/pricing core is pure TypeScript with <strong>zero runtime dependencies</strong>, backed by 46+ test files running against in-memory SQLite. CI gates every PR on typecheck, lint, format, test, and build, then auto-deploys to Cloudflare on merge.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">KV</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span>
             </div>
@@ -136,17 +136,17 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 2. mcp-auth-kit -->
+          <!-- 2. MCP Auth Kit -->
           <article class="project reveal">
             <div class="project-head">
               <span class="project-num">02</span>
               <div class="project-titles">
-                <h3>mcp-auth-kit</h3>
+                <h3>MCP Auth Kit</h3>
                 <p class="project-tagline">A production-minded MCP server kit: OAuth 2.1 + PKCE, rate limiting, scope-gated tools, and two-phase confirmation.</p>
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">mcp-auth-kit packages the hard parts of shipping a safe Model Context Protocol server so I don't rebuild them from scratch every time. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
+            <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so I don't rebuild them from scratch every time. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE</span><span class="tag">Rate limiting</span><span class="tag">Scope-gated auth</span>
             </div>
@@ -157,24 +157,24 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 3. roadrunner -->
+          <!-- 3. Roadrunner -->
           <article class="project reveal">
             <div class="project-head">
               <span class="project-num">03</span>
               <div class="project-titles">
-                <h3>roadrunner</h3>
+                <h3>Roadrunner</h3>
                 <p class="project-tagline">A multi-user Django app that shares the nature you saw on your Strava activities — matching eBird and iNaturalist observations by time and location.</p>
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">Log in with Strava, link an eBird or iNaturalist profile, and roadrunner writes the species you logged into the description of the matching Strava activity. Activities sync in real time via <strong>Strava OAuth and webhooks</strong>. The interesting problem: birders submit checklists hours after they get home, so unmatched activities go into a <strong>deferred re-check queue (2/4/8-hour ladder)</strong>, and the species appear the moment the checklist does. Scheduling runs on a free GitHub Actions cron instead of a paid Vercel Cron plan, keeping total hosting cost at zero. Three third-party API integrations, timezone-correct wall-clock matching, and a test suite covering matching, sync, OAuth, and the re-check queue — roughly half the codebase by line count.</p>
+            <p class="project-body">Log in with Strava, link an eBird or iNaturalist profile, and Roadrunner writes the species you logged into the description of the matching Strava activity. Activities sync in real time via <strong>Strava OAuth and webhooks</strong>. The interesting problem: birders submit checklists hours after they get home, so unmatched activities go into a <strong>deferred re-check queue (2/4/8-hour ladder)</strong>, and the species appear the moment the checklist does. Three third-party API integrations, timezone-correct wall-clock matching, and a test suite covering matching, sync, OAuth, and the re-check queue.</p>
             <div class="tags">
               <span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL (Neon)</span><span class="tag">Vercel</span><span class="tag">Strava API</span><span class="tag">eBird API</span><span class="tag">iNaturalist API</span><span class="tag">GitHub Actions</span>
             </div>
             <div class="metrics">
-              <div class="metric"><span class="val">$0</span><span class="key">hosting cost</span></div>
               <div class="metric"><span class="val">3 APIs</span><span class="key">Strava, eBird, iNaturalist</span></div>
-              <div class="metric"><span class="val">~50%</span><span class="key">of codebase is tests</span></div>
+              <div class="metric"><span class="val">2/4/8h</span><span class="key">deferred re-check ladder</span></div>
+              <div class="metric"><span class="val">Real-time</span><span class="key">OAuth + webhook sync</span></div>
             </div>
             <div class="project-foot">
               <div class="project-links">
@@ -452,7 +452,7 @@ email: bradburch.jobs@gmail.com
         <p class="section-label reveal"><span class="idx">05</span> Now</p>
         <div class="now reveal">
           <div class="now-head"><span class="tag-now">Currently</span><span class="when">July 2026</span></div>
-          <p>Running Brad Paws and building <strong>pawbook</strong>, the open-source, embeddable version of its scheduler, so any operator can add booking to their own site. Just shipped <strong>Debrief</strong>, a native macOS app that records interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching. Also maintaining <strong>mcp-auth-kit</strong>, an open-source OAuth 2.1 + PKCE MCP server kit. <strong>Interviewing in SF</strong> for Forward Deployed, Solutions, and Software Engineer roles at companies shipping production AI. Open to onsite-hybrid in SF, or remote with an SF anchor. Email is the best way to reach me.</p>
+          <p>Running Brad Paws and building <strong>Pawbook</strong>, the open-source, embeddable version of its scheduler, so any operator can add booking to their own site. Just shipped <strong>Debrief</strong>, a native macOS app that records interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching. Also maintaining <strong>MCP Auth Kit</strong>, an open-source OAuth 2.1 + PKCE MCP server kit. <strong>Interviewing in SF</strong> for Forward Deployed, Solutions, and Software Engineer roles at companies shipping production AI. Open to onsite-hybrid in SF, or remote with an SF anchor. Email is the best way to reach me.</p>
         </div>
       </section>
 
