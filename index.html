@@ -142,7 +142,7 @@ email: bradburch.jobs@gmail.com
                 <span class="subsystem-label">Architecture &amp; Infrastructure</span>
                 <ul class="bullets">
                   <li>Architected a TypeScript monorepo (<strong>React Router 7 client portal, Hono API Worker, scheduled sync Worker, shared domain package</strong>) on a <strong>23-table D1 schema</strong>, running on Cloudflare Workers, D1, KV, R2, and Workflows with <strong>no origin server</strong></li>
-                  <li>Chose this stack around one constraint, that the operator never manages infrastructure: <strong>zero monthly cost, no cold starts, nothing to scale</strong>, with a documented path to Durable Objects if write concurrency ever demands it</li>
+                  <li>Chose this stack around one constraint — the operator never manages infrastructure: <strong>no cold starts, nothing to scale, nothing to patch</strong>, with a documented path to Durable Objects if write concurrency ever demands it</li>
                   <li>UUID primary keys for distributed ID generation, E.164 phone normalization, and <code>ExternalId</code>-based cross-source deduplication throughout</li>
                 </ul>
               </div>
@@ -172,7 +172,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Testing &amp; CI/CD</span>
                 <ul class="bullets">
-                  <li>Wrote <strong>1,500+ tests</strong> (server coverage near 100%) with Playwright end-to-end suites, covering auth, booking, cancellation, calendar parsing, AI tools, and every dashboard component</li>
+                  <li>Drove <strong>server test coverage to near 100%</strong>, with Playwright end-to-end suites covering auth, booking, cancellation, calendar parsing, AI tools, and every dashboard component</li>
                   <li>Gated by a CI pipeline that runs <strong>type generation, typecheck, ESLint, Prettier, and tests on every push</strong>, with Cloudflare auto-deploy on merge to <code>main</code> and production source maps</li>
                 </ul>
               </div>
@@ -274,14 +274,14 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">Debrief records your interview calls, transcribes them on-device, and scores them against a rubric, so you walk into round two knowing what to fix. The core idea is <strong>dual-stream capture</strong>: your mic and the interviewer's audio (via ScreenCaptureKit) record as two independent tracks, so who-said-this is a hardware-level fact instead of an ML diarization guess — nothing joins the call as a visible bot. WhisperKit (CoreML/Metal) transcribes fully on-device; the Claude API then produces per-dimension scores, weakness tags, and action items. Audio flushes to disk in chunks during recording, so a crash mid-interview never loses a session. Built solo as a native Swift Package with five independently testable targets and 75 automated tests.</p>
+            <p class="project-body">Debrief records your interview calls, transcribes them on-device, and scores them against a rubric, so you walk into round two knowing what to fix. The core idea is <strong>dual-stream capture</strong>: your mic and the interviewer's audio (via ScreenCaptureKit) record as two independent tracks, so who-said-this is a hardware-level fact instead of an ML diarization guess — nothing joins the call as a visible bot. WhisperKit (CoreML/Metal) transcribes fully on-device; the Claude API then produces per-dimension scores, weakness tags, and action items. <strong>Paste a company's actual leveling guide and the model weights it above the built-in rubric for that session</strong>; an offline mode runs coaching against a local model instead. Audio flushes to disk in chunks during recording, so a crash mid-interview never loses a session, and a trends view charts recurring weakness tags across companies and rounds. Built solo as a native Swift Package with five independently testable targets, each covered by automated tests — including a real end-to-end WhisperKit integration test.</p>
             <div class="tags">
               <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Swift Package Manager</span><span class="tag">ScreenCaptureKit</span><span class="tag">WhisperKit</span><span class="tag">GRDB/SQLite</span><span class="tag">Claude API</span><span class="tag">Keychain Services</span>
             </div>
             <div class="metrics">
-              <div class="metric"><span class="val">75</span><span class="key">automated tests</span></div>
-              <div class="metric"><span class="val">5</span><span class="key">independent targets</span></div>
               <div class="metric"><span class="val">On-device</span><span class="key">no audio leaves the machine</span></div>
+              <div class="metric"><span class="val">Dual-stream</span><span class="key">deterministic speaker attribution, no bot</span></div>
+              <div class="metric"><span class="val">Crash-safe</span><span class="key">chunked capture, automatic recovery</span></div>
             </div>
             <div class="project-foot">
               <div class="project-links">
@@ -300,14 +300,14 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">Pawbook is the productization of the Brad Paws scheduler, built solo end to end. A host site adds one <code>&lt;script&gt;</code> tag; Pawbook injects an auto-resizing iframe whose <code>postMessage</code> channel is validated by both <strong>origin and source</strong>, so neither the widget nor the host page can hijack the other. Behind it is a full multi-tenant platform — each sitter gets isolated config, services, pricing, and bookings, with capacity and conflict rules computed from a single source of truth. The booking/date/pricing core is pure TypeScript with <strong>zero runtime dependencies</strong>, backed by 46+ test files running against in-memory SQLite. CI gates every PR on typecheck, lint, format, test, and build, then auto-deploys to Cloudflare on merge.</p>
+            <p class="project-body">Pawbook is the productization of the Brad Paws scheduler, built solo end to end. A host site adds one <code>&lt;script&gt;</code> tag; Pawbook injects an auto-resizing iframe whose <code>postMessage</code> channel is validated by both <strong>origin and source</strong>, so neither the widget nor the host page can hijack the other. Behind it is a full multi-tenant platform — each sitter gets isolated config, services, pricing, and bookings, with capacity and conflict rules computed from a single source of truth, plus a non-technical dashboard for confirming bookings, defining time-windowed services, importing clients from CSV, and syncing to Google Calendar. The booking/date/pricing core is pure TypeScript with <strong>zero runtime dependencies</strong>, so the rules that decide what a customer can book are testable in isolation — and tested against in-memory SQLite. CI gates every PR on typecheck, lint, format, test, and build, then auto-deploys to Cloudflare on merge.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">KV</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span>
             </div>
             <div class="metrics">
-              <div class="metric"><span class="val">46+</span><span class="key">test files</span></div>
-              <div class="metric"><span class="val">Zero</span><span class="key">runtime deps in core</span></div>
-              <div class="metric"><span class="val">Multi-tenant</span><span class="key">from one codebase</span></div>
+              <div class="metric"><span class="val">Multi-tenant</span><span class="key">isolated config, pricing, and capacity per tenant</span></div>
+              <div class="metric"><span class="val">Safe embedding</span><span class="key">origin- and source-validated postMessage</span></div>
+              <div class="metric"><span class="val">Dependency-free core</span><span class="key">booking rules testable in isolation</span></div>
             </div>
             <div class="project-foot">
               <div class="project-links">
@@ -329,6 +329,11 @@ email: bradburch.jobs@gmail.com
             <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so I don't rebuild them from scratch every time. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE</span><span class="tag">Rate limiting</span><span class="tag">Scope-gated auth</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">OAuth 2.1 + PKCE</span><span class="key">agent auth done to spec</span></div>
+              <div class="metric"><span class="val">Scope-gated tools</span><span class="key">every call authorized against explicit scopes</span></div>
+              <div class="metric"><span class="val">Two-phase confirm</span><span class="key">sensitive actions propose first, execute on approval</span></div>
             </div>
             <div class="project-foot">
               <div class="project-links">
@@ -377,7 +382,7 @@ email: bradburch.jobs@gmail.com
             <div class="role-when">2022 — Present<span class="loc">San Francisco</span></div>
             <div>
               <div class="role-name"><a href="https://bradpaws.com" target="_blank" rel="noopener">Brad Paws</a><span class="role-title">Founder · Sole Engineer</span></div>
-              <p class="role-desc">Sole engineer on a production stack: a <strong>TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with fifteen tools and a full safety envelope, a standards-compliant MCP server, and <strong>1,500+ tests</strong>. See the four projects above.</p>
+              <p class="role-desc">Sole engineer on a production stack: a <strong>TypeScript monorepo</strong> on Cloudflare Workers (D1, KV, R2, Workflows), a Claude agent with fifteen tools and a full safety envelope, a standards-compliant MCP server, and <strong>near-100% server test coverage</strong>. See the four projects above.</p>
             </div>
           </div>
 
@@ -429,7 +434,7 @@ email: bradburch.jobs@gmail.com
         <div class="about-grid">
           <div class="about-prose reveal">
             <p>I'm a full-stack engineer in San Francisco, seven-plus years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
-            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 23-table D1 schema with 1,500+ tests</strong>, and durable calendar sync on Cloudflare Workflows.</p>
+            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 23-table D1 schema with near-100% server test coverage</strong>, and durable calendar sync on Cloudflare Workflows.</p>
             <p>What I want next is a <strong>Forward Deployed, Solutions, or Software Engineer</strong> role in SF at a company shipping AI that's load-bearing. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one.</p>
           </div>
           <aside class="about-side reveal">
