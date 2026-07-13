@@ -106,14 +106,114 @@ email: bradburch.jobs@gmail.com
       <!-- ── Featured work ─────────────────────────── -->
       <section id="work">
         <p class="section-label reveal"><span class="idx">01</span> Featured work</p>
-        <h2 class="section-intro reveal">Three systems running in production, plus a public security audit.</h2>
+        <h2 class="section-intro reveal">Open-source tools I built and maintain, plus three systems running in production for Brad Paws.</h2>
 
         <div class="projects">
 
-          <!-- 1. Portal -->
+          <!-- 1. pawbook -->
           <article class="project reveal">
             <div class="project-head">
               <span class="project-num">01</span>
+              <div class="project-titles">
+                <h3>pawbook</h3>
+                <p class="project-tagline">An open-source, embeddable multi-tenant booking widget — drop a live booking calendar into any website with a single &lt;script&gt; tag.</p>
+              </div>
+              <span class="badge badge-spec">Open source</span>
+            </div>
+            <p class="project-body">pawbook is the productization of the Brad Paws scheduler, built solo end to end. A host site adds one <code>&lt;script&gt;</code> tag; pawbook injects an auto-resizing iframe whose <code>postMessage</code> channel is validated by both <strong>origin and source</strong>, so neither the widget nor the host page can hijack the other. Behind it is a full multi-tenant platform — each sitter gets isolated config, services, pricing, and bookings, with capacity and conflict rules computed from a single source of truth. The booking/date/pricing core is pure TypeScript with <strong>zero runtime dependencies</strong>, backed by 46+ test files running against in-memory SQLite. CI gates every PR on typecheck, lint, format, test, and build, then auto-deploys to Cloudflare on merge.</p>
+            <div class="tags">
+              <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">KV</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">46+</span><span class="key">test files</span></div>
+              <div class="metric"><span class="val">Zero</span><span class="key">runtime deps in core</span></div>
+              <div class="metric"><span class="val">Multi-tenant</span><span class="key">from one codebase</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/bradburch/pawbook" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. mcp-auth-kit -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">02</span>
+              <div class="project-titles">
+                <h3>mcp-auth-kit</h3>
+                <p class="project-tagline">A production-minded MCP server kit: OAuth 2.1 + PKCE, rate limiting, scope-gated tools, and two-phase confirmation.</p>
+              </div>
+              <span class="badge badge-spec">Open source</span>
+            </div>
+            <p class="project-body">mcp-auth-kit packages the hard parts of shipping a safe Model Context Protocol server so I don't rebuild them from scratch every time. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
+            <div class="tags">
+              <span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE</span><span class="tag">Rate limiting</span><span class="tag">Scope-gated auth</span>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/bradburch/mcp-auth-kit" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. roadrunner -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">03</span>
+              <div class="project-titles">
+                <h3>roadrunner</h3>
+                <p class="project-tagline">A multi-user Django app that shares the nature you saw on your Strava activities — matching eBird and iNaturalist observations by time and location.</p>
+              </div>
+              <span class="badge badge-spec">Open source</span>
+            </div>
+            <p class="project-body">Log in with Strava, link an eBird or iNaturalist profile, and roadrunner writes the species you logged into the description of the matching Strava activity. Activities sync in real time via <strong>Strava OAuth and webhooks</strong>. The interesting problem: birders submit checklists hours after they get home, so unmatched activities go into a <strong>deferred re-check queue (2/4/8-hour ladder)</strong>, and the species appear the moment the checklist does. Scheduling runs on a free GitHub Actions cron instead of a paid Vercel Cron plan, keeping total hosting cost at zero. Three third-party API integrations, timezone-correct wall-clock matching, and a test suite covering matching, sync, OAuth, and the re-check queue — roughly half the codebase by line count.</p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL (Neon)</span><span class="tag">Vercel</span><span class="tag">Strava API</span><span class="tag">eBird API</span><span class="tag">iNaturalist API</span><span class="tag">GitHub Actions</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">$0</span><span class="key">hosting cost</span></div>
+              <div class="metric"><span class="val">3 APIs</span><span class="key">Strava, eBird, iNaturalist</span></div>
+              <div class="metric"><span class="val">~50%</span><span class="key">of codebase is tests</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/bradburch/roadrunner" target="_blank" rel="noopener">GitHub ↗</a>
+                <a class="project-link" href="https://roadrunner-iota-nine.vercel.app/" target="_blank" rel="noopener">Live demo ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Debrief -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">04</span>
+              <div class="project-titles">
+                <h3>Debrief</h3>
+                <p class="project-tagline">A native macOS app that records job-interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching feedback.</p>
+              </div>
+              <span class="badge badge-spec">Open source</span>
+            </div>
+            <p class="project-body">Debrief records your interview calls, transcribes them on-device, and scores them against a rubric, so you walk into round two knowing what to fix. The core idea is <strong>dual-stream capture</strong>: your mic and the interviewer's audio (via ScreenCaptureKit) record as two independent tracks, so who-said-this is a hardware-level fact instead of an ML diarization guess — nothing joins the call as a visible bot. WhisperKit (CoreML/Metal) transcribes fully on-device; the Claude API then produces per-dimension scores, weakness tags, and action items. Audio flushes to disk in chunks during recording, so a crash mid-interview never loses a session. Built solo as a native Swift Package with five independently testable targets and 75 automated tests.</p>
+            <div class="tags">
+              <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Swift Package Manager</span><span class="tag">ScreenCaptureKit</span><span class="tag">WhisperKit</span><span class="tag">GRDB/SQLite</span><span class="tag">Claude API</span><span class="tag">Keychain Services</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">75</span><span class="key">automated tests</span></div>
+              <div class="metric"><span class="val">5</span><span class="key">independent targets</span></div>
+              <div class="metric"><span class="val">On-device</span><span class="key">no audio leaves the machine</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/bradburch/debrief" target="_blank" rel="noopener">GitHub ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Portal -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">05</span>
               <div class="project-titles">
                 <h3>Brad Paws Client Portal</h3>
                 <p class="project-tagline">A full-stack React&nbsp;19 + Hono portal on Cloudflare Workers, running a live SF pet-care operation.</p>
@@ -179,10 +279,10 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 2. AI Agent -->
+          <!-- 6. AI Agent -->
           <article class="project reveal">
             <div class="project-head">
-              <span class="project-num">02</span>
+              <span class="project-num">06</span>
               <div class="project-titles">
                 <h3>Brad Paws AI Chat Agent</h3>
                 <p class="project-tagline">A production Claude Haiku 4.5 agent with fifteen tools, two-phase confirmation, and a circuit breaker.</p>
@@ -218,10 +318,10 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 3. MCP -->
+          <!-- 7. MCP -->
           <article class="project reveal">
             <div class="project-head">
-              <span class="project-num">03</span>
+              <span class="project-num">07</span>
               <div class="project-titles">
                 <h3>Brad Paws MCP Server</h3>
                 <p class="project-tagline">A standards-compliant Model Context Protocol server with OAuth2 + PKCE, stateless on Workers V8.</p>
@@ -260,35 +360,6 @@ email: bradburch.jobs@gmail.com
                   <li>Added non-blocking D1 audit logging for all OAuth events with indexed queries by owner, action, and timestamp</li>
                 </ul>
               </div>
-            </div>
-          </article>
-
-          <!-- 4. Audit -->
-          <article class="project reveal">
-            <div class="project-head">
-              <span class="project-num">04</span>
-              <div class="project-titles">
-                <h3>AI Surfaces Audit</h3>
-                <p class="project-tagline">A security self-audit of every AI surface in a production Claude agent.</p>
-              </div>
-              <span class="badge badge-spec">Writeup</span>
-            </div>
-            <p class="project-body">I went after my own agent the way a security firm would go after a client's. I listed every AI surface (the chat input, tool outputs that re-enter the prompt, third-party content that lands in context) and walked the attack tree: <strong>prompt injection through Notion sync, tool-authority abuse, data exfiltration through tool responses</strong>. The writeup covers the findings, the mitigations I shipped, and the risk I chose to live with. It's what I send when someone asks how I think about AI safety once it's in front of customers.</p>
-            <div class="tags">
-              <span class="tag">Prompt injection defense</span><span class="tag">Tool authority</span><span class="tag">Threat modeling</span><span class="tag">MCP</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">Every surface</span><span class="key">enumerated</span></div>
-              <div class="metric"><span class="val">In-code</span><span class="key">mitigations shipped</span></div>
-            </div>
-            <div class="project-foot">
-              <div class="project-links">
-                <a class="project-link" href="#contact" aria-disabled="true">Audit available on request</a>
-              </div>
-              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
-            </div>
-            <div class="dive">
-              <div class="dive-note">Most AI-safety writeups are theoretical. I wanted one grounded in a system I actually had to defend. The mitigations are concrete and live in code: two-phase confirmation, the circuit breaker, scoped tool authority, and a content boundary on third-party data. I kept the public version at the architecture level, so it's useful to a reader without handing an attacker a map.</div>
             </div>
           </article>
 
@@ -340,11 +411,11 @@ email: bradburch.jobs@gmail.com
       <section id="stack">
         <p class="section-label reveal"><span class="idx">03</span> Technical stack</p>
         <div class="stack-grid">
-          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Java · Scala</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 7 · Node.js · Hono · Vercel AI SDK · Spring · Play</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">AI &amp; LLM</span><span class="stack-items">Claude (Haiku, Sonnet) · MCP servers · agentic workflows · tool-use design · prompt-injection defense · AI security audits</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Swift · Go · Java · Scala</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 7 · Node.js · Hono · Vercel AI SDK · SwiftUI · Django · Spring · Play</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">AI &amp; LLM</span><span class="stack-items">Claude (Haiku, Sonnet) · MCP servers · agentic workflows · tool-use design · prompt-injection defense · on-device inference (WhisperKit / CoreML)</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Cloud &amp; Infra</span><span class="stack-items">Cloudflare Workers · D1 · KV · R2 · Workflows · AWS · SQS · Docker</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Data</span><span class="stack-items">PostgreSQL · DynamoDB · MSSQL · SQL · NoSQL</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Data</span><span class="stack-items">PostgreSQL · DynamoDB · MSSQL · SQLite (GRDB) · SQL · NoSQL</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Auth &amp; Security</span><span class="stack-items">OAuth2 · PKCE · SAML 2.0 · JWT · SSO · rate limiting · circuit breakers</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">APIs &amp; Integrations</span><span class="stack-items">REST · Google Calendar v3 · Notion · Gmail · HubSpot · Box · multipart/mixed batching · service-account auth</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Testing &amp; DevOps</span><span class="stack-items">Vitest · Playwright · GitHub Actions · Jenkins · WCAG 2.1 AA</span></div>
@@ -357,7 +428,7 @@ email: bradburch.jobs@gmail.com
         <div class="about-grid">
           <div class="about-prose reveal">
             <p>I'm a full-stack engineer in San Francisco, seven-plus years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
-            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 23-table D1 schema with 1,500+ tests</strong>, and durable calendar sync on Cloudflare Workflows. I published an AI security audit because the agent sits in front of a billing system.</p>
+            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 23-table D1 schema with 1,500+ tests</strong>, and durable calendar sync on Cloudflare Workflows.</p>
             <p>What I want next is a <strong>Forward Deployed, Solutions, or Software Engineer</strong> role in SF at a company shipping AI that's load-bearing. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one.</p>
           </div>
           <aside class="about-side reveal">
@@ -380,8 +451,8 @@ email: bradburch.jobs@gmail.com
       <section id="now">
         <p class="section-label reveal"><span class="idx">05</span> Now</p>
         <div class="now reveal">
-          <div class="now-head"><span class="tag-now">Currently</span><span class="when">June 2026</span></div>
-          <p>Running Brad Paws and tightening the agent's tool surface around what clients actually ask it to do. Writing a second AI-safety post, this one on tool-authority scoping. <strong>Interviewing in SF</strong> for Forward Deployed, Solutions, and Software Engineer roles at companies shipping AI that matters to the product. Open to onsite-hybrid in SF, or remote with an SF anchor. Email is the best way to reach me.</p>
+          <div class="now-head"><span class="tag-now">Currently</span><span class="when">July 2026</span></div>
+          <p>Running Brad Paws and building <strong>pawbook</strong>, the open-source, embeddable version of its scheduler, so any operator can add booking to their own site. Just shipped <strong>Debrief</strong>, a native macOS app that records interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching. Also maintaining <strong>mcp-auth-kit</strong>, an open-source OAuth 2.1 + PKCE MCP server kit. <strong>Interviewing in SF</strong> for Forward Deployed, Solutions, and Software Engineer roles at companies shipping production AI. Open to onsite-hybrid in SF, or remote with an SF anchor. Email is the best way to reach me.</p>
         </div>
       </section>
 
