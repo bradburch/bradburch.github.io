@@ -93,7 +93,7 @@ email: bradburch.jobs@gmail.com
       <span class="status reveal d1"><span class="ping"></span> Open to roles · San Francisco</span>
       <p class="eyebrow reveal d1">Product Engineer · Production AI · San Francisco</p>
       <h1 class="reveal d2">I build production<br>AI systems <em>end-to-end.</em></h1>
-      <p class="lede reveal d3">9+ years full-stack. I'm the <strong>sole engineer on Brad&nbsp;Paws</strong>, where I run a Claude agent, an OAuth2&nbsp;+&nbsp;PKCE MCP server, and a client portal on Cloudflare Workers. Looking for Product Engineer or Software Engineer roles in SF.</p>
+      <p class="lede reveal d3">7+ years full-stack. I'm the <strong>sole engineer on Brad&nbsp;Paws</strong>, where I run a Claude agent, an OAuth2&nbsp;+&nbsp;PKCE MCP server, and a client portal on Cloudflare Workers. Looking for Product Engineer or Software Engineer roles in SF.</p>
       <p class="hero-proof reveal d3"><span class="live-dot"></span><span>Brad Paws is live, handling bookings and billing for <b>dozens of paying SF clients</b>.</span></p>
       <p class="tagline reveal d4">The operator-engineer who ships production AI, talks to customers, and writes the tests.</p>
       <div class="cta-row reveal d5">
@@ -256,7 +256,7 @@ email: bradburch.jobs@gmail.com
               <div class="subsystem">
                 <span class="subsystem-label">Authentication &amp; Security</span>
                 <ul class="bullets">
-                  <li>Built a full OAuth 2.0 authorization-code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code-challenge verification, single-use authorization codes, refresh-token rotation, IP-based rate limiting against brute-force enumeration, and hashed-token audit logging</li>
+                  <li>Built a full OAuth 2.1 authorization-code flow with PKCE (<strong>RFC 7636</strong>) from scratch — dynamic client registration, S256 code-challenge verification, single-use authorization codes, refresh-token rotation, IP-based rate limiting against brute-force enumeration, and hashed-token audit logging</li>
                   <li>Implemented cookie-based JWT auth (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies, <strong>server-side session revocation</strong>, and E.164 phone normalization, protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
                   <li>Added non-blocking D1 audit logging for all OAuth events with indexed queries by owner, action, and timestamp</li>
                 </ul>
@@ -327,7 +327,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so I don't rebuild them from scratch every time. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
+            <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so others don't rebuild them from scratch. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE</span><span class="tag">Rate limiting</span><span class="tag">Scope-gated auth</span>
             </div>
@@ -353,7 +353,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">Log in with Strava, link an eBird or iNaturalist profile, and Roadrunner writes the species you logged into the description of the matching Strava activity. Activities sync in real time via <strong>Strava OAuth and webhooks</strong>. The interesting problem: birders submit checklists hours after they get home, so unmatched activities go into a <strong>deferred re-check queue (2/4/8-hour ladder)</strong>, and the species appear the moment the checklist does. Three third-party API integrations, timezone-correct wall-clock matching, and a test suite covering matching, sync, OAuth, and the re-check queue.</p>
+            <p class="project-body">Log in with Strava, link an eBird or iNaturalist profile, and Roadrunner writes the species you logged into the description of the matching Strava activity. Activities sync in real time via <strong>Strava OAuth and webhooks</strong>, with automatic token refresh. The interesting problem: birders submit checklists hours after they get home, so unmatched activities go into a <strong>deferred re-check queue (2/4/8-hour ladder)</strong>, and the species appear the moment the checklist does. Deployed serverless on Vercel with pooled Neon Postgres and scheduled by a bearer-authenticated GitHub Actions cron. Three third-party API integrations, timezone-correct wall-clock matching, security middleware (CSRF, clickjacking, per-user webhook rate limiting), and a test suite covering matching, sync, OAuth, and the re-check queue.</p>
             <div class="tags">
               <span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL (Neon)</span><span class="tag">Vercel</span><span class="tag">Strava API</span><span class="tag">eBird API</span><span class="tag">iNaturalist API</span><span class="tag">GitHub Actions</span>
             </div>
@@ -376,7 +376,7 @@ email: bradburch.jobs@gmail.com
       <!-- ── Experience ────────────────────────────── -->
       <section id="experience">
         <p class="section-label reveal"><span class="idx">02</span> Experience</p>
-        <h2 class="section-intro reveal">Nine years of customer-facing engineering, from Salesforce to my own product.</h2>
+        <h2 class="section-intro reveal">Seven years of customer-facing engineering, from Salesforce to my own product.</h2>
 
         <div class="timeline">
           <div class="role reveal">
@@ -434,9 +434,9 @@ email: bradburch.jobs@gmail.com
         <p class="section-label reveal"><span class="idx">04</span> About</p>
         <div class="about-grid">
           <div class="about-prose reveal">
-            <p>I'm a full-stack engineer in San Francisco, nine-plus years in. I started at Salesforce in 2017 and spent five years on engineering teams — Salesforce, Total Brain, Front — before going out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
+            <p>I'm a full-stack engineer in San Francisco, seven-plus years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
             <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned the "Forward Deployed Engineer" job description is real work, not a title. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on a 23-table D1 schema with near-100% server test coverage</strong>, and durable calendar sync on Cloudflare Workflows.</p>
-            <p>What I want next is a <strong>Product Engineer or Software Engineer</strong> role at a Series B+ company in SF shipping AI that's load-bearing (I'm also open to Forward Deployed Engineer roles where the JD's actual stack fits). I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one. After 4+ years running Brad Paws solo, I'm looking for a team to build with, not another solo build.</p>
+            <p>What I want next is a <strong>Product Engineer or Software Engineer</strong> role at a Series B+ company in SF shipping AI that's load-bearing (I'm also open to Forward Deployed Engineer roles where the JD's actual stack fits). I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one. After nearly four years running Brad Paws solo, I'm looking for a team to build with, not another solo build.</p>
           </div>
           <aside class="about-side reveal">
             <h4>What working with me is like</h4>
