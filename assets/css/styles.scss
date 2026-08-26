@@ -386,7 +386,7 @@ section:last-of-type { border-bottom: none; }
   transition: 0.16s;
 }
 .project-link:hover { color: var(--accent); border-color: var(--accent); }
-.project-link[aria-disabled="true"] { color: var(--muted); border-style: dashed; cursor: default; }
+.project-link.is-disabled { color: var(--muted); border-style: dashed; cursor: default; }
 
 .dive-btn {
   font-family: var(--mono);
