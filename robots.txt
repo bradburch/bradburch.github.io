@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bradburch.github.io/sitemap.xml
