@@ -12,7 +12,7 @@ email: bradburch.jobs@gmail.com
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Brad Burch - Product Engineer | Production AI, MCP, Cloudflare Workers</title>
-  <meta name="description" content="Brad Burch, product engineer in San Francisco and the Midwest. Sole engineer at Pawservation: booking platform, 15-tool Claude agent, MCP server.">
+  <meta name="description" content="Brad Burch, product engineer in San Francisco, open to the Midwest. Sole engineer at Pawservation: booking platform, 15-tool Claude agent, MCP server.">
   <meta name="author" content="Brad Burch">
   <link rel="canonical" href="https://bradburch.github.io/">
   <meta name="theme-color" content="#0c0c0e">
@@ -55,7 +55,7 @@ email: bradburch.jobs@gmail.com
         "@id": "https://bradburch.github.io/#profilepage",
         "url": "https://bradburch.github.io/",
         "name": "Brad Burch - Product Engineer",
-        "dateModified": "2026-08-26",
+        "dateModified": "2026-09-08",
         "mainEntity": { "@id": "https://bradburch.github.io/#brad" },
         "isPartOf": { "@id": "https://bradburch.github.io/#website" }
       },
@@ -174,8 +174,8 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── Featured work ─────────────────────────── -->
       <section id="work">
-        <h2 class="section-label reveal"><span class="idx">01</span> Featured work</h2>
-        <h2 class="section-intro reveal">The multi-tenant booking platform I built for other pet-care businesses, the AI surfaces I put on top of it, the client portal my own operation runs on, and open-source tools I maintain on the side.</h2>
+        <h2 class="section-label reveal"><span class="idx" aria-hidden="true">01</span> Featured work</h2>
+        <p class="section-intro reveal">The multi-tenant booking platform I built for other pet-care businesses, the AI surfaces I put on top of it, the client portal my own operation runs on, and open-source tools I maintain on the side.</p>
 
         <div class="projects">
 
@@ -281,7 +281,7 @@ email: bradburch.jobs@gmail.com
                 <ul class="bullets">
                   <li>Kept every price, balance, and fee in existing server-side logic and reported it verbatim, so <strong>the model narrates figures it cannot compute</strong></li>
                   <li>Registered every dollar figure a tool returns for the turn and <strong>discarded the entire answer</strong> when the model's prose contained an amount not in that set, rather than stripping the number and shipping a still-unverified sentence</li>
-                  <li>Proved the constraint with a test that stringifies the whole prompt and every tool result and asserts <strong>the only digits the model ever saw are the two dates</strong></li>
+                  <li>Proved the model never receives the inputs it would need to do arithmetic: for a date-range quote, a test stringifies the whole prompt and every tool result and asserts <strong>the only digits present are the two dates</strong> — no rate, no count, nothing to multiply</li>
                 </ul>
               </div>
               <div class="subsystem">
@@ -309,10 +309,10 @@ email: bradburch.jobs@gmail.com
             </div>
             <p class="project-body">The MCP server exposes the booking system to MCP clients, so I and a customer's own AI assistant can drive it from Claude Desktop, Cursor, or anything spec-compliant. I hand-wrote the <strong>authorization-code flow with PKCE</strong> — RFC 7636 on the portal server, the full MCP authorization spec on the platform — so any spec-compliant client connects self-service, and the platform server is publicly verifiable at its discovery endpoint rather than something you have to take my word for. It's stateless across the Workers V8 fleet: every request stands alone, every token is verified, nothing held in memory between calls. The part I would point a reviewer at is that <strong>customer chat and the MCP connector are one product through two transports</strong>: capabilities are declared once and implemented once, and the binding fails loudly in both directions if the two ever disagree. MCP Auth Kit (below) is the open-source version of the auth and safety layer underneath it.</p>
             <div class="tags">
-              <span class="tag">MCP spec</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE (RFC 7636)</span><span class="tag">@modelcontextprotocol/sdk</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
+              <span class="tag">MCP spec</span><span class="tag">OAuth</span><span class="tag">PKCE (RFC 7636)</span><span class="tag">@modelcontextprotocol/sdk</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
             </div>
             <div class="metrics">
-              <div class="metric"><span class="val">5 RFCs</span><span class="key">7636 · 8414 · 8707 · 9207 · 9728</span></div>
+              <div class="metric"><span class="val">5 RFCs</span><span class="key">MCP auth spec, platform server</span></div>
               <div class="metric"><span class="val">Stateless</span><span class="key">across V8 fleet</span></div>
               <div class="metric"><span class="val">One declaration</span><span class="key">two transports, bound or it fails</span></div>
               <div class="metric"><span class="val">0 of 15</span><span class="key">surveyed vendors ship MCP</span></div>
@@ -511,8 +511,8 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── Experience ────────────────────────────── -->
       <section id="experience">
-        <h2 class="section-label reveal"><span class="idx">02</span> Experience</h2>
-        <h2 class="section-intro reveal">7 years of customer-facing engineering, from Salesforce to my own product.</h2>
+        <h2 class="section-label reveal"><span class="idx" aria-hidden="true">02</span> Experience</h2>
+        <p class="section-intro reveal">7 years of customer-facing engineering, from Salesforce to my own product.</p>
 
         <div class="timeline">
           <div class="role reveal">
@@ -552,7 +552,7 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── Stack ─────────────────────────────────── -->
       <section id="stack">
-        <h2 class="section-label reveal"><span class="idx">03</span> Technical stack</h2>
+        <h2 class="section-label reveal"><span class="idx" aria-hidden="true">03</span> Technical stack</h2>
         <div class="stack-grid">
           <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Swift · Java · Scala</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 7 · Node.js · Hono · Vercel AI SDK · SwiftUI · Django · Spring · Play</span></div>
@@ -567,7 +567,7 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── About ─────────────────────────────────── -->
       <section id="about">
-        <h2 class="section-label reveal"><span class="idx">04</span> About</h2>
+        <h2 class="section-label reveal"><span class="idx" aria-hidden="true">04</span> About</h2>
         <div class="about-grid">
           <div class="about-prose reveal">
             <p>I'm a full-stack engineer in San Francisco, 7 years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
@@ -592,7 +592,7 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── Contact ───────────────────────────────── -->
       <section id="contact">
-        <h2 class="section-label reveal"><span class="idx">05</span> Get in touch</h2>
+        <h2 class="section-label reveal"><span class="idx" aria-hidden="true">05</span> Get in touch</h2>
         <div class="contact-card reveal">
           <p class="pitch">Brad Burch is looking for <strong>Product Engineer and Software Engineer</strong> roles (and selectively Forward Deployed Engineer) at <strong>Series B or later companies</strong>, AI or product. Based in <strong>San Francisco</strong>, and open to relocating to <strong>Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor</strong>. Best fit is a team that puts engineers in front of customers, whether the product is AI-first or AI is one surface of it. <strong>US citizen, no sponsorship required.</strong> Fastest reply is email.</p>
           <div class="contact-grid">
