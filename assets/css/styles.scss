@@ -273,6 +273,8 @@ section { padding: 64px 0; border-bottom: 1px solid var(--line); }
 section:last-of-type { border-bottom: none; }
 
 .section-label {
+  margin-top: 0;
+  font-weight: 400;
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.2em;
@@ -509,7 +511,7 @@ section:last-of-type { border-bottom: none; }
   border-radius: 12px;
   padding: 22px 22px 24px;
 }
-.about-side h4 {
+.about-side h3 {
   font-family: var(--mono);
   font-size: 11px;
   font-weight: 700;
@@ -532,7 +534,7 @@ section:last-of-type { border-bottom: none; }
 .about-side li:first-child::before { top: 2px; }
 
 .about-side .edu { margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
-.about-side .edu h4 { margin-bottom: 8px; }
+.about-side .edu h3 { margin-bottom: 8px; }
 .about-side .edu p { font-size: 0.9rem; line-height: 1.55; color: var(--text-dim); }
 .about-side .edu a { color: inherit; text-decoration: none; }
 .about-side .edu a:hover b { color: var(--accent); }
@@ -642,6 +644,8 @@ footer a:hover { color: var(--accent); }
   .contact-card { padding: 22px 18px; }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 599px) {
+  /* six links wrap to a second row below ~600px, which also exceeds
+     scroll-padding-top and buries anchor targets under the sticky nav */
   .nav-link.hide-xs { display: none; }
 }
