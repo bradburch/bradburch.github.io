@@ -12,7 +12,7 @@ email: bradburch.jobs@gmail.com
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Brad Burch - Product Engineer | Production AI, MCP, Cloudflare Workers</title>
-  <meta name="description" content="Brad Burch, product engineer in San Francisco and open to the Midwest. Sole engineer on a production Claude agent, an OAuth 2.1 + PKCE MCP server, and MCP Auth Kit.">
+  <meta name="description" content="Brad Burch, product engineer in San Francisco and the Midwest. Sole engineer at Pawservation: booking platform, 15-tool Claude agent, MCP server.">
   <meta name="author" content="Brad Burch">
   <link rel="canonical" href="https://bradburch.github.io/">
   <meta name="theme-color" content="#0c0c0e">
@@ -23,14 +23,14 @@ email: bradburch.jobs@gmail.com
   <meta property="profile:last_name" content="Burch">
   <meta property="og:url" content="https://bradburch.github.io/">
   <meta property="og:title" content="Brad Burch - Product Engineer | Production AI, MCP, Cloudflare Workers">
-  <meta property="og:description" content="Sole engineer on the platform his own SF pet-care business runs on, plus a separate multi-tenant booking platform for pet-care businesses. Claude agent, MCP server.">
+  <meta property="og:description" content="Sole engineer at Pawservation: a multi-tenant booking platform for pet-care businesses carrying a Claude agent and an MCP server, plus the portal his own SF operation runs on.">
   <meta property="og:image" content="https://bradburch.github.io/og-card.png">
   <meta property="og:image:alt" content="Brad Burch, Product Engineer, San Francisco">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Brad Burch - Product Engineer | Production AI, MCP, Cloudflare Workers">
-  <meta name="twitter:description" content="Sole engineer on the platform his own SF pet-care business runs on, plus a separate multi-tenant booking platform for pet-care businesses. Claude agent, MCP server.">
+  <meta name="twitter:description" content="Sole engineer at Pawservation: a multi-tenant booking platform for pet-care businesses carrying a Claude agent and an MCP server, plus the portal his own SF operation runs on.">
   <meta name="twitter:image" content="https://bradburch.github.io/og-card.png">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -76,7 +76,13 @@ email: bradburch.jobs@gmail.com
         "image": "https://bradburch.github.io/og-card.png",
         "email": "mailto:bradburch.jobs@gmail.com",
         "jobTitle": ["Product Engineer", "Software Engineer", "Forward Deployed Engineer"],
-        "description": "Full-stack product engineer with 7 years of experience. Sole engineer on Brad Paws, the booking and billing platform his own San Francisco pet-care business runs on, built on Cloudflare Workers with a Claude agent and an OAuth 2.1 + PKCE Model Context Protocol server, alongside a separate multi-tenant Pawservation Booking Platform for other pet-care businesses that embeds with one script tag.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Pawservation",
+          "url": "https://pawservation.com/",
+          "description": "San Francisco pet-care business and the multi-tenant booking platform it operates for other pet-care businesses."
+        },
+        "description": "Full-stack product engineer with 7 years of experience. Sole engineer at Pawservation, his own San Francisco pet-care business, where he built and runs a multi-tenant booking platform for other pet-care businesses that embeds with one script tag, carrying a 15-tool Claude agent and a hand-written OAuth + PKCE Model Context Protocol server, alongside the Brad Paws client portal his own operation books and bills on, all on Cloudflare Workers.",
         "homeLocation": {
           "@type": "Place",
           "address": {
@@ -131,6 +137,8 @@ email: bradburch.jobs@gmail.com
       <a href="#top" class="brand">brad_burch<span class="dot">.</span></a>
       <div class="nav-links">
         <a href="#work" class="nav-link hide-xs">Work</a>
+        <a href="#experience" class="nav-link hide-xs">Experience</a>
+        <a href="#stack" class="nav-link hide-xs">Stack</a>
         <a href="#about" class="nav-link hide-xs">About</a>
         <a href="{{ page.resume }}" class="nav-link" download="Brad-Burch-Resume.pdf">Resume</a>
         <a href="mailto:{{ page.email }}" class="nav-link is-cta">Email</a>
@@ -143,7 +151,7 @@ email: bradburch.jobs@gmail.com
       <span class="status reveal d1"><span class="ping"></span> Open to roles · San Francisco &amp; the Midwest</span>
       <p class="eyebrow reveal d1">Product Engineer · Production AI · San Francisco and the Midwest</p>
       <h1 class="reveal d2">I build production<br>AI systems <em>end-to-end.</em></h1>
-      <p class="lede reveal d3">7 years full-stack. I'm the <strong>sole engineer on Brad Paws</strong>, where I run a Claude agent, an OAuth&nbsp;2.1&nbsp;+&nbsp;PKCE MCP server, and a client portal on Cloudflare Workers. Looking for Product Engineer or Software Engineer roles in San Francisco, or in the Midwest if the role is worth relocating for.</p>
+      <p class="lede reveal d3">7 years full-stack. I'm the <strong>sole engineer at Pawservation</strong>, my own SF pet-care business: a multi-tenant booking platform for other pet-care businesses, a 15-tool Claude agent, and a hand-written OAuth&nbsp;+&nbsp;PKCE MCP server, plus the client portal my own operation books and bills on, all on Cloudflare Workers. Looking for Product Engineer or Software Engineer roles in San Francisco, or in the Midwest if the role is worth relocating for.</p>
       <p class="tagline reveal d3">Previously <strong>Salesforce</strong>, <strong>Total Brain</strong>, and <strong>Front</strong>. Since 2022, the only engineer on a production stack of my own.</p>
       <p class="hero-proof reveal d4"><span class="live-dot"></span><span>In production since 2022. It books the work and collects the money, with no ops team and no downtime budget.</span></p>
       <div class="cta-row reveal d5">
@@ -159,33 +167,199 @@ email: bradburch.jobs@gmail.com
         <div class="now reveal">
           <div class="now-head"><span class="tag-now">Summary</span></div>
           <p><strong>Brad Burch</strong> is a product engineer in San Francisco with 7 years of experience across Salesforce, Total Brain, Front, and four years running his own production system.</p>
-          <p>He built and still operates the booking, billing, and payments platform that runs his own San Francisco pet-care business, <strong>Brad Paws</strong>: TypeScript on Cloudflare Workers with D1, KV, R2, and Workflows, 30+ active clients, and 60+ bookings and 30+ invoices a month. He is its only engineer.</p>
-          <p>That platform runs a production Claude agent with fifteen tools and a spec-compliant Model Context Protocol (MCP) server whose OAuth 2.1 + PKCE flow Brad Burch wrote himself. He open-sourced the agent auth and safety layer as MCP Auth Kit.</p>
-          <p>He also builds and operates a separate multi-tenant <strong>Pawservation Booking Platform</strong> for other pet-care businesses, live at pawservation.com with one tenant so far, his own business. It installs with one script tag and no build step, and a four-step wizard covers setup.</p>
-          <p>His stack is TypeScript first: React, Hono, Cloudflare Workers, D1, KV, R2, and Workflows, with Python as a secondary language.</p>
-          <p>Brad Burch is based in San Francisco and is open to relocating to Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor for the right role.</p>
-          <p>He is looking for Product Engineer or Software Engineer roles at Series B or later companies, and selectively Forward Deployed Engineer roles where the stack fits.</p>
+          <p>He is the sole engineer at <strong>Pawservation</strong>, his own San Francisco pet-care business: a multi-tenant booking platform for other pet-care businesses at pawservation.com, carrying a 15-tool Claude booking agent and a standards-conformant Model Context Protocol (MCP) server, plus the client portal his own operation books and bills on, serving 30+ active clients. The stack is TypeScript first: React, Hono, Cloudflare Workers, D1, KV, R2, and Workflows. He open-sourced the agent auth and safety layer as MCP Auth Kit.</p>
+          <p>Brad Burch is looking for Product Engineer or Software Engineer roles at Series B or later companies. He is based in San Francisco and open to relocating to Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor.</p>
         </div>
       </section>
 
       <!-- ── Featured work ─────────────────────────── -->
       <section id="work">
-        <p class="section-label reveal"><span class="idx">01</span> Featured work</p>
-        <h2 class="section-intro reveal">The production systems I run for Brad Paws, a separate booking platform I built for other pet-care businesses, and open-source tools I maintain on the side.</h2>
+        <h2 class="section-label reveal"><span class="idx">01</span> Featured work</h2>
+        <h2 class="section-intro reveal">The multi-tenant booking platform I built for other pet-care businesses, the AI surfaces I put on top of it, the client portal my own operation runs on, and open-source tools I maintain on the side.</h2>
 
         <div class="projects">
 
-          <!-- 1. Portal -->
+          <!-- 1. Pawservation Booking Platform -->
           <article class="project reveal">
             <div class="project-head">
               <span class="project-num">01</span>
+              <div class="project-titles">
+                <h3>Pawservation Booking Platform</h3>
+                <p class="project-tagline">A multi-tenant booking platform for pet-care businesses, embeddable in one script tag, on Cloudflare Workers, D1, and KV.</p>
+              </div>
+              <span class="badge badge-live"><span class="b-dot"></span>Live</span>
+            </div>
+            <p class="project-body">Embeddable booking for a pet-care business whose owner does not have a developer. Installing it is one <code>&lt;script&gt;</code> tag on any site builder that accepts embed HTML, with no build step and an iframe fallback for the builders that strip scripts. A four-step wizard covers the rest: services and pricing, availability, calendar connection, then the embed snippet. Under the widget sits the booking, calendar, and billing core on Cloudflare Workers with D1 and KV. The part I would want a reviewer to look at first is tenant isolation. Config, pricing, capacity, and bookings stay separated because every SQL query routes through one module scoped by business id, which makes the isolation boundary one file to review instead of every request handler. It is live at pawservation.com, and today it has one tenant, which is my own business.</p>
+            <div class="tags">
+              <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">KV</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">One script tag</span><span class="key">no build step, iframe fallback</span></div>
+              <div class="metric"><span class="val">Four-step wizard</span><span class="key">setup without a developer</span></div>
+              <div class="metric"><span class="val">Scoped queries</span><span class="key">one module carries every business id</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://pawservation.com/" target="_blank" rel="noopener">Live site ↗</a>
+                <span class="project-link is-disabled">Code: private — walkthrough on request</span>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="subsystem">
+                <span class="subsystem-label">Install &amp; Setup</span>
+                <ul class="bullets">
+                  <li>Designed an embeddable booking widget installed with <strong>one <code>&lt;script&gt;</code> tag</strong> and no build step, with an <strong>iframe fallback</strong> for the site builders that strip scripts</li>
+                  <li>Validated the widget's <code>postMessage</code> auto-resize channel by both <strong>origin and source</strong>, blocking the host page and the embedded widget from driving each other</li>
+                  <li>Built a <strong>four-step setup wizard</strong> taking a business from an empty account to a bookable calendar: services and pricing, availability, calendar connection, then the embed snippet</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Multi-Tenancy</span>
+                <ul class="bullets">
+                  <li>Isolated tenant data across <strong>config, pricing, capacity, and bookings</strong> by scoping every SQL query through a single business-id module</li>
+                  <li>Gave each business its own services, pricing, and capacity rules, single-sourced behind the quote, the calendar cost stamp, and the invoice</li>
+                  <li>Bounded LLM spend with per-user and global daily USD caps on reserve-then-reconcile, <strong>partitioned per tenant</strong> so one tenant cannot exhaust another's</li>
+                  <li>Exposed every operating assumption as dashboard-editable configuration, including services, cancellation windows, fee tiers, and the calendar connection</li>
+                  <li>Added <strong>change detection</strong> to a scheduled calendar sync that was rewriting unchanged rows every 15 minutes, eliminating the source of <strong>97% of the Cloudflare account's daily database writes (56,424 of 58,121</strong> against a 100,000/day cap), shipped a week before the cap took effect</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Data &amp; Testing</span>
+                <ul class="bullets">
+                  <li>Migrated <strong>66 client records, 64 pets, and 821 payments</strong> onto the platform with a read-only, insert-only generator that fails on replay instead of duplicating</li>
+                  <li>Tested every matcher against that migrated history rather than against fixtures, which is where the ambiguous payment cases actually live</li>
+                  <li>Kept the booking, date, and pricing core pure TypeScript with <strong>zero runtime dependencies</strong>, run in isolation against in-memory SQLite</li>
+                  <li>Gated every PR on typecheck, lint, format, test, and build, with auto-deploy to Cloudflare on merge</li>
+                </ul>
+              </div>
+              <div class="dive-note"><strong>Why it matters:</strong> the install path is the product. An owner with no developer pastes one tag into a site builder and finishes four steps to a bookable calendar, and the tenant boundary underneath stays one module a reviewer can check in a single file.</div>
+            </div>
+          </article>
+
+          <!-- 2. AI Agent -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">02</span>
+              <div class="project-titles">
+                <h3>Pawservation AI Chat Agent</h3>
+                <p class="project-tagline">A production Claude Haiku 4.5 agent with fifteen tools, two-phase confirmation, a circuit breaker, and no authority over money.</p>
+              </div>
+              <span class="badge badge-live"><span class="b-dot"></span>Live</span>
+            </div>
+            <p class="project-body">Customers book in plain language, on the client portal and on the multi-tenant platform. The agent runs on Claude Haiku 4.5 through the Vercel AI SDK with fifteen tools wired to the live system: schedule, reschedule, cancel, pull history, send a receipt. The prompt was the easy part; the safety envelope took the rest of the time. The constraint I care most about is that <strong>the model has no authority over money</strong>: prices, balances, and fees come from the same server-side logic the invoice uses and are reported verbatim, so the assistant narrates figures it cannot compute — enforced in code, not in the prompt. Every mutation goes through one preview-and-confirm gate, and <strong>the code path that performs a write calls no model</strong>. So an injection that lands, through booking notes, ingested mail, or the titles of synced third-party calendar events, can make the assistant say something false. It cannot make a write happen.</p>
+            <div class="tags">
+              <span class="tag">Claude Haiku 4.5</span><span class="tag">Vercel AI SDK</span><span class="tag">TypeScript</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">15 tools</span><span class="key">live system access</span></div>
+              <div class="metric"><span class="val">Server-written</span><span class="key">confirmation text, single-use token</span></div>
+              <div class="metric"><span class="val">No arithmetic</span><span class="key">model never sees the inputs</span></div>
+              <div class="metric"><span class="val">Circuit breaker</span><span class="key">fails safe on errors</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://pawservation.com/" target="_blank" rel="noopener">Live site ↗</a>
+                <span class="project-link is-disabled">Code: private — walkthrough on request</span>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="subsystem">
+                <span class="subsystem-label">Agent &amp; Safety Envelope</span>
+                <ul class="bullets">
+                  <li>Shipped a customer-facing Claude Haiku 4.5 agent (Vercel AI SDK, <strong>15 tools</strong>) for booking, rescheduling, cancellation, history, and receipts, streaming responses over the live system</li>
+                  <li>Gated every mutation behind an <strong>explicit confirmation card</strong> backed by a single-use KV token (5-min TTL), blocking any destructive action from running without approval</li>
+                  <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), <strong>hard USD spend caps</strong> at the platform, tenant, and client level, and a circuit breaker (3 failures, then a 60s cooldown)</li>
+                  <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
+                  <li>Wrote an automated <strong>LLM eval harness</strong> run on every prompt change against production tool schemas, catching a regression that fired on roughly <strong>one in nine agent runs</strong> and that manual testing had missed</li>
+                  <li>Threat-modeled the agent's attack surface (<strong>prompt injection, tool authority, data exfiltration</strong>) before wiring it to live billing and scheduling data</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Money &amp; Authority</span>
+                <ul class="bullets">
+                  <li>Kept every price, balance, and fee in existing server-side logic and reported it verbatim, so <strong>the model narrates figures it cannot compute</strong></li>
+                  <li>Registered every dollar figure a tool returns for the turn and <strong>discarded the entire answer</strong> when the model's prose contained an amount not in that set, rather than stripping the number and shipping a still-unverified sentence</li>
+                  <li>Proved the constraint with a test that stringifies the whole prompt and every tool result and asserts <strong>the only digits the model ever saw are the two dates</strong></li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Mutation Gate &amp; Injection</span>
+                <ul class="bullets">
+                  <li>Routed every mutation through one preview-and-confirm gate where <strong>the server resolves the intent and writes the confirmation text itself</strong>, minting a single-use token bound to that exact action and re-checking it against live state before applying</li>
+                  <li>Kept the code path that performs a write free of any model call</li>
+                  <li>Reduced prompt injection from a correctness risk to a nuisance by requiring a human to approve text the <em>server</em> authored — untrusted text arrives from booking notes, ingested mail, customer intake answers, and <strong>titles of synced third-party calendar events</strong></li>
+                  <li>Declined to delegate confirmation to the AI client, since whether a given client shows a tool call to its user before approving is outside the product's control and unverified</li>
+                </ul>
+              </div>
+              <div class="dive-note"><strong>Why it matters:</strong> the usual guardrail is a prompt telling the model to be careful with money. This one removes the capability instead — the model never receives the numbers it would need to do arithmetic, and the write path does not call it. The circuit breaker sits at the agent layer rather than the model layer, so it still protects the downstream tools when the model itself is the thing misbehaving.</div>
+            </div>
+          </article>
+
+          <!-- 3. MCP -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">03</span>
+              <div class="project-titles">
+                <h3>Pawservation MCP Server</h3>
+                <p class="project-tagline">A standards-conformant Model Context Protocol server with hand-written OAuth + PKCE, stateless on Workers V8.</p>
+              </div>
+              <span class="badge badge-spec">Spec-strict</span>
+            </div>
+            <p class="project-body">The MCP server exposes the booking system to MCP clients, so I and a customer's own AI assistant can drive it from Claude Desktop, Cursor, or anything spec-compliant. I hand-wrote the <strong>authorization-code flow with PKCE</strong> — RFC 7636 on the portal server, the full MCP authorization spec on the platform — so any spec-compliant client connects self-service, and the platform server is publicly verifiable at its discovery endpoint rather than something you have to take my word for. It's stateless across the Workers V8 fleet: every request stands alone, every token is verified, nothing held in memory between calls. The part I would point a reviewer at is that <strong>customer chat and the MCP connector are one product through two transports</strong>: capabilities are declared once and implemented once, and the binding fails loudly in both directions if the two ever disagree. MCP Auth Kit (below) is the open-source version of the auth and safety layer underneath it.</p>
+            <div class="tags">
+              <span class="tag">MCP spec</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE (RFC 7636)</span><span class="tag">@modelcontextprotocol/sdk</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
+            </div>
+            <div class="metrics">
+              <div class="metric"><span class="val">5 RFCs</span><span class="key">7636 · 8414 · 8707 · 9207 · 9728</span></div>
+              <div class="metric"><span class="val">Stateless</span><span class="key">across V8 fleet</span></div>
+              <div class="metric"><span class="val">One declaration</span><span class="key">two transports, bound or it fails</span></div>
+              <div class="metric"><span class="val">0 of 15</span><span class="key">surveyed vendors ship MCP</span></div>
+            </div>
+            <div class="project-foot">
+              <div class="project-links">
+                <a class="project-link" href="https://pawservation.com/" target="_blank" rel="noopener">Live site ↗</a>
+                <span class="project-link is-disabled">Code: private — walkthrough on request</span>
+              </div>
+              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
+            </div>
+            <div class="dive">
+              <div class="subsystem">
+                <span class="subsystem-label">MCP Booking Server</span>
+                <ul class="bullets">
+                  <li>Built the MCP booking server (<code>@modelcontextprotocol/sdk</code>, Streamable HTTP) so external AI agents can manage bookings through <strong>15 shared tool definitions</strong></li>
+                  <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
+                  <li>Centralized tool definitions across the chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
+                  <li>Made customer chat and the MCP connector <strong>one product through two transports</strong> — capabilities declared once, implemented once, with the binding failing loudly in both directions if the surfaces disagree</li>
+                  <li>Sequenced the multi-tenant connector last against evidence rather than excitement, after research put the realistic audience at <strong>zero to two people per business</strong> and a 15-platform survey found no vendor-built MCP server in the category</li>
+                </ul>
+              </div>
+              <div class="subsystem">
+                <span class="subsystem-label">Authentication &amp; Security</span>
+                <ul class="bullets">
+                  <li>Hand-wrote the OAuth authorization-code flow with PKCE (<strong>RFC 7636</strong>, S256 challenge verification, single-use codes, rotating hashed refresh tokens, dynamic client registration), letting any spec-compliant client connect self-service</li>
+                  <li>Implemented the MCP authorization spec end to end on the platform server (<strong>RFC 7636, 8414, 8707, 9207, 9728</strong>), verifiable at the public discovery endpoint</li>
+                  <li>Hardened the authorization server against attacker-chosen URLs: <strong>refuses every IP literal (v4 and v6) and internal hostname</strong>, and refuses redirects outright rather than re-validating and following them, with a test proving the internal host is never contacted</li>
+                  <li>Rate-limited authorization attempts by IP against brute-force enumeration, with hashed-token audit logging on every OAuth event</li>
+                  <li>Implemented cookie-based JWT auth (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and <strong>revocable server-side sessions</strong>, protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
+                  <li>Added non-blocking D1 audit logging for all OAuth events, indexed by owner, action, and timestamp for queries that stay off the request path</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Portal -->
+          <article class="project reveal">
+            <div class="project-head">
+              <span class="project-num">04</span>
               <div class="project-titles">
                 <h3>Brad Paws Client Portal</h3>
                 <p class="project-tagline">A full-stack React&nbsp;19 + Hono portal on Cloudflare Workers, running a live SF pet-care operation.</p>
               </div>
               <span class="badge badge-live"><span class="b-dot"></span>Live</span>
             </div>
-            <p class="project-body">A scheduling, booking, and billing system that runs unattended for a live operation. It is the system of record for Brad Paws, an SF pet-care company, it moves money, and I am on call for it. 30+ clients, 60+ bookings and 30+ invoices a month. I <strong>integrated the operator's existing tools rather than replacing them</strong>: Notion stayed the workspace, Google Calendar the scheduling source of truth, and the portal took over everything customer-facing. It's a TypeScript monorepo (client portal, API Worker, sync Worker, shared package) on Cloudflare Workers with D1, KV, R2, and Workflows, and no origin server. Four APIs I don't control feed one reconciled ledger: Notion, Gmail, Venmo exports, and Google Calendar, each with its own rate limits, quotas, and failure modes. The hard part was never any single integration. It was deciding which source wins when two of them disagree about what a client owes.</p>
+            <p class="project-body">A scheduling, booking, and billing system that runs unattended for a live operation. It is the system of record for Pawservation, an SF pet-care company, it moves money, and I am on call for it. 30+ clients, 60+ bookings and 30+ invoices a month. I <strong>integrated the operator's existing tools rather than replacing them</strong>: Notion stayed the workspace, Google Calendar the scheduling source of truth, and the portal took over everything customer-facing. It's a TypeScript monorepo (client portal, API Worker, sync Worker, shared package) on Cloudflare Workers with D1, KV, R2, and Workflows, and no origin server. Four APIs I don't control feed one reconciled ledger: Notion, Gmail, Venmo exports, and Google Calendar, each with its own rate limits, quotas, and failure modes. The hard part was never any single integration. It was deciding which source wins when two of them disagree about what a client owes.</p>
             <div class="tags">
               <span class="tag">React Router 7</span><span class="tag">React 19</span><span class="tag">Hono</span><span class="tag">TypeScript</span><span class="tag">Cloudflare Workers</span><span class="tag">D1 · KV · R2</span><span class="tag">Workflows</span><span class="tag">Vitest</span><span class="tag">Playwright</span>
             </div>
@@ -252,99 +426,10 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 2. AI Agent -->
+          <!-- 5. Debrief -->
           <article class="project reveal">
             <div class="project-head">
-              <span class="project-num">02</span>
-              <div class="project-titles">
-                <h3>Brad Paws AI Chat Agent</h3>
-                <p class="project-tagline">A production Claude Haiku 4.5 agent with fifteen tools, two-phase confirmation, and a circuit breaker.</p>
-              </div>
-              <span class="badge badge-live"><span class="b-dot"></span>Live</span>
-            </div>
-            <p class="project-body">Clients talk to the portal in plain language. The agent runs on Claude Haiku 4.5 through Vercel AI SDK v6, with fifteen tools wired to the live system: schedule, reschedule, cancel, pull history, send a receipt. The prompt was the easy part. The safety envelope took the rest of the time. <strong>Destructive tools require two-phase confirmation.</strong> There are per-user rate limits, per-conversation token budgets, <strong>hard USD cost caps at the user and global level</strong>, and a circuit breaker that takes the agent offline when upstream errors spike. Untrusted text reaches the agent through client-supplied booking notes and ingested mail, so I designed on the assumption that an injection eventually lands. A compromised turn can propose a mutation. It cannot execute one without a human approving the confirmation card, it cannot reach a tool outside its granted scope, and it cannot exceed the USD cap either way. Every prompt change now runs through an automated eval harness before it ships, because manual testing was missing regressions that only fired some of the time.</p>
-            <div class="tags">
-              <span class="tag">Claude Haiku 4.5</span><span class="tag">Vercel AI SDK v6</span><span class="tag">TypeScript</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">15 tools</span><span class="key">live system access</span></div>
-              <div class="metric"><span class="val">2-phase</span><span class="key">confirm on mutations</span></div>
-              <div class="metric"><span class="val">USD-capped</span><span class="key">hard limits per user &amp; global</span></div>
-              <div class="metric"><span class="val">Circuit breaker</span><span class="key">fails safe on errors</span></div>
-            </div>
-            <div class="project-foot">
-              <div class="project-links">
-                <a class="project-link" href="https://bradpaws.com" target="_blank" rel="noopener">Live demo (gated) ↗</a>
-              </div>
-              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
-            </div>
-            <div class="dive">
-              <div class="subsystem">
-                <span class="subsystem-label">Agent &amp; Safety Envelope</span>
-                <ul class="bullets">
-                  <li>Shipped a customer-facing Claude Haiku 4.5 agent (Vercel AI SDK v6, <strong>15 tools</strong>) for booking, rescheduling, cancellation, history, and receipts, streaming responses over the live system</li>
-                  <li>Gated every mutation behind an <strong>explicit confirmation card</strong> backed by a single-use KV token (5-min TTL), blocking any destructive action from running without approval</li>
-                  <li>Implemented layered cost controls: per-user rate limiting (<strong>20 msg/hour</strong>), daily token budgets (<strong>50k tokens/day</strong>), <strong>hard USD spend caps at the user and global level</strong>, and a circuit breaker (3 failures, then a 60s cooldown)</li>
-                  <li>Designed chat persistence with a 20-message sliding window, automatic session rotation at 100 messages, and a 90-day retention cleanup cron</li>
-                  <li>Wrote an automated <strong>LLM eval harness</strong> run on every prompt change against production tool schemas, catching a regression that fired on roughly <strong>one in nine agent runs</strong> and that manual testing had missed</li>
-                  <li>Threat-modeled the agent's attack surface (<strong>prompt injection, tool authority, data exfiltration</strong>) before wiring it to live billing and scheduling data</li>
-                  <li>Bounded a compromised turn to proposals only, since scope gating limits which tools it reaches and the USD cap limits what it can cost before a human approves anything</li>
-                </ul>
-              </div>
-              <div class="dive-note"><strong>Why it matters:</strong> a chat agent in front of a live billing and scheduling system is a liability without guardrails. I put the circuit breaker at the agent layer rather than the model layer, so it still protects the downstream tools when the model itself is the thing misbehaving.</div>
-            </div>
-          </article>
-
-          <!-- 3. MCP -->
-          <article class="project reveal">
-            <div class="project-head">
-              <span class="project-num">03</span>
-              <div class="project-titles">
-                <h3>Brad Paws MCP Server</h3>
-                <p class="project-tagline">A standards-compliant Model Context Protocol server with OAuth 2.1 + PKCE, stateless on Workers V8.</p>
-              </div>
-              <span class="badge badge-spec">Spec-strict</span>
-            </div>
-            <p class="project-body">I exposed the Brad Paws client portal to MCP clients so I (and authorized agents) can drive the system from Claude Desktop, Cursor, or anything spec-compliant. The server implements the MCP spec and handles <strong>OAuth 2.1 with PKCE</strong> for client auth. It's stateless across the Workers V8 fleet: every request stands alone, every token is verified, nothing held in memory between calls. MCP Auth Kit (below) is the open-source version of the auth and safety layer underneath it, so that layer is readable even though the server itself is not public.</p>
-            <div class="tags">
-              <span class="tag">MCP spec</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE (RFC 7636)</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">RFC 7636</span><span class="key">hand-written PKCE</span></div>
-              <div class="metric"><span class="val">Stateless</span><span class="key">across V8 fleet</span></div>
-              <div class="metric"><span class="val">15 tools</span><span class="key">single source of truth</span></div>
-            </div>
-            <div class="project-foot">
-              <div class="project-links">
-                <span class="project-link is-disabled">Code: private — walkthrough on request</span>
-              </div>
-              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
-            </div>
-            <div class="dive">
-              <div class="subsystem">
-                <span class="subsystem-label">MCP Booking Server</span>
-                <ul class="bullets">
-                  <li>Built the MCP booking server (<code>@modelcontextprotocol/sdk</code> v1.x, Streamable HTTP) so external AI agents (Claude Desktop) can manage bookings through <strong>15 shared tool definitions</strong></li>
-                  <li>Aligned MCP transport with Workers' V8 isolate model: stateless per-request server instances with closure-cached tool state — no server-side sessions, no Durable Objects required</li>
-                  <li>Centralized tool definitions across the chat agent and MCP server in a single source of truth (names, Zod schemas, MCP annotations), eliminating behavioral drift between access channels</li>
-                </ul>
-              </div>
-              <div class="subsystem">
-                <span class="subsystem-label">Authentication &amp; Security</span>
-                <ul class="bullets">
-                  <li>Hand-wrote the OAuth 2.1 authorization-code flow with PKCE (<strong>RFC 7636</strong>, S256 challenge verification, single-use codes, rotating hashed refresh tokens, dynamic client registration), letting any spec-compliant client connect self-service</li>
-                  <li>Rate-limited authorization attempts by IP against brute-force enumeration, with hashed-token audit logging on every OAuth event</li>
-                  <li>Implemented cookie-based JWT auth (HS256 via <code>jose</code>) with HttpOnly/Secure/SameSite=Lax cookies and <strong>revocable server-side sessions</strong>, protecting the client dashboard from XSS and CSRF without a third-party auth provider</li>
-                  <li>Added non-blocking D1 audit logging for all OAuth events, indexed by owner, action, and timestamp for queries that stay off the request path</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <!-- 4. Debrief -->
-          <article class="project reveal">
-            <div class="project-head">
-              <span class="project-num">04</span>
+              <span class="project-num">05</span>
               <div class="project-titles">
                 <h3>Debrief</h3>
                 <p class="project-tagline">A native macOS app that records job-interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching feedback.</p>
@@ -367,63 +452,6 @@ email: bradburch.jobs@gmail.com
             </div>
           </article>
 
-          <!-- 5. Pawservation Booking Platform -->
-          <article class="project reveal">
-            <div class="project-head">
-              <span class="project-num">05</span>
-              <div class="project-titles">
-                <h3>Pawservation Booking Platform</h3>
-                <p class="project-tagline">A multi-tenant booking platform for pet-care businesses, embeddable in one script tag, on Cloudflare Workers, D1, and KV.</p>
-              </div>
-              <span class="badge badge-live"><span class="b-dot"></span>Live</span>
-            </div>
-            <p class="project-body">Embeddable booking for a pet-care business whose owner does not have a developer. Installing it is one <code>&lt;script&gt;</code> tag on any site builder that accepts embed HTML, with no build step and an iframe fallback for the builders that strip scripts. A four-step wizard covers the rest: services and pricing, availability, calendar connection, then the embed snippet. Under the widget sits the booking, calendar, and billing core on Cloudflare Workers with D1 and KV. The part I would want a reviewer to look at first is tenant isolation. Config, pricing, capacity, and bookings stay separated because every SQL query routes through one module scoped by business id, which makes the isolation boundary one file to review instead of every request handler. It is live at pawservation.com, and today it has one tenant, which is my own business.</p>
-            <div class="tags">
-              <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">KV</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">One script tag</span><span class="key">no build step, iframe fallback</span></div>
-              <div class="metric"><span class="val">Four-step wizard</span><span class="key">setup without a developer</span></div>
-              <div class="metric"><span class="val">Scoped queries</span><span class="key">one module carries every business id</span></div>
-            </div>
-            <div class="project-foot">
-              <div class="project-links">
-                <a class="project-link" href="https://pawservation.com/" target="_blank" rel="noopener">Live site ↗</a>
-                <span class="project-link is-disabled">Code: private — walkthrough on request</span>
-              </div>
-              <button class="dive-btn" aria-expanded="false">↗ Engineering detail</button>
-            </div>
-            <div class="dive">
-              <div class="subsystem">
-                <span class="subsystem-label">Install &amp; Setup</span>
-                <ul class="bullets">
-                  <li>Designed an embeddable booking widget installed with <strong>one <code>&lt;script&gt;</code> tag</strong> and no build step, with an <strong>iframe fallback</strong> for the site builders that strip scripts</li>
-                  <li>Validated the widget's <code>postMessage</code> auto-resize channel by both <strong>origin and source</strong>, blocking the host page and the embedded widget from driving each other</li>
-                  <li>Built a <strong>four-step setup wizard</strong> taking a business from an empty account to a bookable calendar: services and pricing, availability, calendar connection, then the embed snippet</li>
-                </ul>
-              </div>
-              <div class="subsystem">
-                <span class="subsystem-label">Multi-Tenancy</span>
-                <ul class="bullets">
-                  <li>Isolated tenant data across <strong>config, pricing, capacity, and bookings</strong> by scoping every SQL query through a single business-id module</li>
-                  <li>Gave each business its own services, pricing, and capacity rules, single-sourced behind the quote, the calendar cost stamp, and the invoice</li>
-                  <li>Bounded LLM spend with per-user and global daily USD caps on reserve-then-reconcile, <strong>partitioned per tenant</strong> so one tenant cannot exhaust another's</li>
-                  <li>Exposed every operating assumption as dashboard-editable configuration, including services, cancellation windows, fee tiers, and the calendar connection</li>
-                  <li>Added <strong>change detection</strong> to a scheduled calendar sync that was rewriting unchanged rows every 15 minutes, eliminating the source of <strong>97% of the Cloudflare account's daily database writes (56,424 of 58,121</strong> against a 100,000/day cap), shipped a week before the cap took effect</li>
-                </ul>
-              </div>
-              <div class="subsystem">
-                <span class="subsystem-label">Data &amp; Testing</span>
-                <ul class="bullets">
-                  <li>Migrated <strong>66 client records, 64 pets, and 821 payments</strong> onto the platform with a read-only, insert-only generator that fails on replay instead of duplicating</li>
-                  <li>Tested every matcher against that migrated history rather than against fixtures, which is where the ambiguous payment cases actually live</li>
-                  <li>Kept the booking, date, and pricing core pure TypeScript with <strong>zero runtime dependencies</strong>, run in isolation against in-memory SQLite</li>
-                  <li>Gated every PR on typecheck, lint, format, test, and build, with auto-deploy to Cloudflare on merge</li>
-                </ul>
-              </div>
-              <div class="dive-note"><strong>Why it matters:</strong> the install path is the product. An owner with no developer pastes one tag into a site builder and finishes four steps to a bookable calendar, and the tenant boundary underneath stays one module a reviewer can check in a single file.</div>
-            </div>
-          </article>
 
           <!-- 6. MCP Auth Kit -->
           <article class="project reveal">
@@ -435,7 +463,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so others don't have to rebuild them. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Brad Paws MCP server.</p>
+            <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so others don't have to rebuild them. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Pawservation MCP server.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE</span><span class="tag">Rate limiting</span><span class="tag">Scope-gated auth</span>
             </div>
@@ -483,15 +511,15 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── Experience ────────────────────────────── -->
       <section id="experience">
-        <p class="section-label reveal"><span class="idx">02</span> Experience</p>
+        <h2 class="section-label reveal"><span class="idx">02</span> Experience</h2>
         <h2 class="section-intro reveal">7 years of customer-facing engineering, from Salesforce to my own product.</h2>
 
         <div class="timeline">
           <div class="role reveal">
             <div class="role-when">2022 — Present<span class="loc">San Francisco</span></div>
             <div>
-              <div class="role-name"><a href="https://bradpaws.com" target="_blank" rel="noopener">Brad Paws</a><span class="role-title">Software Engineer</span></div>
-              <p class="role-desc">Sole engineer on a production TypeScript monorepo (Cloudflare Workers, D1, KV, R2, Workflows) serving 30+ active clients, a Claude Haiku 4.5 booking agent, and a hand-written OAuth 2.1 + PKCE MCP server. Also build a separate multi-tenant <strong>Pawservation Booking Platform</strong> for other pet-care businesses. See the three projects above.</p>
+              <div class="role-name"><a href="https://pawservation.com" target="_blank" rel="noopener">Pawservation</a><span class="role-title">Software Engineer</span></div>
+              <p class="role-desc">Sole engineer on both: a multi-tenant <strong>Pawservation Booking Platform</strong> for other pet-care businesses, carrying a Claude Haiku 4.5 booking agent and a hand-written OAuth + PKCE MCP server, and the production TypeScript monorepo (Cloudflare Workers, D1, KV, R2, Workflows) my own operation runs on, serving 30+ active clients. See the four projects above.</p>
             </div>
           </div>
 
@@ -524,7 +552,7 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── Stack ─────────────────────────────────── -->
       <section id="stack">
-        <p class="section-label reveal"><span class="idx">03</span> Technical stack</p>
+        <h2 class="section-label reveal"><span class="idx">03</span> Technical stack</h2>
         <div class="stack-grid">
           <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Swift · Java · Scala</span></div>
           <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 7 · Node.js · Hono · Vercel AI SDK · SwiftUI · Django · Spring · Play</span></div>
@@ -539,15 +567,15 @@ email: bradburch.jobs@gmail.com
 
       <!-- ── About ─────────────────────────────────── -->
       <section id="about">
-        <p class="section-label reveal"><span class="idx">04</span> About</p>
+        <h2 class="section-label reveal"><span class="idx">04</span> About</h2>
         <div class="about-grid">
           <div class="about-prose reveal">
             <p>I'm a full-stack engineer in San Francisco, 7 years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
-            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned what the "Forward Deployed Engineer" job description actually describes: sitting with the customer, scoping the integration, and then building it. Today I run the whole Brad Paws stack solo: a <strong>TypeScript monorepo on Cloudflare Workers</strong> with D1, KV, R2, and Workflows, running my own SF pet-care business and its paying clients. The work I am proudest of there is unglamorous: rewriting how payments get matched to charges after the old rule let real money slip through undetected (see the Client Portal project above for the numbers). I also build a separate multi-tenant <strong>Pawservation Booking Platform</strong> at pawservation.com, currently with one tenant, my own business: embeddable booking for other pet-care businesses, installed with one script tag, with config, pricing, capacity, and bookings isolated per tenant by scoping every SQL query through a single business-id module.</p>
-            <p>What I want next is a <strong>Product Engineer or Software Engineer</strong> role at a Series B+ company, in San Francisco or the Midwest (I'm also open to Forward Deployed Engineer roles where the JD's actual stack fits). AI companies and product companies both: the common thread I look for is that engineers sit close to the customer. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one. San Francisco is home, and I'd relocate to Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor for the right role. After nearly four years running Brad Paws solo, what I want next is a team to build alongside.</p>
+            <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That's where I learned what the "Forward Deployed Engineer" job description actually describes: sitting with the customer, scoping the integration, and then building it. Today I run the whole Pawservation stack solo: a <strong>TypeScript monorepo on Cloudflare Workers</strong> with D1, KV, R2, and Workflows, running my own SF pet-care business and its paying clients. The work I am proudest of there is unglamorous: rewriting how payments get matched to charges after the old rule let real money slip through undetected (see the Client Portal project above for the numbers). I also build a multi-tenant <strong>Pawservation Booking Platform</strong> at pawservation.com, currently with one tenant, my own business: embeddable booking for other pet-care businesses, installed with one script tag, with config, pricing, capacity, and bookings isolated per tenant by scoping every SQL query through a single business-id module.</p>
+            <p>What I want next is a <strong>Product Engineer or Software Engineer</strong> role at a Series B+ company, in San Francisco or the Midwest (I'm also open to Forward Deployed Engineer roles where the JD's actual stack fits). AI companies and product companies both: the common thread I look for is that engineers sit close to the customer. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one. San Francisco is home, and I'd relocate to Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor for the right role. After nearly four years running Pawservation solo, what I want next is a team to build alongside.</p>
           </div>
           <aside class="about-side reveal">
-            <h4>What working with me is like</h4>
+            <h3>What working with me is like</h3>
             <ul>
               <li>I write tests before I ship</li>
               <li>I read the RFC before I write the integration</li>
@@ -555,27 +583,18 @@ email: bradburch.jobs@gmail.com
               <li>Happy on a customer call, happy in the four-hour debugging session after</li>
             </ul>
             <div class="edu">
-              <h4>Education</h4>
+              <h3>Education</h3>
               <p><a href="https://www.depauw.edu" target="_blank" rel="noopener"><b>DePauw University</b></a><br>Bachelor's in Computer Science, 2017</p>
             </div>
           </aside>
         </div>
       </section>
 
-      <!-- ── Now ───────────────────────────────────── -->
-      <section id="now">
-        <p class="section-label reveal"><span class="idx">05</span> Now</p>
-        <div class="now reveal">
-          <div class="now-head"><span class="tag-now">Currently</span></div>
-          <p>Running Brad Paws, the booking and billing platform my own SF pet-care business operates on, and shipping a separate multi-tenant <strong>Pawservation Booking Platform</strong> at pawservation.com: embeddable booking for pet-care businesses, one script tag, no build step. Just shipped <strong>Debrief</strong>, a native macOS app that records interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching. Also maintaining <strong>MCP Auth Kit</strong>, an open-source OAuth 2.1 + PKCE MCP server kit. Open to Product Engineer and Software Engineer roles (and selectively Forward Deployed Engineer) at Series B or later companies, AI or product. On-site or hybrid in San Francisco, open to relocating to Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor, and open to remote for the right team. Email is the best way to reach me.</p>
-        </div>
-      </section>
-
       <!-- ── Contact ───────────────────────────────── -->
       <section id="contact">
-        <p class="section-label reveal"><span class="idx">06</span> Get in touch</p>
+        <h2 class="section-label reveal"><span class="idx">05</span> Get in touch</h2>
         <div class="contact-card reveal">
-          <p class="pitch">Brad Burch is looking for <strong>Product Engineer and Software Engineer</strong> roles (and selectively Forward Deployed Engineer) at <strong>Series B or later companies</strong>, AI or product. Based in <strong>San Francisco</strong>, and open to relocating to <strong>Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor</strong>. Best fit is a team that puts engineers in front of customers, whether the product is AI-first or AI is one surface of it. Fastest reply is email.</p>
+          <p class="pitch">Brad Burch is looking for <strong>Product Engineer and Software Engineer</strong> roles (and selectively Forward Deployed Engineer) at <strong>Series B or later companies</strong>, AI or product. Based in <strong>San Francisco</strong>, and open to relocating to <strong>Chicago, Minneapolis-St. Paul, Indianapolis, or Ann Arbor</strong>. Best fit is a team that puts engineers in front of customers, whether the product is AI-first or AI is one surface of it. <strong>US citizen, no sponsorship required.</strong> Fastest reply is email.</p>
           <div class="contact-grid">
             <a class="contact-item" href="mailto:{{ page.email }}"><div class="ci-key">Email</div><div class="ci-val">{{ page.email }}</div></a>
             <a class="contact-item" href="{{ page.linkedin }}" target="_blank" rel="noopener"><div class="ci-key">LinkedIn</div><div class="ci-val">linkedin.com/in/burchbrad</div></a>
