@@ -13,3 +13,4 @@ RESUME_BULLETS - *.md
 
 # Tooling scratch
 .superpowers/
+.playwright-mcp/
