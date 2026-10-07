@@ -471,6 +471,9 @@ section:last-of-type { border-bottom: none; }
 .role-rif { font-family: var(--mono); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 12px; padding: 2px 8px; }
 .role-desc { font-size: 0.92rem; color: var(--text-dim); line-height: 1.72; }
 .role-desc strong { color: var(--bright); font-weight: 700; }
+.role .bullets { margin-top: 12px; }
+.about-prose h3 { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin: 28px 0 10px; }
+.about-prose .bullets { margin-top: 12px; }
 
 /* ── Stack grid ────────────────────────────────────── */
 
