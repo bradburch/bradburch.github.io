@@ -76,7 +76,7 @@ email: bradburch.jobs@gmail.com
         "image": "https://bradburch.github.io/og-card.png",
         "email": "mailto:bradburch.jobs@gmail.com",
         "jobTitle": ["Product Engineer", "Software Engineer", "Forward Deployed Engineer"],
-        "description": "Full-stack product engineer with 7 years of experience. Builds Pawservation, a booking, payments, and AI platform for pet-care businesses: the system his own San Francisco pet-care business runs on, serving 30+ active clients, and a multi-tenant booking platform that 4+ outside pet-sitting businesses now use. Built on Cloudflare Workers, D1, and Durable Objects with a Claude agent, an OAuth 2.1 + PKCE Model Context Protocol server, Stripe Connect, and WhatsApp booking.",
+        "description": "Full-stack product engineer with 7 years of experience. Builds Pawservation, a booking, payments, and AI platform for pet-care businesses: the system a San Francisco pet-care business runs on, serving 30+ active clients, and a multi-tenant booking platform that 4+ outside pet-sitting businesses now use. Built on Cloudflare Workers, D1, and Durable Objects with a Claude agent, an OAuth 2.1 + PKCE Model Context Protocol server, Stripe Connect, and WhatsApp booking.",
         "homeLocation": {
           "@type": "Place",
           "address": {
@@ -117,7 +117,6 @@ email: bradburch.jobs@gmail.com
           "Python",
           "PostgreSQL",
           "Amazon DynamoDB",
-          "Amazon SQS",
           "REST APIs",
           "Webhooks",
           "Distributed systems",
@@ -169,7 +168,7 @@ email: bradburch.jobs@gmail.com
       <h1 class="reveal d2">I build production<br>AI systems <em>end-to-end.</em></h1>
       <p class="lede reveal d3">7 years full-stack. I'm a software engineer at <strong>Pawservation</strong>, building a booking, payments, and Claude agent platform on Cloudflare Workers, with Stripe Connect, WhatsApp booking, and an OAuth&nbsp;2.1&nbsp;+&nbsp;PKCE MCP server. Looking for Product Engineer or Software Engineer roles in San Francisco, or in the Midwest if the role is worth relocating for.</p>
       <p class="tagline reveal d3">Previously <strong>Salesforce</strong>, <strong>Total Brain</strong>, and <strong>Front</strong>. Since 2022, building and running Pawservation.</p>
-      <p class="hero-proof reveal d4"><span class="live-dot"></span><span>Across the client portal and the AI booking channels, more than half of bookings now arrive self-serve, for 30+ active clients and 60+ bookings a month. The system replaced 5 to 15 hours a month of manual invoicing and scheduling, and 4+ outside pet-sitting businesses now run on the platform.</span></p>
+      <p class="hero-proof reveal d4"><span class="live-dot"></span><span>More than half of bookings now arrive self-serve across 30+ active clients and 60+ bookings a month, replacing 5 to 15 hours a month of manual work. 4+ outside pet-sitting businesses run on the platform.</span></p>
       <div class="cta-row reveal d5">
         <a class="btn btn-primary" href="mailto:{{ page.email }}?subject=Role%20for%20Brad">→ Email me</a>
         <a class="btn btn-ghost" href="#work">See the projects</a>
@@ -182,21 +181,15 @@ email: bradburch.jobs@gmail.com
       <section id="summary">
         <div class="now reveal">
           <div class="now-head"><span class="tag-now">Summary</span></div>
-          <p><strong>Brad Burch</strong> is a product engineer in San Francisco with 7 years of experience across Salesforce, Total Brain, and Front, and has built and run his own production system since 2022.</p>
-          <p>He built and still operates the booking, billing, and payments platform that runs Brad Paws, his own San Francisco pet-care business, serving 30+ active clients, 60+ bookings a month, and 30+ invoices a month. The platform replaced 5 to 15 hours a month of manual invoicing, payment reconciliation, and scheduling.</p>
-          <p>Clients book through a production Claude Haiku 4.5 agent on web chat and WhatsApp, or from their own Claude through a Model Context Protocol (MCP) server whose OAuth 2.1 + PKCE authorization server Brad Burch hand-built. The business owner approves each AI-made request in one tap, and nearly all are approved as submitted.</p>
-          <p>He is a software engineer at Pawservation, a multi-tenant booking platform for independent pet sitters at pawservation.com, with 4+ outside pet-sitting businesses now on it. It sells Solo ($15/mo) and Pro ($29/mo) plans with self-serve signup, and its paid tier adds Stripe Connect payments, an AI assistant, and WhatsApp booking.</p>
-          <p>Brad Burch runs his own user research: interviews with potential and current users, and cold email outreach to independent sitters.</p>
-          <p>His stack is TypeScript first: React, Hono, Cloudflare Workers, D1, Durable Objects, KV, R2, and Workflows, with Stripe, the WhatsApp Cloud API, and the Claude API, and Python as a secondary language. He open-sourced an MCP auth and safety layer as MCP Auth Kit.</p>
-          <p>Brad Burch is based in San Francisco and is open to relocating to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor for the right role.</p>
-          <p>He is looking for Product Engineer or Software Engineer roles at Series B or later companies, and selectively Forward Deployed Engineer roles where the stack fits.</p>
+          <p><strong>Brad Burch</strong> is a product engineer in San Francisco with 7 years of experience across Salesforce, Total Brain, Front, and Pawservation. At Pawservation he builds a booking, payments, and AI platform on TypeScript and Cloudflare Workers: a Claude agent and an OAuth 2.1 + PKCE Model Context Protocol (MCP) server with human approval on every AI-made request, Stripe Connect payments, and WhatsApp booking, used by 30+ active clients and 4+ outside pet-sitting businesses.</p>
+          <p>He is open to Product Engineer and Software Engineer roles, and selectively Forward Deployed Engineer roles, at Series B or later companies, in San Francisco or relocating to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor.</p>
         </div>
       </section>
 
       <!-- ── Featured work ─────────────────────────── -->
       <section id="work">
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">01</span> Featured work</h2>
-        <p class="section-intro reveal">The client portal my own pet-care business runs on, the multi-tenant booking platform built for other pet-care businesses, the AI surfaces on top of both, and open-source tools I maintain on the side.</p>
+        <p class="section-intro reveal">The client portal, the multi-tenant booking platform, the AI surfaces on top of both, and open-source tools.</p>
 
         <div class="projects">
 
@@ -210,13 +203,12 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-live"><span class="b-dot"></span>Live</span>
             </div>
-            <p class="project-body">A scheduling, booking, and billing system that runs unattended for a live operation: 30+ active clients, 60+ bookings and 30+ invoices a month. It is the system of record for Brad Paws, my own SF pet-care business, and it moves money. It replaced <strong>5 to 15 hours a month</strong> of manual invoicing, payment reconciliation, and scheduling back-and-forth. I <strong>integrated the business's existing tools rather than replacing them</strong>: Notion stayed the workspace, Google Calendar the scheduling source of truth, and the portal took over everything customer-facing. It's a TypeScript monorepo (client portal, API Worker, sync Worker, shared package) on Cloudflare Workers with D1, KV, R2, Queues, and Workflows, and no origin server. Four sources I don't control feed one booking and payment record: Notion, Gmail, Venmo exports, and Google Calendar, each with its own rate limits, quotas, and failure modes. Most of the work is deciding which source wins when two of them disagree about what a client owes, and keeping four booking channels from double-booking a calendar that has no transactions.</p>
+            <p class="project-body">A scheduling, booking, and billing system that runs unattended for Brad Paws, a San Francisco pet-care business: 30+ active clients, 60+ bookings and 30+ invoices a month. It replaced <strong>5 to 15 hours a month</strong> of manual invoicing, payment reconciliation, and scheduling. It is a TypeScript monorepo on Cloudflare Workers, D1, KV, R2, Queues, and Workflows with no origin server, fed by four sources it does not control: Notion, Gmail, Venmo exports, and Google Calendar. Most of the work is deciding which source wins when two of them disagree about what a client owes, and keeping four booking channels from double-booking a calendar that has no transactions.</p>
             <div class="tags">
               <span class="tag">React Router 8</span><span class="tag">React 19</span><span class="tag">Hono</span><span class="tag">TypeScript</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">KV</span><span class="tag">R2</span><span class="tag">Queues</span><span class="tag">Workflows</span><span class="tag">Recharts</span><span class="tag">Vitest</span><span class="tag">Playwright</span>
             </div>
             <div class="metrics">
               <div class="metric"><span class="val">30+</span><span class="key">active clients</span></div>
-              <div class="metric"><span class="val">60+</span><span class="key">bookings / month</span></div>
               <div class="metric"><span class="val">5 to 15 hrs</span><span class="key">of manual work replaced / month</span></div>
               <div class="metric"><span class="val">154 ms to 18 ms</span><span class="key">CPU time per invoice PDF</span></div>
             </div>
@@ -279,15 +271,6 @@ email: bradburch.jobs@gmail.com
                   <li>Gated every push on <strong>type generation, typecheck, ESLint, Prettier, and tests</strong>, with Cloudflare auto-deploy on merge to <code>main</code> and production source maps</li>
                 </ul>
               </div>
-              <div class="subsystem">
-                <span class="subsystem-label">Product, Pricing &amp; Operations</span>
-                <ul class="bullets">
-                  <li>Cut late cancellations while demand held by <strong>owning pricing and policy end to end</strong>: raised rates, limited overnight care to regulars, and tightened cancellation fees, with site copy reading the same constants billing uses so advertised terms cannot drift</li>
-                  <li>Simplified the funnel by removing the phone number from every page and making a <strong>Meet and Greet form the single call to action</strong>, bringing in better-qualified leads</li>
-                  <li>Designed a booking flow that offers only what a client can book: options adapt to their pets, and the calendar and server share capacity rules, so submitted requests do not bounce</li>
-                  <li>Built an owner dashboard (React, Recharts) for revenue, bookings, AI usage, and leads by year, quarter, or month, with <strong>per-channel AI kill switches</strong> that need no redeploy</li>
-                </ul>
-              </div>
             </div>
           </article>
 
@@ -301,7 +284,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-live"><span class="b-dot"></span>Live</span>
             </div>
-            <p class="project-body">Booking, payments, and client messaging for a pet sitter who does not have a developer. <strong>4+ outside pet-sitting businesses are now on the platform.</strong> Sitters sign up self-serve and pick a Solo ($15/mo) or Pro ($29/mo or $290/yr) plan on Stripe Checkout with a 30-day trial. Installing it is one <code>&lt;script&gt;</code> tag on any site builder that accepts embed HTML, with an iframe fallback for builders that strip scripts and a hosted booking link for sitters with no site at all. A Google Calendar import turns a sitter's past events into bookings. The paid tier runs as a second Cloudflare Worker that talks to the booking product only through its public REST API, and adds three things. <strong>Card payments on each sitter's own Stripe Connect account</strong>, with deposits and a post-stay auto-charge that runs <strong>at most once per stay</strong>. <strong>An AI assistant that cannot misquote money</strong>: every dollar figure in an answer is checked to the cent against tool output. And <strong>WhatsApp booking on the sitter's own business number</strong>, where she confirms or declines in one tap. The part I would want a reviewer to look at first is still tenant isolation: every SQL query routes through one module scoped by business id, and the test data gives two businesses' clients the same email and phone, so any unscoped lookup fails visibly.</p>
+            <p class="project-body">Booking, payments, and client messaging for pet sitters who do not have a developer, with <strong>4+ outside pet-sitting businesses now on it</strong>. Sitters sign up self-serve for Solo ($15/mo) or Pro ($29/mo) on Stripe Checkout and install with one script tag or a hosted booking link. The paid tier adds <strong>Stripe Connect card payments</strong> with a post-stay auto-charge that runs <strong>at most once per stay</strong>, an AI assistant that checks every dollar figure against tool output, and <strong>WhatsApp booking</strong> on the sitter's own number. Every SQL query is scoped by business id, and the test data gives two businesses' clients the same email and phone, so any unscoped lookup fails visibly.</p>
             <div class="tags">
               <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span><span class="tag">Durable Objects</span><span class="tag">KV</span><span class="tag">Stripe Connect</span><span class="tag">Stripe Checkout</span><span class="tag">WhatsApp Cloud API</span><span class="tag">Claude</span><span class="tag">Vercel AI SDK</span><span class="tag">MCP</span><span class="tag">Turnstile</span><span class="tag">Vite</span><span class="tag">Vitest</span><span class="tag">GitHub Actions</span>
             </div>
@@ -309,7 +292,6 @@ email: bradburch.jobs@gmail.com
               <div class="metric"><span class="val">4+</span><span class="key">outside pet-sitting businesses on the platform</span></div>
               <div class="metric"><span class="val">At most once</span><span class="key">auto-charge per stay, raced with 20 concurrent writers</span></div>
               <div class="metric"><span class="val">To the cent</span><span class="key">every dollar in an AI answer checked against tool output</span></div>
-              <div class="metric"><span class="val">3 channels, 1 tool layer</span><span class="key">web chat, WhatsApp, and MCP</span></div>
             </div>
             <div class="project-foot">
               <div class="project-links">
@@ -323,9 +305,9 @@ email: bradburch.jobs@gmail.com
                 <span class="subsystem-label">Plans, Data &amp; Import</span>
                 <ul class="bullets">
                   <li>Launched <strong>Solo ($15/mo) and Pro ($29/mo or $290/yr)</strong> plans on Stripe Checkout and the Customer Portal with a 30-day trial, keyed on paid invoices so a renewal in flight grants no free month</li>
-                  <li>Built a Google Calendar import that turns past events into bookings; on a month of my own calendar it <strong>resolved 53 of 55 events</strong> and sent only the two it could not place for review</li>
+                  <li>Built a Google Calendar import that turns past events into bookings; on a month of real calendar data it <strong>resolved 53 of 55 events</strong> and sent only the two it could not place for review</li>
                   <li>Fixed a D1 write-cap problem: the 15-minute calendar reconcile rewrote every external event each pass, the source of <strong>97% of daily database writes (56,424 of 58,121)</strong> against a 100,000/day platform cap; a null-safe change guard on the upsert fixed it a week before the cap took effect</li>
-                  <li>Caught a <strong>16x payment over-allocation</strong> ($42,430 proposed against $2,640 owed) by testing the matcher on my business's real data before release, so the defect never reached a customer</li>
+                  <li>Caught a <strong>16x payment over-allocation</strong> ($42,430 proposed against $2,640 owed) by testing the matcher on real data before release, so the defect never reached a customer</li>
                 </ul>
               </div>
               <div class="subsystem">
@@ -340,7 +322,7 @@ email: bradburch.jobs@gmail.com
                 <ul class="bullets">
                   <li>Made the assistant <strong>unable to misquote money</strong>: every dollar figure in an answer is checked to the cent against tool output, and any answer with an unverified figure is replaced</li>
                   <li>Required a <strong>server-rendered preview and a single-use, expiring token</strong> for every AI-initiated write, re-validated against live data on confirm; a typed "yes" never confirms anything</li>
-                  <li>Built <strong>one shared tool layer of 10 client capabilities</strong> behind web chat, WhatsApp, and the MCP server, so each new capability ships on all three channels at once and they cannot drift apart</li>
+                  <li>Built <strong>one shared tool layer</strong> behind web chat, WhatsApp, and the MCP server, so each new capability ships on all three channels at once and they cannot drift apart</li>
                   <li>Ran <strong>each sitter and each client conversation as its own Durable Object</strong> with built-in timers, so alerts, reminders, and AI turns fire on schedule and one conversation cannot slow another</li>
                 </ul>
               </div>
@@ -365,14 +347,13 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-live"><span class="b-dot"></span>Live</span>
             </div>
-            <p class="project-body">Clients book in plain language, on the portal's web chat or by WhatsApp message. The agent runs on Claude Haiku 4.5 through Vercel AI SDK v6, with fifteen tools wired to the live system: check availability, quote, book, reschedule, cancel, pull history. The agent proposes, the client confirms, and the business owner approves each request in <strong>one tap</strong> from an admin queue or WhatsApp; <strong>nearly all AI-made requests are approved as submitted.</strong> Most of the engineering went into the safety envelope: <strong>every write needs a single-use confirmation token</strong> claimed atomically in D1, there are per-user rate limits, daily token budgets, <strong>hard USD cost caps at the user and global level</strong>, and a circuit breaker that takes the agent offline when upstream errors spike. Untrusted text reaches the agent through client-supplied booking notes and ingested mail, so I designed on the assumption that an injection eventually lands. A compromised turn can propose a mutation. It cannot execute one without a human approving it, it cannot reach a tool outside its granted scope, and it cannot exceed the USD cap either way. Prompt and model changes ship only after a 47-case live-model eval suite runs, and prompt caching cut cost <strong>4.9x per eval run</strong>.</p>
+            <p class="project-body">Clients book in plain language on web chat or WhatsApp. The agent runs on Claude Haiku 4.5 with fifteen tools wired to the live system. The agent proposes, the client confirms, and the business owner approves each request in <strong>one tap</strong>; <strong>nearly all AI-made requests are approved as submitted.</strong> The safety envelope is most of the work: every write needs a single-use token claimed atomically in D1, per-user and global USD caps, and a circuit breaker. I designed on the assumption that an injection eventually lands, so a compromised turn can propose a mutation but cannot execute one. A 47-case live-model eval suite gates every prompt change.</p>
             <div class="tags">
               <span class="tag">Claude Haiku 4.5</span><span class="tag">Vercel AI SDK v6</span><span class="tag">Prompt caching</span><span class="tag">LLM evals</span><span class="tag">WhatsApp Cloud API</span><span class="tag">Cloudflare Queues</span><span class="tag">TypeScript</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span><span class="tag">D1</span>
             </div>
             <div class="metrics">
               <div class="metric"><span class="val">15 tools</span><span class="key">wired to live availability, quotes, and bookings</span></div>
               <div class="metric"><span class="val">1 tap</span><span class="key">owner approval, nearly all approved as submitted</span></div>
-              <div class="metric"><span class="val">4.9x</span><span class="key">lower cost per eval run with prompt caching</span></div>
               <div class="metric"><span class="val">47 cases</span><span class="key">live-model eval suite gates every prompt change</span></div>
             </div>
             <div class="project-foot">
@@ -416,14 +397,13 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Spec-strict</span>
             </div>
-            <p class="project-body">Clients book directly from their own Claude. I exposed the Pawservation booking system to MCP clients so clients and authorized agents can check availability, get quotes, and request bookings from Claude Desktop, Cursor, or anything spec-compliant, and real clients have booked this way. The MCP SDK supplies the protocol layer and transport; the <strong>OAuth 2.1 + PKCE authorization server is hand-built</strong>. It's stateless across the Workers V8 fleet: every request stands alone, every token is verified, nothing held in memory between calls. The connector once went quiet for 9 weeks (fully down for the last 5) because a fetch redirect option that Node accepts is one the Workers runtime rejects, and every Node test stayed green. A client's screenshot surfaced it; live log tailing and a local repro found it. I fixed it with a one-line change, then added a CI suite that runs in the real Workers runtime and an auth-health alert. MCP Auth Kit (below) is the open-source version of the auth and safety layer underneath it, so that layer is readable even though the server itself is not public.</p>
+            <p class="project-body">Clients can book from their own Claude, Claude Desktop, Cursor, or any spec-compliant client. The MCP SDK supplies the protocol layer; the <strong>OAuth 2.1 + PKCE authorization server is hand-built</strong> and stateless across the Workers V8 fleet. Every write goes through the same preview, confirmation, and owner approval as web chat. The connector once went quiet for weeks because a fetch redirect option Node accepts is one Workers rejects, and every Node test stayed green. The fix was one line, followed by a CI suite that runs in the real Workers runtime and an auth-health alert. MCP Auth Kit (below) is the open-source version of the auth and safety layer.</p>
             <div class="tags">
               <span class="tag">MCP spec</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE (RFC 7636)</span><span class="tag">Hono</span><span class="tag">Cloudflare Workers</span>
             </div>
             <div class="metrics">
               <div class="metric"><span class="val">RFC 7636</span><span class="key">hand-written PKCE</span></div>
               <div class="metric"><span class="val">Stateless</span><span class="key">across the V8 fleet</span></div>
-              <div class="metric"><span class="val">16 tools</span><span class="key">the agent's 15 plus a confirm tool</span></div>
               <div class="metric"><span class="val">Real-runtime CI</span><span class="key">Node-only bugs now fail the build</span></div>
             </div>
             <div class="project-foot">
@@ -471,15 +451,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">MCP Auth Kit packages the hard parts of shipping a safe Model Context Protocol server so others don't have to rebuild them. It handles <strong>OAuth 2.1 with PKCE</strong>, rate limiting, scope-gated tool access, and two-phase confirmation on sensitive actions, and stays unopinionated about your tools, identity provider, and storage. It's the reusable, open-source distillation of the auth and safety work behind the Pawservation MCP server.</p>
-            <div class="tags">
-              <span class="tag">TypeScript</span><span class="tag">MCP</span><span class="tag">OAuth 2.1</span><span class="tag">PKCE</span><span class="tag">Rate limiting</span><span class="tag">Scope-gated auth</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">OAuth 2.1 + PKCE</span><span class="key">agent auth done to spec</span></div>
-              <div class="metric"><span class="val">Scope-gated tools</span><span class="key">every call authorized against explicit scopes</span></div>
-              <div class="metric"><span class="val">Two-phase confirm</span><span class="key">sensitive actions propose first, execute on approval</span></div>
-            </div>
+            <p class="project-body">The hard parts of a safe MCP server, packaged: OAuth 2.1 with PKCE, rate limiting, scope-gated tools, and two-phase confirmation on sensitive actions, unopinionated about tools, identity provider, and storage. The open-source version of the auth layer behind the MCP server above.</p>
             <div class="project-foot">
               <div class="project-links">
                 <a class="project-link" href="https://github.com/bradburch/mcp-auth-kit" target="_blank" rel="noopener">GitHub ↗</a>
@@ -497,15 +469,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">Debrief records your interview calls, transcribes them on-device, and scores them against a rubric, so you walk into round two knowing what to fix. The core idea is <strong>dual-stream capture</strong>: your mic and the interviewer's audio (via ScreenCaptureKit) record as two independent tracks, so who-said-this is a hardware-level fact instead of an ML diarization guess. Nothing joins the call as a visible bot. WhisperKit (CoreML/Metal) transcribes fully on-device; the Claude API then produces per-dimension scores, weakness tags, and action items. <strong>Paste a company's actual leveling guide and the model weights it above the built-in rubric for that session</strong>; an offline mode runs coaching against a local model instead. Audio flushes to disk in chunks during recording, so a crash mid-interview never loses a session, and a trends view charts recurring weakness tags across companies and rounds. Built solo as a native Swift Package with five independently testable targets, each covered by automated tests, including a real end-to-end WhisperKit integration test.</p>
-            <div class="tags">
-              <span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Swift Package Manager</span><span class="tag">ScreenCaptureKit</span><span class="tag">WhisperKit</span><span class="tag">GRDB/SQLite</span><span class="tag">Claude API</span><span class="tag">Keychain Services</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">On-device</span><span class="key">no audio leaves the machine</span></div>
-              <div class="metric"><span class="val">Dual-stream</span><span class="key">deterministic speaker attribution, no bot</span></div>
-              <div class="metric"><span class="val">Crash-safe</span><span class="key">chunked capture, automatic recovery</span></div>
-            </div>
+            <p class="project-body">Records interview calls as two separate tracks (mic and ScreenCaptureKit), transcribes on-device with WhisperKit, and uses the Claude API to score them against a rubric, including a pasted company leveling guide. Audio flushes to disk in chunks, so a crash never loses a session. Swift, SwiftUI, and Swift Package Manager.</p>
             <div class="project-foot">
               <div class="project-links">
                 <a class="project-link" href="https://github.com/bradburch/debrief" target="_blank" rel="noopener">GitHub ↗</a>
@@ -523,16 +487,7 @@ email: bradburch.jobs@gmail.com
               </div>
               <span class="badge badge-spec">Open source</span>
             </div>
-            <p class="project-body">Log in with Strava, link an eBird or iNaturalist profile, and Roadrunner writes the species you logged into the description of the matching Strava activity. Activities sync in real time via <strong>Strava OAuth and webhooks</strong>, with automatic token refresh. The interesting problem: birders submit checklists hours after they get home, so unmatched activities go into a <strong>deferred re-check queue (2/4/8-hour ladder)</strong>, and the species appear the moment the checklist does. Deployed serverless on Vercel with pooled Neon Postgres and scheduled by a bearer-authenticated GitHub Actions cron. Three third-party API integrations, timezone-correct wall-clock matching, security middleware (CSRF, clickjacking, per-user webhook rate limiting), and a test suite covering matching, sync, OAuth, and the re-check queue.</p>
-            <p class="project-body">Roadrunner is my Python, Django, and PostgreSQL work on this page. The Strava OAuth and webhook handlers, the matching logic, the re-check queue, and the test suite are all Django code running on Postgres.</p>
-            <div class="tags">
-              <span class="tag">Python</span><span class="tag">Django</span><span class="tag">PostgreSQL (Neon)</span><span class="tag">Vercel</span><span class="tag">Strava API</span><span class="tag">eBird API</span><span class="tag">iNaturalist API</span><span class="tag">GitHub Actions</span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><span class="val">3 APIs</span><span class="key">Strava, eBird, iNaturalist</span></div>
-              <div class="metric"><span class="val">2/4/8h</span><span class="key">deferred re-check ladder</span></div>
-              <div class="metric"><span class="val">Real-time</span><span class="key">OAuth + webhook sync</span></div>
-            </div>
+            <p class="project-body">Writes the species you logged on eBird or iNaturalist into the matching Strava activity, using Strava OAuth and webhooks and a deferred 2/4/8-hour re-check queue for late checklists. Python, Django, and PostgreSQL on Vercel and Neon, with tests covering matching, sync, OAuth, and the queue.</p>
             <div class="project-foot">
               <div class="project-links">
                 <a class="project-link" href="https://github.com/bradburch/roadrunner" target="_blank" rel="noopener">GitHub ↗</a>
@@ -547,7 +502,7 @@ email: bradburch.jobs@gmail.com
       <!-- ── Experience ────────────────────────────── -->
       <section id="experience">
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">02</span> Experience</h2>
-        <p class="section-intro reveal">7 years of customer-facing engineering, from Salesforce to my own product.</p>
+        <p class="section-intro reveal">7 years of customer-facing engineering, from Salesforce to Pawservation.</p>
 
         <div class="timeline">
           <div class="role reveal">
@@ -561,11 +516,7 @@ email: bradburch.jobs@gmail.com
                 <li>Launched Solo ($15/mo) and Pro ($29/mo) plans on Stripe Checkout with a 30-day trial and Turnstile-protected self-serve signup, with 4+ outside pet-sitting businesses now on the platform.</li>
                 <li>Designed human-in-the-loop AI booking with client confirmation and one-tap owner approval from an admin queue or WhatsApp, with nearly all AI-made requests approved as submitted.</li>
                 <li>Guaranteed each stay is auto-charged at most once by claiming a D1 uniqueness constraint before calling Stripe, verified with 20 concurrent writers on the real D1 runtime.</li>
-                <li>Cut agent cost 4.9x per eval run by restructuring the system prompt into a byte-stable cached prefix, serving about 95% of eval-suite input tokens from cache.</li>
                 <li>Hand-built an OAuth 2.1 + PKCE authorization server for a remote MCP server (S256, rotating hashed refresh tokens, SSRF-guarded client metadata), letting clients book directly from Claude.</li>
-                <li>Built a 47-case live-model eval suite as the acceptance bar for prompt and model changes, catching a prompt bug that exposed three date defects within a day.</li>
-                <li>Caught a 16x payment over-allocation ($42,430 proposed against $2,640 owed) by testing the matcher on production data before release, so the defect never reached a customer.</li>
-                <li>Traced a Claude connector outage (fully down 5 weeks) to a fetch option Node accepts and Workers rejects, then added a real-Workers-runtime CI suite so that bug class fails the build.</li>
               </ul>
             </div>
           </div>
@@ -602,16 +553,13 @@ email: bradburch.jobs@gmail.com
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">03</span> Technical stack</h2>
         <div class="stack-grid">
           <div class="stack-cell reveal"><span class="stack-cat">Focus</span><span class="stack-items">Full-stack, backend-leaning · Serverless · distributed systems · REST APIs · webhooks</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Swift · Java · Scala · SQL</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 8 · Node.js · Hono · Vite · Tailwind CSS · Vercel AI SDK · Recharts · SwiftUI · Django · Spring · Play</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">AI &amp; LLM</span><span class="stack-items">Claude (Haiku, Sonnet) · Model Context Protocol (MCP) servers · tool calling · agentic tool loops · streaming · LLM evals (live-model eval suites, model benchmarking) · prompt caching · AI cost metering and cost controls · human-in-the-loop approvals · agent safety envelopes (scope gating, two-phase confirmation, spend caps) · AI threat modeling · on-device inference (WhisperKit / CoreML) · Claude Code · Cursor</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Cloud &amp; Infra</span><span class="stack-items">Serverless (Cloudflare Workers, Durable Objects, Queues, Workflows) · D1 · KV · R2 (S3-compatible object storage) · AWS (DynamoDB, SQS) · Docker · Kubernetes</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Data</span><span class="stack-items">PostgreSQL · DynamoDB · MSSQL · SQLite (D1, GRDB) · SQL · NoSQL</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Payments</span><span class="stack-items">Stripe Connect · Stripe Checkout · Stripe Billing · webhooks · idempotency · reconciliation</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Auth &amp; Security</span><span class="stack-items">OAuth 2.1 · PKCE · SAML 2.0 · JWT · SSO · HMAC webhook verification · AES-GCM · SSRF prevention · multi-tenant isolation · rate limiting · circuit breakers</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">APIs &amp; Integrations</span><span class="stack-items">REST APIs · webhooks · WhatsApp Cloud API (Meta) · Stripe · Google Calendar v3 · Notion · Gmail · HubSpot · Box · multipart/mixed batching · service-account auth</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Testing &amp; DevOps</span><span class="stack-items">Vitest (Node and Workers runtime) · Playwright · contract tests · GitHub Actions · Jenkins · CI/CD · monitoring and alerting · incident response · runbooks</span></div>
-          <div class="stack-cell reveal"><span class="stack-cat">Product &amp; Research</span><span class="stack-items">customer discovery · user interviews · cold outreach · PRDs with success metrics · pricing and packaging · self-serve onboarding · analytics dashboards · integration scoping · live technical demos · POC-to-production delivery · data migration</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Languages</span><span class="stack-items">TypeScript · JavaScript · Python · Swift · Java · SQL</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Frameworks</span><span class="stack-items">React 19 · React Router 8 · Node.js · Hono · Vercel AI SDK · Django · SwiftUI</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">AI &amp; LLM</span><span class="stack-items">Claude (Haiku, Sonnet) · Model Context Protocol (MCP) servers · tool calling · LLM evals · prompt caching · human-in-the-loop approvals · agent safety envelopes (scope gating, spend caps) · Claude Code · Cursor</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Cloud &amp; Data</span><span class="stack-items">Cloudflare Workers, Durable Objects, Queues, Workflows · D1 · KV · R2 · AWS (DynamoDB) · PostgreSQL · MSSQL · SQLite</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Payments &amp; APIs</span><span class="stack-items">Stripe Connect, Checkout, and Billing · idempotency · webhooks · WhatsApp Cloud API · Google Calendar · Notion · Gmail · HubSpot · Box</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Auth &amp; Security</span><span class="stack-items">OAuth 2.1 · PKCE · SAML 2.0 · JWT · SSO · HMAC webhook verification · SSRF prevention · multi-tenant isolation · rate limiting</span></div>
+          <div class="stack-cell reveal"><span class="stack-cat">Testing &amp; DevOps</span><span class="stack-items">Vitest (Node and Workers runtime) · Playwright · contract tests · GitHub Actions · CI/CD · monitoring and alerting</span></div>
         </div>
       </section>
 
@@ -620,19 +568,16 @@ email: bradburch.jobs@gmail.com
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">04</span> About</h2>
         <div class="about-grid">
           <div class="about-prose reveal">
-            <p>I'm a full-stack engineer in San Francisco, 7 years in. I started at Salesforce in 2017, worked through Total Brain and Front, then went out on my own in 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
+            <p>I'm a full-stack engineer in San Francisco, 7 years in. I started at Salesforce in 2017, worked through Total Brain and Front, and have been at Pawservation since 2022. The thread across all of it: <strong>I like the seam where engineering meets the customer</strong>, and I like owning a system from the database up to the conversation a user has with it.</p>
             <p>At Total Brain I was the engineering point of contact on enterprise customer-success and sales calls while owning the integrations and a MSSQL-to-DynamoDB migration. That is where I learned what the "Forward Deployed Engineer" job description actually describes: sitting with the customer, scoping the integration, and then building it.</p>
-            <p>The system my SF pet-care business, Brad Paws, runs on serves <strong>30+ active clients and 60+ bookings a month</strong>. Clients book through the client portal, a Claude agent on web chat and WhatsApp, or their own Claude over MCP. It replaced <strong>5 to 15 hours a month</strong> of manual invoicing, payment reconciliation, and scheduling by pulling Google Calendar, Gmail, Notion, and Venmo into one booking and payment record. I also build <strong>Pawservation, the booking platform</strong> at pawservation.com, which <strong>4+ outside pet-sitting businesses</strong> now use: one script tag to install, Solo and Pro plans with self-serve signup, and a paid tier with Stripe Connect payments, an AI assistant, and WhatsApp booking. I do my own user research for it, interviewing potential and current users and running cold email outreach to independent sitters.</p>
-            <p>The work I am proudest of is the unglamorous money work. I replaced date-ordered payment matching with closest-first allocation after date ordering let a $40 payment clear a $600 boarding stay. I made each stay auto-charge at most once by claiming a database uniqueness constraint before Stripe is ever called. And I caught a payment matcher proposing $42,430 against $2,640 owed by running it on real data before release, so no customer ever saw it.</p>
-            <p>What I want next is a <strong>Product Engineer or Software Engineer</strong> role at a Series B+ company, in San Francisco or the Midwest (I'm also open to Forward Deployed Engineer roles where the JD's actual stack fits). AI companies and product companies both: the common thread I look for is that engineers sit close to the customer. I'm most useful turning a customer ask into a working system, then keeping the trust that earns you the next one. San Francisco is home, and I would relocate to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor for the right role. I have been a software engineer at Pawservation since 2022, and what I want next is a larger team to build alongside.</p>
+            <p>The work I am proudest of is the unglamorous money work. I replaced date-ordered payment matching with closest-first allocation after date ordering let a $40 payment clear a $600 boarding stay, and I made each stay auto-charge at most once by claiming a database uniqueness constraint before Stripe is ever called.</p>
+            <p>Next I want a <strong>Product Engineer or Software Engineer</strong> role at a Series B+ company in San Francisco or the Midwest, or a Forward Deployed Engineer role where the stack fits. San Francisco is home, and I would relocate to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor for the right team.</p>
             <h3>How I verify AI-assisted code</h3>
-            <p>I build with Claude Code and Cursor, and I treat their output as a draft I have to prove. The proof lives in automation, not in my reading speed:</p>
+            <p>I build with Claude Code and Cursor and treat the output as a draft I have to prove, through automation:</p>
             <ul class="bullets">
-              <li><strong>Tests in the real runtime.</strong> Node tests once passed a fetch option that Cloudflare Workers rejects, and a Claude connector went down for it. The portal and the paid tier both now run a CI suite inside the actual Workers runtime (workerd), so that class of bug fails the build. Concurrency claims are tested there too: when 20 concurrent writers race against real D1, one charge row lands for the stay.</li>
-              <li><strong>Live-model evals as the acceptance bar.</strong> Prompt and model changes ship only after a 47-case suite runs against the live model. Within a day of launch it caught a prompt bug that exposed three date defects.</li>
-              <li><strong>Contract tests against a live build.</strong> The paid tier tests against a live build of the booking service as well as its fake, which caught API drift (a number sent as a string) that every local test missed.</li>
-              <li><strong>CI checks that read the source.</strong> The build fails on any paid route without an entitlement gate, any log field outside a 38-key allowlist, and any doc reference to code that no longer exists.</li>
-              <li><strong>Real data before release.</strong> Payment matching and calendar import run against my own business's history before they ship. That is how the 16x over-allocation got caught.</li>
+              <li><strong>Tests in the real runtime.</strong> A CI suite runs inside the actual Workers runtime, after a fetch option that Node accepts took a Claude connector down.</li>
+              <li><strong>Live-model evals.</strong> Prompt and model changes ship only after a 47-case suite passes against the live model.</li>
+              <li><strong>Real data before release.</strong> Payment matching runs against real history first, which is how a 16x over-allocation got caught.</li>
             </ul>
           </div>
           <aside class="about-side reveal">
@@ -651,19 +596,11 @@ email: bradburch.jobs@gmail.com
         </div>
       </section>
 
-      <!-- ── Now ───────────────────────────────────── -->
-      <section id="now">
-        <div class="now reveal">
-          <div class="now-head"><span class="tag-now">Now</span></div>
-          <p>Running Pawservation, the booking and billing platform my own SF pet-care business runs on, and shipping the <strong>Pawservation booking platform</strong> at pawservation.com, now used by 4+ outside pet-sitting businesses, with Stripe Connect payments and WhatsApp booking in its paid tier. Just shipped <strong>Debrief</strong>, a native macOS app that records interview calls locally, transcribes them on-device, and turns them into LLM-scored coaching. Also maintaining <strong>MCP Auth Kit</strong>, an open-source OAuth 2.1 + PKCE MCP server kit. Open to Product Engineer and Software Engineer roles (and selectively Forward Deployed Engineer) at Series B or later companies, AI or product. On-site or hybrid in San Francisco, open to relocating to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor, and open to remote for the right team. Email is the best way to reach me.</p>
-        </div>
-      </section>
-
       <!-- ── Contact ───────────────────────────────── -->
       <section id="contact">
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">05</span> Get in touch</h2>
         <div class="contact-card reveal">
-          <p class="pitch">Brad Burch is looking for <strong>Product Engineer and Software Engineer</strong> roles (and selectively Forward Deployed Engineer) at <strong>Series B or later companies</strong>, AI or product. Based in <strong>San Francisco</strong>, and open to relocating to <strong>Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor</strong>. Best fit is a team that puts engineers in front of customers, whether the product is AI-first or AI is one surface of it. <strong>US citizen, no sponsorship required.</strong> Fastest reply is email.</p>
+          <p class="pitch">Brad Burch is looking for <strong>Product Engineer and Software Engineer</strong> roles (and selectively Forward Deployed Engineer) at <strong>Series B or later companies</strong>. Based in <strong>San Francisco</strong>, open to relocating to <strong>Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor</strong>. <strong>US citizen, no sponsorship required.</strong> Fastest reply is email.</p>
           <div class="contact-grid">
             <a class="contact-item" href="mailto:{{ page.email }}"><div class="ci-key">Email</div><div class="ci-val">{{ page.email }}</div></a>
             <a class="contact-item" href="{{ page.linkedin }}" target="_blank" rel="noopener"><div class="ci-key">LinkedIn</div><div class="ci-val">linkedin.com/in/burchbrad</div></a>
@@ -675,7 +612,7 @@ email: bradburch.jobs@gmail.com
         </div>
         <div class="now reveal" style="margin-top:24px">
           <div class="now-head"><span class="tag-now">Passing this along?</span></div>
-          <p>Copy this: "Brad Burch, product engineer in SF, 7 years, ex-Salesforce and Front. Software engineer at Pawservation. Built and runs a booking and payments platform with a Claude agent and an OAuth 2.1 + PKCE MCP server, now used by 4+ outside pet-sitting businesses, and open-sourced the agent auth layer. Looking for Product Engineer or Software Engineer roles at Series B or later, SF or Midwest. bradburch.github.io, bradburch.jobs@gmail.com"</p>
+          <p>Copy this: "Brad Burch, product engineer in SF, 7 years, ex-Salesforce and Front. Software engineer at Pawservation: booking and payments platform with a Claude agent and an OAuth 2.1 + PKCE MCP server, used by 4+ outside pet-sitting businesses. Looking for Product or Software Engineer roles at Series B or later, SF or Midwest. bradburch.github.io, bradburch.jobs@gmail.com"</p>
         </div>
       </section>
     </main>
