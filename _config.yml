@@ -8,3 +8,10 @@ github_username:  bradburch
 google_analytics: G-R8KE8VL0TQ
 linkedin_username: burchbrad
 author: Brad Burch
+
+exclude:
+  - README.md
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - GITHUB_PAGES_CONTENT.md

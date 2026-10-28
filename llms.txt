@@ -1,0 +1,19 @@
+# Brad Burch
+
+> Senior full-stack and product engineer in San Francisco, open to the Midwest. 7 years across Salesforce, Total Brain, Front, and Pawservation. Designs, builds, and runs Claude agents, MCP servers with OAuth 2.1 + PKCE, and Stripe Connect payments in TypeScript, Python, and PostgreSQL.
+
+Looking for senior Software Engineer, Full Stack, or Product Engineer roles (selectively Forward Deployed and AI Engineer) at Series B or later companies. San Francisco, or relocating to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor. US citizen, no sponsorship required.
+
+## Links
+
+- [Portfolio](https://bradburch.github.io/): projects, experience, stack
+- [Resume (PDF)](https://bradburch.github.io/assets/resume/Brad-Burch-Resume.pdf)
+- [GitHub](https://github.com/bradburch): MCP Auth Kit, Roadrunner
+- [LinkedIn](https://linkedin.com/in/burchbrad/)
+- Email: bradburch.jobs@gmail.com
+
+## Selected work
+
+- Pawservation booking platform: multi-tenant, Stripe Connect, 30+ active clients, 60+ bookings a month.
+- Claude booking agent: human approval on every write, 85% to 93% pass rate across 1,251 eval cases, 0 unapproved writes in 5,418 eval turns.
+- MCP server with a hand-built OAuth 2.1 + PKCE authorization server, stateless on serverless infrastructure.
