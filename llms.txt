@@ -6,7 +6,7 @@ Looking for senior Software Engineer, Full Stack, or Product Engineer roles (sel
 
 ## Links
 
-- [Portfolio](https://bradburch.github.io/): projects, experience, stack
+- [Portfolio](https://bradburch.github.io/): projects, engineering detail, experience, stack
 - [Resume (PDF)](https://bradburch.github.io/assets/resume/Brad-Burch-Resume.pdf)
 - [GitHub](https://github.com/bradburch): MCP Auth Kit, Roadrunner
 - [LinkedIn](https://linkedin.com/in/burchbrad/)
@@ -14,6 +14,21 @@ Looking for senior Software Engineer, Full Stack, or Product Engineer roles (sel
 
 ## Selected work
 
-- Pawservation booking platform: multi-tenant, Stripe Connect, 30+ active clients, 60+ bookings a month.
-- Claude booking agent: human approval on every write, 85% to 93% pass rate across 1,251 eval cases, 0 unapproved writes in 5,418 eval turns.
+- Pawservation booking platform: the multi-tenant, productized version of Brad Paws, the San Francisco pet-care business it grew out of. Stripe Connect payments, 30+ active clients, 60+ bookings a month. Auto-charge happens at most once per stay (a database uniqueness claim before Stripe is called, tested with 20 concurrent writers). Removed the source of 97% of daily database writes.
+- Brad Paws client portal: serverless React 19 + Hono portal that replaced 5 to 15 hours a month of manual invoicing, reconciliation, and scheduling. Cut CPU per invoice PDF from 154 ms to 18 ms, recovering 4 months of failed invoice runs.
+- Claude booking agent: human approval on every write (95% approved as submitted), 98% of 1,249 eval cases passing every run (97% on untuned Sonnet), 0 unapproved writes in 5,418 eval turns, about 8x lower per-turn model cost.
 - MCP server with a hand-built OAuth 2.1 + PKCE authorization server, stateless on serverless infrastructure.
+- MCP Auth Kit (open source): OAuth 2.1 + PKCE, rate limiting, scope-gated tools, two-phase confirmation.
+- Roadrunner (open source): Python/Django and PostgreSQL app matching eBird and iNaturalist observations to Strava activities.
+
+## Experience
+
+- Pawservation, Software Engineer, 2022 to present, San Francisco.
+- Front, Software Engineer, 2022, San Francisco (role eliminated in company-wide layoff).
+- Total Brain, Software Engineer, 2019 to 2021, San Francisco.
+- Salesforce, Software Engineer, 2017 to 2018, San Francisco.
+- Education: DePauw University, B.A. Computer Science, 2017.
+
+## Stack
+
+TypeScript, Python, JavaScript, SQL, Java, Scala. React 19, Node.js, Django, Hono, Vercel AI SDK. Claude, MCP, tool calling, LLM evals, prompt caching. PostgreSQL, SQLite, DynamoDB, serverless functions, workflow orchestration. Stripe Connect and Checkout, OAuth 2.1, PKCE, SAML 2.0, JWT, SSRF prevention, multi-tenant isolation. Vitest, Playwright, GitHub Actions.
