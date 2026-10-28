@@ -410,6 +410,9 @@ section:last-of-type { border-bottom: none; }
 /* deep-dive panel */
 .dive { display: none; margin-top: 20px; padding-top: 22px; border-top: 1px dashed var(--line-bright); }
 .dive.open { display: block; animation: rise 0.4s var(--ease); }
+/* no-JS fallback: keep engineering detail visible to crawlers and readers */
+html:not(.js) .dive { display: block; }
+html:not(.js) .dive-btn { display: none; }
 
 .subsystem { margin-bottom: 20px; }
 .subsystem:last-child { margin-bottom: 0; }
