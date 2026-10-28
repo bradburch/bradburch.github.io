@@ -54,7 +54,7 @@ email: bradburch.jobs@gmail.com
   <link rel="stylesheet" href="/assets/css/styles.css">
 
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ProfilePage","dateModified":"2026-10-28","mainEntity":{"@type":"Person","@id":"https://bradburch.github.io/#brad-burch","name":"Brad Burch","jobTitle":"Software Engineer","description":"Senior full-stack and product engineer in San Francisco with 7 years of experience. Builds Claude agents, MCP servers with OAuth 2.1 + PKCE, and Stripe Connect payments in TypeScript, Python, and PostgreSQL.","image":"https://bradburch.github.io/og-card.png","worksFor":{"@type":"Organization","name":"Pawservation","url":"https://pawservation.com"},"address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA","addressCountry":"US"},"alumniOf":{"@type":"CollegeOrUniversity","name":"DePauw University"},"knowsAbout":["TypeScript","Python","React","PostgreSQL","Claude","Model Context Protocol (MCP)","LLM evals","OAuth 2.1","Stripe Connect","Serverless architecture"],"url":"https://bradburch.github.io/","sameAs":["https://linkedin.com/in/burchbrad/","https://github.com/bradburch"]}}
+  {"@context":"https://schema.org","@type":"ProfilePage","dateModified":"2026-10-28","mainEntity":{"@type":"Person","@id":"https://bradburch.github.io/#brad-burch","name":"Brad Burch","jobTitle":"Software Engineer","description":"Senior full-stack and product engineer in San Francisco with 9 years of experience. Builds Claude agents, MCP servers with OAuth 2.1 + PKCE, and Stripe Connect payments in TypeScript, Python, and PostgreSQL.","image":"https://bradburch.github.io/og-card.png","worksFor":{"@type":"Organization","name":"Pawservation","url":"https://pawservation.com"},"address":{"@type":"PostalAddress","addressLocality":"San Francisco","addressRegion":"CA","addressCountry":"US"},"alumniOf":{"@type":"CollegeOrUniversity","name":"DePauw University"},"knowsAbout":["TypeScript","Python","React","PostgreSQL","Claude","Model Context Protocol (MCP)","LLM evals","OAuth 2.1","Stripe Connect","Serverless architecture"],"url":"https://bradburch.github.io/","sameAs":["https://linkedin.com/in/burchbrad/","https://github.com/bradburch"]}}
   </script>
 
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
@@ -83,7 +83,7 @@ email: bradburch.jobs@gmail.com
       <span class="status reveal d1"><span class="ping"></span> Open to roles · San Francisco &amp; the Midwest</span>
       <p class="eyebrow reveal d1">Senior Software Engineer · Full Stack · Product Engineer · Production AI</p>
       <h1 class="reveal d2">I design, build, and run<br>production AI systems.</h1>
-      <p class="lede reveal d3">7 years full-stack, backend-leaning. I'm a software engineer at <strong>Pawservation</strong>, where I designed, built, and run a booking, payments, and Claude agent platform on serverless infrastructure, with Stripe Connect, WhatsApp booking, and an OAuth&nbsp;2.1&nbsp;+&nbsp;PKCE MCP server. I own it from the data model through evals, on-call, and incident response. Looking for senior Software Engineer, Full Stack, or Product Engineer roles in San Francisco or the Midwest.</p>
+      <p class="lede reveal d3">9 years full-stack, backend-leaning. I'm a software engineer at <strong>Pawservation</strong>, where I designed, built, and run a booking, payments, and Claude agent platform on serverless infrastructure, with Stripe Connect, WhatsApp booking, and an OAuth&nbsp;2.1&nbsp;+&nbsp;PKCE MCP server. I own it from the data model through evals, on-call, and incident response. Looking for senior Software Engineer, Full Stack, or Product Engineer roles in San Francisco or the Midwest.</p>
       <p class="tagline reveal d3">Previously <strong>Salesforce</strong>, <strong>Total Brain</strong>, and <strong>Front</strong>. At Pawservation since 2022.</p>
       <p class="hero-proof reveal d4"><span class="live-dot"></span><span>More than half of bookings now arrive self-serve across 30+ active clients and 60+ bookings a month, replacing 5 to 15 hours a month of manual work.</span></p>
       <div class="cta-row reveal d5">
@@ -98,7 +98,7 @@ email: bradburch.jobs@gmail.com
       <section id="summary">
         <div class="now reveal">
           <div class="now-head"><span class="tag-now">Summary</span></div>
-          <p><strong>Brad Burch</strong> is a senior full-stack and product engineer in San Francisco with 7 years of experience across Salesforce, Total Brain, Front, and Pawservation. At Pawservation he designed, built, and runs a booking, payments, and AI platform in TypeScript on serverless infrastructure with a Claude agent, an OAuth 2.1 + PKCE Model Context Protocol (MCP) server, Stripe Connect payments, and WhatsApp booking, used by 30+ active clients.</p>
+          <p><strong>Brad Burch</strong> is a senior full-stack and product engineer in San Francisco with 9 years of experience across Salesforce, Total Brain, Front, and Pawservation. At Pawservation he designed, built, and runs a booking, payments, and AI platform in TypeScript on serverless infrastructure with a Claude agent, an OAuth 2.1 + PKCE Model Context Protocol (MCP) server, Stripe Connect payments, and WhatsApp booking, used by 30+ active clients.</p>
           <p>He is looking for senior Software Engineer, Full Stack, and Product Engineer roles, and selectively Forward Deployed Engineer and AI Engineer roles, at Series B or later companies, in San Francisco or relocating to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor.</p>
         </div>
       </section>
@@ -221,19 +221,14 @@ email: bradburch.jobs@gmail.com
             <div class="dive">
               <div class="subsystem">
                 <ul class="bullets">
-                  <li>Shipped a customer-facing Claude Haiku 5.5 agent (Vercel AI SDK, <strong>15 tools</strong>) on web chat and WhatsApp plus a remote MCP server that shares the same tool definitions.</li>
-                  <li>Designed <strong>human-in-the-loop booking</strong> through one channel-agnostic approval service: the client confirms, the owner approves in one tap from an admin queue or WhatsApp, and a pending request holds capacity.</li>
-                  <li>Gated every write behind a confirmation card and a <strong>single-use token claimed atomically in the database</strong>. <strong>20 concurrent redemptions produce one winner</strong>.</li>
+                  <li>Shipped a customer-facing Claude Haiku 5.5 agent (Vercel AI SDK, <strong>15 tools</strong>) on web chat and WhatsApp, plus a remote MCP server that shares the same tool definitions.</li>
+                  <li>Designed <strong>human-in-the-loop booking</strong> through one channel-agnostic approval service. Every write sits behind a confirmation card and a <strong>single-use token claimed atomically in the database</strong> (20 concurrent redemptions produce one winner), and the owner approves in one tap from an admin queue or WhatsApp.</li>
                   <li>Layered cost controls (<strong>20 messages/hour, 50k tokens/day</strong>, per-user and global USD caps) and a circuit breaker at the agent layer, so it still protects downstream tools when the model is the thing misbehaving.</li>
-                  <li>Cut AI cost on two fronts: eval-run cost <strong>79%</strong> with cached prompt blocks (about 95% of input tokens from cache, pass rate unchanged), and per-turn cost <strong>about 8x</strong> by moving chat and the sitter assistant to a smaller model with no measured quality loss.</li>
-                  <li>Chose the production model from a <strong>16-config eval matrix</strong>, cutting eval-run cost about 7x versus Haiku 4.5 while accepting a 4-point row-pass dip (95.7% vs 100%).</li>
-                  <li>Moved the same-day booking rule from prompt to server after prompt-only enforcement failed on several models, and checked every date and night count in a reply against what the tools returned.</li>
-                  <li>Raised the pass rate from <strong>85% to 93% across 1,251 eval cases</strong> (4 channels, 8 business-rule setups) by triaging 292 failures into 22 root causes and moving date parsing and booking-change previews into deterministic code.</li>
-                  <li>Built a <strong>database-state grading harness</strong> that judges agents on rows written, not reply text, catching 41 of 41 defects injected for the new checks versus 4 before and exposing three change-booking bugs fixed within a day.</li>
-                  <li>Closed the gap when the agent stopped at "shall I request it?" by having the server build the booking preview itself, still applied only on the client's tap; 44 of 44 such turns previewed correctly.</li>
-                  <li>Gave the owner a <strong>9-tool WhatsApp admin agent</strong> to manage requests, bookings, payments, and extra charges by text, each change a one-tap preview with an audit row.</li>
-                  <li>Added a human hand-off to 3 AI channels that emails the sitter on request, with no false "sitter notified" claim reaching a client across 21 live eval runs.</li>
-                  <li>Benchmarked the production model against 8 open-weight models on cost, latency, and accuracy; Claude Haiku scored 100% at 2.1 s while 3 models broke a booking-safety rule.</li>
+                  <li>Cut AI cost on three fronts: eval-run cost <strong>79%</strong> with cached prompt blocks (about 95% of input tokens from cache), per-turn cost <strong>about 8x</strong> by moving to a smaller model with no measured quality loss, and model choice from a <strong>16-config eval matrix</strong> and a benchmark against 8 open-weight models, where 3 broke a booking-safety rule.</li>
+                  <li>Moved rules the model kept missing into the server: same-day booking enforcement, date and night-count checks on every reply, and server-built booking previews (44 of 44 previewed correctly), still applied only on the client's tap.</li>
+                  <li>Raised the pass rate from <strong>85% to 93% across 1,251 eval cases</strong> (4 channels, 8 business-rule setups) by triaging 292 failures into 22 root causes and moving date parsing into deterministic code.</li>
+                  <li>Built a <strong>database-state grading harness</strong> that judges agents on rows written, not reply text, catching 41 of 41 injected defects versus 4 before and exposing three change-booking bugs fixed within a day.</li>
+                  <li>Gave the owner a <strong>9-tool WhatsApp admin agent</strong> for requests, bookings, payments, and extra charges, each change a one-tap preview with an audit row, and added an emailed human hand-off on all 3 AI channels.</li>
                 </ul>
               </div>
             </div>
@@ -318,7 +313,7 @@ email: bradburch.jobs@gmail.com
       <!-- ── Experience ────────────────────────────── -->
       <section id="experience">
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">02</span> Experience</h2>
-        <p class="section-intro reveal">7 years of engineering, from Salesforce to Pawservation.</p>
+        <p class="section-intro reveal">9 years of engineering, from Salesforce to Pawservation.</p>
 
         <div class="timeline">
           <div class="role reveal">
@@ -386,7 +381,7 @@ email: bradburch.jobs@gmail.com
         <h2 class="section-label reveal"><span class="idx" aria-hidden="true">04</span> About</h2>
         <div class="about-grid">
           <div class="about-prose reveal">
-            <p>I'm a backend-leaning full-stack engineer in San Francisco, 7 years in. I started at Salesforce in 2017, worked at Total Brain and Front, and have been at Pawservation since 2022. I do my best work close to the customer, and at Pawservation I own the path from customer feedback to a shipped, tested change, including the architecture calls and the on-call.</p>
+            <p>I'm a backend-leaning full-stack engineer in San Francisco, 9 years in. I started at Salesforce in 2017, worked at Total Brain and Front, and have been at Pawservation since 2022. I do my best work close to the customer, and at Pawservation I own the path from customer feedback to a shipped, tested change, including the architecture calls and the on-call.</p>
             <p>At Total Brain I was the engineering point of contact on enterprise Customer Success and Sales calls while owning the SSO, HubSpot, and Box integrations and the MSSQL to DynamoDB migration.</p>
             <p>The work I'm proudest of is the money work. I replaced date-based past-due logic after a $40 payment cleared a $600 boarding stay, and I made each stay auto-charge at most once by claiming a database uniqueness constraint before Stripe is called.</p>
             <p>Next I want a <strong>senior Software Engineer, Full Stack, or Product Engineer</strong> role at a Series B+ company in San Francisco or the Midwest, or a Forward Deployed Engineer role where the stack fits. San Francisco is home, and I would relocate to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor for the right team.</p>
@@ -430,7 +425,7 @@ email: bradburch.jobs@gmail.com
         </div>
         <div class="now reveal" style="margin-top:24px">
           <div class="now-head"><span class="tag-now">Passing this along?</span></div>
-          <p>Copy this: "Brad Burch, senior full-stack and product engineer in SF, 7 years, ex-Salesforce and Front. Software engineer at Pawservation, where he designed, built, and runs a booking and payments platform with a Claude agent and an OAuth 2.1 + PKCE MCP server. Looking for senior Software Engineer, Full Stack, or Product Engineer roles at Series B or later, SF or Midwest. bradburch.github.io, bradburch.jobs@gmail.com"</p>
+          <p>Copy this: "Brad Burch, senior full-stack and product engineer in SF, 9 years, ex-Salesforce and Front. Software engineer at Pawservation, where he designed, built, and runs a booking and payments platform with a Claude agent and an OAuth 2.1 + PKCE MCP server. Looking for senior Software Engineer, Full Stack, or Product Engineer roles at Series B or later, SF or Midwest. bradburch.github.io, bradburch.jobs@gmail.com"</p>
         </div>
       </section>
     </main>

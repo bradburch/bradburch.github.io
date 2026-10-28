@@ -1,6 +1,6 @@
 # Brad Burch
 
-> Senior full-stack and product engineer in San Francisco, open to the Midwest. 7 years across Salesforce, Total Brain, Front, and Pawservation. Designs, builds, and runs Claude agents, MCP servers with OAuth 2.1 + PKCE, and Stripe Connect payments in TypeScript, Python, and PostgreSQL.
+> Senior full-stack and product engineer in San Francisco, open to the Midwest. 9 years across Salesforce, Total Brain, Front, and Pawservation. Designs, builds, and runs Claude agents, MCP servers with OAuth 2.1 + PKCE, and Stripe Connect payments in TypeScript, Python, and PostgreSQL.
 
 Looking for senior Software Engineer, Full Stack, or Product Engineer roles (selectively Forward Deployed and AI Engineer) at Series B or later companies. San Francisco, or relocating to Chicago, Minneapolis-St. Paul, Detroit, Columbus, Indianapolis, or Ann Arbor. US citizen, no sponsorship required.
 
