@@ -1,6 +1,6 @@
 # bradburch.github.io
 
-Personal portfolio site — Senior Full Stack & Product Engineer based in San Francisco.
+Personal portfolio site — Full Stack & Product Engineer based in San Francisco.
 
 ## Stack
 
